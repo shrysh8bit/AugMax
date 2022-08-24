@@ -24,7 +24,7 @@ parser.add_argument('--gpu', default='0')
 parser.add_argument('--cpus', type=int, default=4)
 # dataset:
 parser.add_argument('--dataset', '--ds', default='cifar10', choices=['cifar10', 'cifar100', 'tin', 'IN'], help='which dataset to use')
-parser.add_argument('--data_root_path', '--drp', default='/ssd1/haotao/datasets/', help='Where you save all your datasets.')
+parser.add_argument('--data_root_path', '--drp', default='./data', help='Where you save all your datasets.')
 parser.add_argument('--model', '--md', default='WRN40', choices=['ResNet18_DuBIN', 'WRN40_DuBIN', 'ResNeXt29_DuBIN'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # 
@@ -32,7 +32,7 @@ parser.add_argument('--test_batch_size', '--tb', type=int, default=1000)
 parser.add_argument('--ckpt_path', default='')
 parser.add_argument('--mode', default='clean', choices=['clean', 'c', 'v2', 'sta', 'all'], help='Which dataset to evaluate on')
 parser.add_argument('--k', default=10, type=int, help='hyperparameter k in worst-of-k spatial attack')
-parser.add_argument('--save_root_path', '--srp', default='/ssd1/haotao', help='where you save the outputs')
+parser.add_argument('--save_root_path', '--srp', default='./runs', help='where you save the outputs')
 args = parser.parse_args()
 print(args)
 
@@ -71,10 +71,14 @@ if args.dataset == 'IN':
     model = model_fn().cuda()
 else:
     model = model_fn(num_classes=num_classes, init_stride=init_stride).cuda()
+
 model = torch.nn.DataParallel(model)
 
 # load model:
+print(f"Aug max results save loc {args.save_root_path}")
+print(f"Best sa path save loc {args.ckpt_path}")
 ckpt = torch.load(os.path.join(args.save_root_path, 'AugMax_results', args.ckpt_path, 'best_SA.pth'))
+print(f"ckpt {ckpt}")
 model.load_state_dict(ckpt)        
 
 # log file:
