@@ -6,3 +6,4 @@ data/
 *.sh
 !scripts/imagenet.sh
 results/*
+wand

@@ -77,14 +77,14 @@ def cifar_c_testloader(corruption, data_dir, num_classes=10,
     The first 10,000 images in each .npy are of level 1 severity, and the last 10,000 are of level 5 severity.
     '''
 
-    # # download:
-    # url = 'https://zenodo.org/record/2535967/files/CIFAR-10-C.tar'
-    # root_dir = data_dir
-    # tgz_md5 = '56bf5dcef84df0e2308c6dcbcbbd8499'
-    # if not os.path.exists(os.path.join(root_dir, 'CIFAR-10-C.tar')):
-    #     download_and_extract_archive(url, root_dir, extract_root=root_dir, md5=tgz_md5)
-    # elif not os.path.exists(os.path.join(root_dir, 'CIFAR-10-C')):
-    #     extract_archive(os.path.join(root_dir, 'CIFAR-10-C.tar'), to_path=root_dir)
+    # download:
+    url = 'https://zenodo.org/record/2535967/files/CIFAR-10-C.tar'
+    root_dir = data_dir
+    tgz_md5 = '56bf5dcef84df0e2308c6dcbcbbd8499'
+    if not os.path.exists(os.path.join(root_dir, 'CIFAR-10-C.tar')):
+        download_and_extract_archive(url, root_dir, extract_root=root_dir, md5=tgz_md5)
+    elif not os.path.exists(os.path.join(root_dir, 'CIFAR-10-C')):
+        extract_archive(os.path.join(root_dir, 'CIFAR-10-C.tar'), to_path=root_dir)
 
     if num_classes==10:
         CIFAR = datasets.CIFAR10
@@ -103,6 +103,7 @@ def cifar_c_testloader(corruption, data_dir, num_classes=10,
     
     # replace clean data with corrupted data:
     test_set.data = np.load(os.path.join(base_c_path, '%s.npy' % corruption))
+    print(f"len of test_set.data  {len(test_set.data)}")
     test_set.targets = torch.LongTensor(np.load(os.path.join(base_c_path, 'labels.npy')))
     print('loader for %s ready' % corruption)
 

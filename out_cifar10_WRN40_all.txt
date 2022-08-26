@@ -1,0 +1,70 @@
+Namespace(ckpt_path='', cpus=4, data_root_path='./data', dataset='cifar10', gpu='1', k=10, mode='all', model='WRN40_DuBIN', save_root_path='./runs', test_batch_size=1000, widen_factor=2)
+Aug max results save loc ./runs
+Best sa path save loc 
+ckpt load loc ./runs/AugMax_results/WRN40_DuBIN/best_SA.pth
+Files already downloaded and verified
+Files already downloaded and verified
+clean test time: 8.23s
+clean: 0.9568
+loader for gaussian_noise ready
+loader for shot_noise ready
+loader for impulse_noise ready
+loader for defocus_blur ready
+loader for glass_blur ready
+loader for motion_blur ready
+loader for zoom_blur ready
+loader for snow ready
+loader for frost ready
+loader for fog ready
+loader for brightness ready
+loader for contrast ready
+loader for elastic_transform ready
+loader for pixelate ready
+loader for jpeg_compression ready
+evaluating corruptions...
+50
+gaussian_noise test time: 37.64s
+gaussian_noise: 0.8179
+50
+shot_noise test time: 37.66s
+shot_noise: 0.8683
+50
+impulse_noise test time: 37.71s
+impulse_noise: 0.8904
+50
+defocus_blur test time: 37.67s
+defocus_blur: 0.9466
+50
+glass_blur test time: 37.72s
+glass_blur: 0.8449
+50
+motion_blur test time: 37.77s
+motion_blur: 0.9331
+50
+zoom_blur test time: 37.70s
+zoom_blur: 0.9378
+50
+snow test time: 37.77s
+snow: 0.9146
+50
+frost test time: 37.69s
+frost: 0.9189
+50
+fog test time: 37.68s
+fog: 0.9220
+50
+brightness test time: 37.69s
+brightness: 0.9502
+50
+contrast test time: 37.68s
+contrast: 0.9452
+50
+elastic_transform test time: 37.70s
+elastic_transform: 0.9144
+50
+pixelate test time: 37.79s
+pixelate: 0.9040
+50
+jpeg_compression test time: 37.65s
+jpeg_compression: 0.8930
+corruption acc: (mean) 0.9067

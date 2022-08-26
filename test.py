@@ -25,7 +25,7 @@ parser.add_argument('--cpus', type=int, default=4)
 # dataset:
 parser.add_argument('--dataset', '--ds', default='cifar10', choices=['cifar10', 'cifar100', 'tin', 'IN'], help='which dataset to use')
 parser.add_argument('--data_root_path', '--drp', default='./data', help='Where you save all your datasets.')
-parser.add_argument('--model', '--md', default='WRN40', choices=['ResNet18_DuBIN', 'WRN40_DuBIN', 'ResNeXt29_DuBIN'], help='which model to use')
+parser.add_argument('--model', '--md', default='WRN40_DuBIN', choices=['ResNet18_DuBIN', 'WRN40_DuBIN', 'ResNeXt29_DuBIN'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # 
 parser.add_argument('--test_batch_size', '--tb', type=int, default=1000)
@@ -77,8 +77,9 @@ model = torch.nn.DataParallel(model)
 # load model:
 print(f"Aug max results save loc {args.save_root_path}")
 print(f"Best sa path save loc {args.ckpt_path}")
-ckpt = torch.load(os.path.join(args.save_root_path, 'AugMax_results', args.ckpt_path, 'best_SA.pth'))
-print(f"ckpt {ckpt}")
+ckpt = torch.load(os.path.join(args.save_root_path, 'AugMax_results', args.model, args.ckpt_path, 'best_SA.pth'))
+# print(f"args.save_root_path {args.save_root_path 'AugMax_results', args.ckpt_path, 'best_SA.pth')}")
+print(f"ckpt load loc {os.path.join(args.save_root_path, 'AugMax_results', args.model, args.ckpt_path, 'best_SA.pth')}")
 model.load_state_dict(ckpt)        
 
 # log file:
