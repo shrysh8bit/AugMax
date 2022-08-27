@@ -1,0 +1,1 @@
+Epoch 0 | Validation | Time: 3069.7754 | lr: 0.1 | SA: 0.2533

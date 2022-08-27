@@ -43,7 +43,7 @@ parser.add_argument('--decay_epochs', '--de', default=[100,150], nargs='+', type
 parser.add_argument('--opt', default='sgd', choices=['sgd', 'adam'], help='which optimizer to use')
 parser.add_argument('--decay', default='cos', choices=['cos', 'multisteps'], help='which lr decay method to use')
 parser.add_argument('--lr', type=float, default=0.1, help='Initial learning rate.')
-parser.add_argument('--batch_size', '-b', type=int, default=256, help='Batch size for training.')
+parser.add_argument('--batch_size', '-b', type=int, default=96, help='Batch size for training. 96 uses appx 8.5 GB of GPU RAM')
 parser.add_argument('--test_batch_size', '--tb', type=int, default=1000, help='Batch size for validation.')
 parser.add_argument('--momentum', '-m', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--wd', type=float, default=0.0005, help='Weight decay (L2 penalty).')

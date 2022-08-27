@@ -1,0 +1,18 @@
+nohup python augmax_training_ddp.py --gpu 1 --drp ./data --ds cifar10 --md ResNeXt29 --Lambda 10 --steps 10 --save_root_path ./runs/augmax_training/ --batch_size 96 > out_train.txt &
+
+
+saving to ./runs/augmax_training/AugMax_results/augmax_training/cifar10/ResNeXt29_DuBIN/fat-1-untargeted-10-0.1_Lambda10.0_e200-b96_sgd-lr0.1-m0.9-wd0.0005_cos
+Running on rank 0.
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=3, batch_size=96, data_root_path='./data', dataset='cifar10', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='1', lr=0.1, mixture_depth=-1, mixture_width=3, model='ResNeXt29', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path=Epoch 0-0 | Train | Loss: 3.0364 (2.9592, 0.0772), SA: 0.0417, RA: 0.0417
+Epoch 0-50 | Train | Loss: 7.8162 (2.3108, 0.1009), SA: 0.0966, RA: 0.0978
+Epoch 0-100 | Train | Loss: 5.1781 (2.2984, 0.0101), SA: 0.1025, RA: 0.0954
+Epoch 0-150 | Train | Loss: 4.2685 (2.2843, 0.0401), SA: 0.1118, RA: 0.0944
+Epoch 0-200 | Train | Loss: 3.7831 (2.2417, 0.0420), SA: 0.1200, RA: 0.0955
+Epoch 0-250 | Train | Loss: 3.4837 (2.3302, 0.0207), SA: 0.1252, RA: 0.0968
+Epoch 0-300 | Train | Loss: 3.2801 (2.1923, 0.0371), SA: 0.1340, RA: 0.1004
+Epoch 0-350 | Train | Loss: 3.1300 (2.1212, 0.0548), SA: 0.1417, RA: 0.1045
+Epoch 0-400 | Train | Loss: 3.0126 (2.1637, 0.0468), SA: 0.1510, RA: 0.1090
+Epoch 0-450 | Train | Loss: 2.9187 (2.0182, 0.0673), SA: 0.1586, RA: 0.1129
+Epoch 0-500 | Train | Loss: 2.8404 (1.9433, 0.0979), SA: 0.1660, RA: 0.1174
+False
+Epoch 0 | Validation | Time: 3069.7754 | lr: 0.1 | SA: 0.2533
