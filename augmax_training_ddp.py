@@ -61,7 +61,7 @@ parser.add_argument('--Lambda', type=float, default=10, help='Trade-off hyper-pa
 # others:
 parser.add_argument('--deepaug', action='store_true', help='If true, use deep augmented training set. (Only works for ImageNet.)')
 parser.add_argument('--resume', action='store_true', help='If true, resume from early stopped ckpt')
-parser.add_argument('--save_root_path', '--srp', default='/ssd1/haotao/', help='where you save the outputs')
+parser.add_argument('--save_root_path', '--srp', default='./runs/augmax_training/', help='where you save the outputs')
 # DDP settings:
 parser.add_argument('--ddp', action='store_true', help='If true, use distributed data parallel')
 parser.add_argument('--ddp_backend', '--ddpbed', default='nccl', choices=['nccl', 'gloo', 'mpi'], help='If true, use distributed data parallel')
