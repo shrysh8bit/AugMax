@@ -1,1 +1,12 @@
 Epoch 0 | Validation | Time: 3069.7754 | lr: 0.1 | SA: 0.2533
+Epoch 1 | Validation | Time: 3054.7378 | lr: 0.09999383162408304 | SA: 0.4067
+Epoch 2 | Validation | Time: 3055.2843 | lr: 0.09997532801828658 | SA: 0.5562
+Epoch 3 | Validation | Time: 3058.2338 | lr: 0.09994449374809851 | SA: 0.6342
+Epoch 4 | Validation | Time: 3059.1048 | lr: 0.09990133642141359 | SA: 0.6458
+Epoch 5 | Validation | Time: 3059.5251 | lr: 0.09984586668665642 | SA: 0.7295
+Epoch 6 | Validation | Time: 3059.1883 | lr: 0.09977809823015402 | SA: 0.7579
+Epoch 7 | Validation | Time: 3059.7212 | lr: 0.09969804777275901 | SA: 0.7402
+Epoch 8 | Validation | Time: 3059.5425 | lr: 0.09960573506572391 | SA: 0.8123
+Epoch 9 | Validation | Time: 3059.2501 | lr: 0.09950118288582789 | SA: 0.7853
+Epoch 10 | Validation | Time: 3058.5449 | lr: 0.09938441702975691 | SA: 0.7731
+Epoch 11 | Validation | Time: 3059.9900 | lr: 0.09925546630773871 | SA: 0.8299

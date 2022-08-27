@@ -13,6 +13,9 @@ from torch.optim import SGD, Adam, lr_scheduler
 from torch.utils.data import DataLoader
 import torch.distributed as dist
 
+import torchvision
+import torchvision.transforms as transforms
+
 from augmax_modules import augmentations
 from augmax_modules.augmax import AugMaxDataset, AugMaxModule, AugMixModule
 
@@ -26,6 +29,7 @@ from models.imagenet.resnet_DuBIN import ResNet50_DuBIN as INResNet50_DuBIN
 from dataloaders.cifar10 import cifar_dataloaders
 from dataloaders.tiny_imagenet import tiny_imagenet_dataloaders, tiny_imagenet_deepaug_dataloaders
 from dataloaders.imagenet import imagenet_dataloaders, imagenet_deepaug_dataloaders
+from dataloaders.MNIST import MNIST_dataloaders
 
 from utils.utils import *
 from utils.context import ctx_noparamgrad_and_eval
@@ -161,45 +165,61 @@ def train(gpu_id, ngpus_per_node):
     num_workers = args.num_workers if not args.ddp else int((args.num_workers+ngpus_per_node)/ngpus_per_node)
 
     # data loader:
-    if args.dataset in ['cifar10', 'cifar100']:
-        num_classes=10 if args.dataset == 'cifar10' else 100
+    if args.dataset == 'MNIST':
+        num_classes = 10
         init_stride = 1
-        train_data, val_data = cifar_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
-            AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+        train_loader, val_loader = MNIST_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
+            AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity,
+            batch_size = args.batch_size
         )
-    elif args.dataset == 'tin':
-        num_classes, init_stride = 200, 2
-        train_data, val_data = tiny_imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200'),
-            AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
-        )
-        if args.deepaug:
-            edsr_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-EDSR'),
+
+        print(f"MNIST data len   Train {len(train_loader)}    val {len(val_loader)}")
+
+    else:
+        if args.dataset in ['cifar10', 'cifar100']:
+            num_classes=10 if args.dataset == 'cifar10' else 100
+            init_stride = 1
+            train_data, val_data = cifar_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
                 AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
             )
-            cae_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-CAE'),
+
+
+        elif args.dataset == 'tin':
+            num_classes, init_stride = 200, 2
+            train_data, val_data = tiny_imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200'),
                 AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
             )
-            train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
-    elif args.dataset == 'IN':
-        num_classes, init_stride = 1000, None
-        train_data, val_data = imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet'), 
-            AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
-        )
-        if args.deepaug:
-            edsr_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-EDSR'), 
+            if args.deepaug:
+                edsr_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-EDSR'),
+                    AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                )
+                cae_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-CAE'),
+                    AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                )
+                train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
+        elif args.dataset == 'IN':
+            num_classes, init_stride = 1000, None
+            train_data, val_data = imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet'), 
                 AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
             )
-            cae_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-CAE'), 
-                AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
-            )
-            train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
+            if args.deepaug:
+                edsr_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-EDSR'), 
+                    AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                )
+                cae_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-CAE'), 
+                    AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                )
+                train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
+    
+            
+        train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
+        val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
+
     if args.ddp:
         train_sampler = torch.utils.data.distributed.DistributedSampler(train_data)
     else:
         train_sampler = None
-    train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
-    val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
-
+    
     # model:
     if args.dataset == 'IN':
         if args.model == 'WRN40':

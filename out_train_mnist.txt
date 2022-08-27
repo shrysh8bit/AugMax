@@ -1,0 +1,20 @@
+dataset MNIST     img size 32
+loss str Lambda10.0
+attack str fat-1-untargeted-10-0.1
+saving to ./runs/augmax_training/AugMax_results/augmax_training/MNIST/ResNeXt29_DuBIN/fat-1-untargeted-10-0.1_Lambda10.0_e200-b96_sgd-lr0.1-m0.9-wd0.0005_cos
+Running on rank 0.
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=3, batch_size=96, data_root_path='./data', dataset='MNIST', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='0', lr=0.1, mixture_depth=-1, mixture_width=3, model='ResNeXt29', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/augmax_training/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
+==> Preparing data..MNIST
+MNIST data len   Train 625    val 105
+Traceback (most recent call last):
+  File "augmax_training_ddp_mnist.py", line 399, in <module>
+    train(0, 0)
+  File "augmax_training_ddp_mnist.py", line 300, in train
+    imgs_augmax_1, _, _  = attacker.attack(augmax_model, model, images_tuple, labels=labels, device=device)
+  File "/home/mt1/21CS60D06/MTP/wkg_code/AugMax/utils/attacks.py", line 140, in attack
+    x_adv = augmax_model(xs, m_adv , q_adv)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mt1/21CS60D06/MTP/wkg_code/AugMax/augmax_modules/augmax.py", line 91, in forward
+    m = m.view((N,1,1,1)).expand_as(x_ori)
+RuntimeError: expand(torch.cuda.FloatTensor{[28, 1, 1, 1]}, size=[28, 28]): the number of sizes provided (2) must be greater or equal to the number of dimensions in the tensor (4)
