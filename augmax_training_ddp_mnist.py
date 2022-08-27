@@ -215,6 +215,7 @@ def train(gpu_id, ngpus_per_node):
         train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
         val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
 
+    print(f"MNIST data loaders complete")
     if args.ddp:
         train_sampler = torch.utils.data.distributed.DistributedSampler(train_data)
     else:

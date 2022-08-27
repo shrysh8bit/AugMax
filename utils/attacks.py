@@ -53,6 +53,8 @@ class AugMaxAttack():
 		mixture_width = len(xs) - 1
 		N = xs[0].size()[0]
 
+		print(f"augmax attack -> xs shape  {xs.shape}")
+
 		# initialize m_adv:
 		m_adv = torch.rand(N).to(device) # random initialize in [0,1)
 		m_adv = torch.clamp(m_adv, 0, 1) # clamp to range [0,1)
@@ -127,6 +129,7 @@ class FriendlyAugMaxAttack():
 		# 
 		mixture_width = len(xs) - 1
 		N = xs[0].size()[0]
+		print(f"friendly augmax attack -> xs len  {len(xs)}   xs[0] shape {xs[0].shape} ")
 
 		# initialize m_adv:
 		m_adv = torch.rand(N).to(device) # random initialize in [0,1)
