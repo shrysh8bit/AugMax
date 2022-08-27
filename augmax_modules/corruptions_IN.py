@@ -8,9 +8,9 @@ from PIL import Image
 import skimage as sk
 from skimage.filters import gaussian
 from io import BytesIO
-from wand.image import Image as WandImage
-from wand.api import library as wandlibrary
-import wand.color as WandColor
+# from wand.image import Image as WandImage
+# from wand.api import library as wandlibrary
+# import wand.color as WandColor
 import ctypes
 from PIL import Image as PILImage
 import cv2
@@ -45,16 +45,16 @@ def disk(radius, alias_blur=0.1, dtype=np.float32):
 
 
 # Tell Python about the C method
-wandlibrary.MagickMotionBlurImage.argtypes = (ctypes.c_void_p,  # wand
-                                              ctypes.c_double,  # radius
-                                              ctypes.c_double,  # sigma
-                                              ctypes.c_double)  # angle
+# wandlibrary.MagickMotionBlurImage.argtypes = (ctypes.c_void_p,  # wand
+#                                               ctypes.c_double,  # radius
+#                                               ctypes.c_double,  # sigma
+#                                               ctypes.c_double)  # angle
 
 
-# Extend wand.image.Image class to include method signature
-class MotionImage(WandImage):
-    def motion_blur(self, radius=0.0, sigma=0.0, angle=0.0):
-        wandlibrary.MagickMotionBlurImage(self.wand, radius, sigma, angle)
+# # Extend wand.image.Image class to include method signature
+# class MotionImage(WandImage):
+#     def motion_blur(self, radius=0.0, sigma=0.0, angle=0.0):
+#         wandlibrary.MagickMotionBlurImage(self.wand, radius, sigma, angle)
 
 
 # modification of https://github.com/FLHerne/mapgen/blob/master/diamondsquare.py
