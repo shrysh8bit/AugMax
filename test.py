@@ -75,15 +75,15 @@ else:
 model = torch.nn.DataParallel(model)
 
 # load model:
-print(f"Aug max results save loc {args.save_root_path}")
-print(f"Best sa path save loc {args.ckpt_path}")
+# print(f"Aug max results save loc {args.save_root_path}")
+# print(f"Best sa path save loc {args.ckpt_path}")
 ckpt = torch.load(os.path.join(args.save_root_path, 'AugMax_results', args.model, args.ckpt_path, 'best_SA.pth'))
 # print(f"args.save_root_path {args.save_root_path 'AugMax_results', args.ckpt_path, 'best_SA.pth')}")
 print(f"ckpt load loc {os.path.join(args.save_root_path, 'AugMax_results', args.model, args.ckpt_path, 'best_SA.pth')}")
 model.load_state_dict(ckpt)        
 
 # log file:
-fp = open(os.path.join(args.save_root_path, 'AugMax_results', args.ckpt_path, 'test_results.txt'), 'a+')
+fp = open(os.path.join(args.save_root_path, 'AugMax_results',args.model, args.ckpt_path, 'test_results.txt'), 'a+')
 
 ## Test on CIFAR:
 def val_cifar():

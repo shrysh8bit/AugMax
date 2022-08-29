@@ -22,6 +22,7 @@ from augmax_modules.augmax import AugMaxDataset, AugMaxModule, AugMixModule
 from models.cifar10.resnet_DuBIN import ResNet18_DuBIN
 from models.cifar10.wideresnet_DuBIN import WRN40_DuBIN
 from models.cifar10.resnext_DuBIN import ResNeXt29_DuBIN
+from models.MNIST import MNIST_model
 
 from models.imagenet.resnet_DuBIN import ResNet18_DuBIN as INResNet18_DuBIN
 from models.imagenet.resnet_DuBIN import ResNet50_DuBIN as INResNet50_DuBIN
@@ -49,7 +50,7 @@ parser.add_argument('--decay_epochs', '--de', default=[100,150], nargs='+', type
 parser.add_argument('--opt', default='sgd', choices=['sgd', 'adam'], help='which optimizer to use')
 parser.add_argument('--decay', default='cos', choices=['cos', 'multisteps'], help='which lr decay method to use')
 parser.add_argument('--lr', type=float, default=0.1, help='Initial learning rate.')
-parser.add_argument('--batch_size', '-b', type=int, default=120, help='Batch size for training.')
+parser.add_argument('--batch_size', '-b', type=int, default=96, help='Batch size for training.')
 parser.add_argument('--test_batch_size', '--tb', type=int, default=1000, help='Batch size for validation.')
 parser.add_argument('--momentum', '-m', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--wd', type=float, default=0.0005, help='Weight decay (L2 penalty).')
@@ -95,7 +96,9 @@ if args.num_nodes == 1: # When using multiple nodes, we assume all gpus on each 
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu 
 
 # select model_fn:
-if args.dataset == 'IN':
+if args.dataset == 'MNIST':
+    model_fn = MNIST_model
+elif args.dataset == 'IN':
     if args.model == 'ResNet18':
         model_fn = INResNet18_DuBIN
     elif args.model == 'ResNet50':
@@ -114,6 +117,7 @@ if args.opt == 'sgd':
     opt_str = 'e%d-b%d_sgd-lr%s-m%s-wd%s' % (args.epochs, args.batch_size, args.lr, args.momentum, args.wd)
 elif args.opt == 'adam':
     opt_str = 'e%d-b%d_adam-lr%s-wd%s' % (args.epochs, args.batch_size, args.lr, args.wd)
+
 if args.decay == 'cos':
     decay_str = 'cos'
 elif args.decay == 'multisteps':
@@ -168,23 +172,23 @@ def train(gpu_id, ngpus_per_node):
     if args.dataset == 'MNIST':
         num_classes = 10
         init_stride = 1
-        train_loader, val_loader = MNIST_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
+        train_data, val_data = MNIST_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
             AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity,
             batch_size = args.batch_size
         )
 
-        print(f"MNIST data len   Train {len(train_loader)}    val {len(val_loader)}")
+        print(f"MNIST data len Train {len(train_data)}    val {len(val_data)}")
 
-    else:
-        if args.dataset in ['cifar10', 'cifar100']:
+    elif args.dataset in ['cifar10', 'cifar100']:
             num_classes=10 if args.dataset == 'cifar10' else 100
             init_stride = 1
             train_data, val_data = cifar_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
                 AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
             )
 
+            print(f"cifar train data len {len(train_data)}  val data len {len(val_data)}")
 
-        elif args.dataset == 'tin':
+    elif args.dataset == 'tin':
             num_classes, init_stride = 200, 2
             train_data, val_data = tiny_imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200'),
                 AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
@@ -197,7 +201,7 @@ def train(gpu_id, ngpus_per_node):
                     AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
                 )
                 train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
-        elif args.dataset == 'IN':
+    elif args.dataset == 'IN':
             num_classes, init_stride = 1000, None
             train_data, val_data = imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet'), 
                 AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
@@ -210,19 +214,20 @@ def train(gpu_id, ngpus_per_node):
                     AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
                 )
                 train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
-    
-            
-        train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
-        val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
-
-    print(f"MNIST data loaders complete")
+     
     if args.ddp:
         train_sampler = torch.utils.data.distributed.DistributedSampler(train_data)
     else:
         train_sampler = None
     
+    train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
+    val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
+    print(f"MNIST data loaders complete")
+
     # model:
-    if args.dataset == 'IN':
+    if args.dataset == 'MNIST':
+        model = model_fn().to(device)
+    elif args.dataset == 'IN':
         if args.model == 'WRN40':
             model = model_fn(widen_factor=args.widen_factor).to(device)
         else:
@@ -232,6 +237,8 @@ def train(gpu_id, ngpus_per_node):
             model = model_fn(num_classes=num_classes, init_stride=init_stride, widen_factor=args.widen_factor).to(device)
         else:
             model = model_fn(num_classes=num_classes, init_stride=init_stride).to(device)
+    
+    
     if args.ddp:
         model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[gpu_id], broadcast_buffers=False, find_unused_parameters=False)
     else:
@@ -263,8 +270,15 @@ def train(gpu_id, ngpus_per_node):
         attacker = AugMaxAttack(steps=args.steps, alpha=args.alpha, targeted=args.targeted)
     elif args.attacker == 'fat':
         attacker = FriendlyAugMaxAttack(steps=args.steps, alpha=args.alpha, tau=args.tau, targeted=args.targeted)
+    
     augmix_model = AugMixModule(args.mixture_width, device=device)
     augmax_model = AugMaxModule(device=device)
+
+
+    # train loader testing
+    # for i, (images_tuples, labels) in enumerate(train_loader):
+    #     print(f"i {i} images_tuples {len(images_tuples)}   labels{len(labels)} ")
+
 
     # train:
     for epoch in range(start_epoch, args.epochs):
@@ -278,6 +292,9 @@ def train(gpu_id, ngpus_per_node):
         model.train()
         requires_grad_(model, True)
         accs, accs_augmax, losses = AverageMeter(), AverageMeter(), AverageMeter()
+
+        # print(f"train loader    type {type(train_loader)}   len {len(train_loader)}")
+
         for i, (images_tuples, labels) in enumerate(train_loader):
 
             # get batch:

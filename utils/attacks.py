@@ -46,6 +46,8 @@ class AugMaxAttack():
 		Return:
 			x_adv: Tensor. Adversarial images. size=(N,C,W,H)
 		'''
+
+		print(f"Aug max attk")
 		# 
 		model.eval()
 
@@ -129,7 +131,7 @@ class FriendlyAugMaxAttack():
 		# 
 		mixture_width = len(xs) - 1
 		N = xs[0].size()[0]
-		print(f"friendly augmax attack -> xs len  {len(xs)}   xs[0] shape {xs[0].shape} ")
+		print(f"friendly augmax attack -> xs len  {len(xs)}   xs[0] shape {xs[0].size()} N {N} mixture width {mixture_width}")
 
 		# initialize m_adv:
 		m_adv = torch.rand(N).to(device) # random initialize in [0,1)
@@ -155,6 +157,7 @@ class FriendlyAugMaxAttack():
 			budget = (torch.ones(len(labels)) * self.tau).to(device)
 			
 		for t in range(self.steps):
+			print (f"x adv {type(x_adv)} shape {x_adv.shape}")
 			logits_adv = model(x_adv)
 			pred = logits_adv.max(1, keepdim=True)[1]
 
