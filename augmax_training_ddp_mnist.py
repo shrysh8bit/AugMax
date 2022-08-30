@@ -87,7 +87,7 @@ elif args.dataset == 'IN':
     augmentations.IMAGE_SIZE = 224 # change imange size
 elif args.dataset == 'MNIST':
     # args.lr *= args.batch_size / 256. # linearly scaled to batch size
-    augmentations.IMAGE_SIZE = 32 # change imange size
+    augmentations.IMAGE_SIZE = 28 # change imange size
 
 print (f"dataset {args.dataset}     img size {augmentations.IMAGE_SIZE}")
 

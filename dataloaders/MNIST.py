@@ -41,7 +41,7 @@ def MNIST_dataloaders(data_dir, num_classes=10, AugMax=None, batch_size = 96, **
     if AugMax is not None:
         train_transform = transforms.Compose(
             [transforms.RandomHorizontalFlip(),
-            transforms.RandomCrop(32, padding=4)])
+            transforms.RandomCrop(28, padding=4)])
         test_transform = transforms.Compose([transforms.ToTensor()])
 
         train_data = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=train_transform)
@@ -54,7 +54,7 @@ def MNIST_dataloaders(data_dir, num_classes=10, AugMax=None, batch_size = 96, **
     else:
         train_transform = transforms.Compose(
             [transforms.RandomHorizontalFlip(),
-            transforms.RandomCrop(32, padding=4),
+            transforms.RandomCrop(28, padding=4),
             transforms.ToTensor()])
         test_transform = transforms.Compose(
             [transforms.ToTensor()])

@@ -1,33 +1,23 @@
-dataset MNIST     img size 32
+dataset MNIST     img size 28
 loss str Lambda10.0
 attack str fat-1-untargeted-10-0.1
-saving to ./runs/augmax_training/AugMax_results/augmax_training/MNIST/MNIST_model/fat-1-untargeted-10-0.1_Lambda10.0_e200-b64_sgd-lr0.1-m0.9-wd0.0005_cos
+saving to ./runs/augmax_training/AugMax_results/augmax_training/MNIST/MNIST_model/fat-1-untargeted-10-0.1_Lambda10.0_e200-b100_sgd-lr0.1-m0.9-wd0.0005_cos
 Running on rank 0.
-Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=3, batch_size=64, data_root_path='./data', dataset='MNIST', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='0', lr=0.1, mixture_depth=-1, mixture_width=3, model='ResNeXt29', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/augmax_training/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=3, batch_size=100, data_root_path='./data', dataset='MNIST', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='0', lr=0.1, mixture_depth=-1, mixture_width=3, model='ResNeXt29', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/augmax_training/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
 ==> Loading data..MNIST
 MNIST data len Train 60000    val 10000
 MNIST data loaders complete
-friendly augmax attack -> xs len  4   xs[0] shape torch.Size([64, 1, 32, 32]) N 64 mixture width 3
-x adv <class 'torch.Tensor'> shape torch.Size([64, 1, 32, 32])
-Traceback (most recent call last):
-  File "augmax_training_ddp_mnist.py", line 417, in <module>
-    train(0, 0)
-  File "augmax_training_ddp_mnist.py", line 318, in train
-    imgs_augmax_1, _, _  = attacker.attack(augmax_model, model, images_tuple, labels=labels, device=device)
-  File "/home/mt1/21CS60D06/MTP/wkg_code/AugMax/utils/attacks.py", line 161, in attack
-    logits_adv = model(x_adv)
-  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 165, in forward
-    return self.module(*inputs[0], **kwargs[0])
-  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/mt1/21CS60D06/MTP/wkg_code/AugMax/models/MNIST.py", line 24, in forward
-    x = self.fc1(x)
-  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
-    result = self.forward(*input, **kwargs)
-  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 94, in forward
-    return F.linear(input, self.weight, self.bias)
-  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/functional.py", line 1753, in linear
-    return torch._C._nn.linear(input, weight, bias)
-RuntimeError: mat1 dim 1 must match mat2 dim 0
+Epoch 0-0 | Train | Loss: 2.2987 (2.2973, 0.0015), SA: 0.1400, RA: 0.1400
+Epoch 0-50 | Train | Loss: 2.2194 (1.9078, 0.1470), SA: 0.2402, RA: 0.1804
+Epoch 0-100 | Train | Loss: 2.1035 (1.7133, 0.2101), SA: 0.3490, RA: 0.2709
+Epoch 0-150 | Train | Loss: 2.0109 (1.4173, 0.2889), SA: 0.4205, RA: 0.3336
+Epoch 0-200 | Train | Loss: 1.9465 (1.4110, 0.3743), SA: 0.4677, RA: 0.3754
+Epoch 0-250 | Train | Loss: 1.8947 (1.2795, 0.4643), SA: 0.5047, RA: 0.4111
+Epoch 0-300 | Train | Loss: 1.8566 (1.3280, 0.2982), SA: 0.5310, RA: 0.4383
+Epoch 0-350 | Train | Loss: 1.8222 (1.2091, 0.4154), SA: 0.5521, RA: 0.4590
+Epoch 0-400 | Train | Loss: 1.7973 (1.0526, 0.4010), SA: 0.5688, RA: 0.4748
+Epoch 0-450 | Train | Loss: 1.7785 (1.1865, 0.4235), SA: 0.5806, RA: 0.4858
+Epoch 0-500 | Train | Loss: 1.7638 (1.2347, 0.4078), SA: 0.5907, RA: 0.4942
+Epoch 0-550 | Train | Loss: 1.7492 (1.1304, 0.4833), SA: 0.6000, RA: 0.5032
+False
+Epoch 0 | Validation | Time: 40.4857 | lr: 0.1 | SA: 0.8388
