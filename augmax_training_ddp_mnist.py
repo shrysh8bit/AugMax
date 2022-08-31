@@ -55,9 +55,9 @@ parser.add_argument('--test_batch_size', '--tb', type=int, default=1000, help='B
 parser.add_argument('--momentum', '-m', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--wd', type=float, default=0.0005, help='Weight decay (L2 penalty).')
 # AugMix options
-parser.add_argument('--mixture_width', default=3, help='Number of augmentation chains to mix per augmented example')
-parser.add_argument('--mixture_depth', default=-1, help='Depth of augmentation chains. -1 denotes stochastic depth in [1, 3]')
-parser.add_argument('--aug_severity', default=3, help='Severity of base augmentation operators')
+parser.add_argument('--mixture_width', default=1, help='Number of augmentation chains to mix per augmented example')
+parser.add_argument('--mixture_depth', default=1, help='Depth of augmentation chains. -1 denotes stochastic depth in [1, 3]')
+parser.add_argument('--aug_severity', default=1, help='Severity of base augmentation operators')
 # augmax parameters:
 parser.add_argument('--attacker', default='fat', choices=['pgd', 'fat'], help='How to solve the inner maximization problem.')
 parser.add_argument('--targeted', action='store_true', help='If true, targeted attack')
@@ -87,7 +87,7 @@ elif args.dataset == 'IN':
     augmentations.IMAGE_SIZE = 224 # change imange size
 elif args.dataset == 'MNIST':
     # args.lr *= args.batch_size / 256. # linearly scaled to batch size
-    augmentations.IMAGE_SIZE = 28 # change imange size
+    augmentations.IMAGE_SIZE = 28 # change image size
 
 print (f"dataset {args.dataset}     img size {augmentations.IMAGE_SIZE}")
 

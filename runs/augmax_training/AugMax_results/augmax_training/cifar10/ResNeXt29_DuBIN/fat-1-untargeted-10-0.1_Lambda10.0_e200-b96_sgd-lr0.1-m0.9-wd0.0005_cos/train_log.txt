@@ -79,3 +79,4 @@ Epoch 77 | Validation | Time: 3052.5367 | lr: 0.0676737421889629 | SA: 0.8763
 Epoch 78 | Validation | Time: 3055.4317 | lr: 0.06693689601226462 | SA: 0.8880
 Epoch 79 | Validation | Time: 3052.8149 | lr: 0.06619587090990751 | SA: 0.8914
 Epoch 80 | Validation | Time: 3054.4777 | lr: 0.06545084971874741 | SA: 0.8744
+Epoch 0 | Validation | Time: 3075.6062 | lr: 0.1 | SA: 0.2501
