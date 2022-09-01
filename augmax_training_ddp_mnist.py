@@ -156,7 +156,9 @@ def train(gpu_id, ngpus_per_node):
     if gpu_id == 0:
         print(args)
         print(f"2. in gpu id == 0")
+
     # Initializes ddp:
+    print (f"ddp {args.ddp}")
     if args.ddp:
         setup(rank, ngpus_per_node)
 
@@ -310,10 +312,10 @@ def train(gpu_id, ngpus_per_node):
 
         # print(f"train loader    type {type(train_loader)}   len {len(train_loader)}")
 
-        print(f"    start enumeration over train_loader")
+        # print(f"    start enumeration over train_loader")
         for i, (images_tuples, labels) in enumerate(train_loader):
             
-            print(f"    In train loader", flush=True)
+            # print(f"    In train loader", flush=True)
             # print(f"    images_tuples len {len(images_tuples)}  len[0] {len(images_tuples[0])} len[1] {len(images_tuples[1])}", flush=True)
             # print(f"    images_tuples[0][0] == images_tuples[0][1]  {images_tuples[0][0] == images_tuples[0][1]} ", flush = True)
             
@@ -334,31 +336,35 @@ def train(gpu_id, ngpus_per_node):
             if 'DuBIN' in model_fn.__name__:
                 model.apply(lambda m: setattr(m, 'route', 'A')) # use auxilary BN for AugMax images
 
-            print(f"15. Start generation of augmax images {i}")
+            # print(f"15. Start generation of augmax images {i}")
             # generate and forward augmax images:
             with ctx_noparamgrad_and_eval(model):
                 # generate augmax images:
-                print(f"    args.targeted  {args.targeted}", flush = True)
+                # print(f"    args.targeted  {args.targeted}", flush = True)
                 if args.targeted:
                     targets = torch.fmod(labels + torch.randint(low=1, high=num_classes, size=labels.size()).to(device), num_classes)
                     imgs_augmax_1, _, _ = attacker.attack(augmax_model, model, images_tuple, labels=labels, targets=targets, device=device)
                 else:
                     imgs_augmax_1, _, _  = attacker.attack(augmax_model, model, images_tuple, labels=labels, device=device)
+            # print(f"16. imgs_augmax_1   {type(imgs_augmax_1)}  {imgs_augmax_1.shape}")
             # augmax image forward:
             logits_augmax_1 = model(imgs_augmax_1.detach())
 
-
+            # print('17. DuBIN')
             # switch to BN-M:
             if 'DuBIN' in model_fn.__name__:
                 model.apply(lambda m: setattr(m, 'route', 'M')) # use main BN for normal images
 
+            # print('18. Augmix images')
             # generate augmix images:
             imgs_augmix_1 = augmix_model(images_tuple_2)
             logits_augmix_1 = model(imgs_augmix_1.detach())
 
+            # print('19. logits for clean images')
             # logits for clean imgs:
             logits = model(images_tuple[0])
 
+            # print('20. loss')
             # loss:
             loss_clean = F.cross_entropy(logits, labels)
             p_clean, p_aug1, p_aug2 = F.softmax(logits, dim=1), F.softmax(logits_augmax_1, dim=1), F.softmax(logits_augmix_1, dim=1)

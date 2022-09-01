@@ -44,7 +44,7 @@ def MNIST_dataloaders(data_dir, num_classes=10, AugMax=None, batch_size = 96, **
             mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'])
         
         clean_data = AugMax(clean_data, test_transform, 
-            mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'])
+            mixture_width=1, mixture_depth=0, aug_severity=AugMax_args['aug_severity'])
 
         print(f"7. type of augmax data {type(augmax_data)}")
 

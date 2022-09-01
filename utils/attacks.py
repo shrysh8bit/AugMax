@@ -126,43 +126,44 @@ class FriendlyAugMaxAttack():
 			x_adv: Tensor. Adversarial images. size=(N,C,W,H)
 		'''
 		# 
-		print(f"	15.1 In fat (friendly augmax attk) module")
+		# print(f"	15.1 In fat (friendly augmax attk) module")
 		model.eval() # Parse by value (everything is parsed). Module is immutable variable; the original one won't be changed by this function. http://scipy-lectures.org/intro/language/functions.html#passing-by-value
 
 		# 
-		print(f"	mixture_width + 1 == len(xs) {len(xs)}")
+		# print(f"	mixture_width + 1 == len(xs) {len(xs)}")
 		mixture_width = len(xs) - 1
 
 		N = xs[0].size()[0]
-		print(f"	friendly augmax attack -> xs[0] shape {xs[0].shape} N {N} mixture width {mixture_width}")
+		# print(f"	friendly augmax attack -> xs[0] shape {xs[0].shape} N {N} mixture width {mixture_width}")
 
 		# initialize m_adv:
 		m_adv = torch.rand(N).to(device) # random initialize in [0,1)
 		m_adv = torch.clamp(m_adv, 0, 1) # clamp to range [0,1)
 		m_adv.requires_grad=True
-		print(f"	m_adv {m_adv.shape}  type {type(m_adv)}")
+		# print(f"	m_adv {m_adv.shape}  type {type(m_adv)}")
 
 		# initialize ws_adv:
 		q_adv = torch.rand((N,mixture_width), requires_grad=True).to(device) # random initialize
-		print(f"	q_adv {q_adv.shape}  type {type(q_adv)}")
+		# print(f"	q_adv {q_adv.shape}  type {type(q_adv)}")
 
 		# initialize x_adv
 		x_adv = augmax_model(xs, m_adv , q_adv)
-		print(f"	x_adv {x_adv.shape}  type {type(x_adv)}")
+		# print(f"	x_adv {x_adv.shape}  type {type(x_adv)}")
 
 		# attack step size
 		if random_level:
 			alpha = self.alpha * np.random.choice([1,0.5,0.2,0.1])
 		else:
 			alpha = self.alpha
-		print(f"	random lvl {random_level}, aplha {alpha}")
+		# print(f"	random lvl {random_level}, aplha {alpha}")
 
 		# intialize counter
 		if self.targeted:
 			budget = (torch.ones(len(targets)) * self.tau).to(device)
 		else:
 			budget = (torch.ones(len(labels)) * self.tau).to(device)
-			
+		# print(f"budget {type(budget)}  {budget}")
+
 		for t in range(self.steps):
 			# print (f"x adv {type(x_adv)} shape {x_adv.shape}")
 			logits_adv = model(x_adv)
