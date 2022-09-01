@@ -32,6 +32,7 @@ def int_parameter(level, maxval):
   Returns:
     An int that results from scaling `maxval` according to `level`.
   """
+  print("in augmentations")
   return int(level * maxval / 10)
 
 

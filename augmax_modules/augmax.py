@@ -49,6 +49,8 @@ class AugMaxDataset(torch.utils.data.Dataset):
 		self.aug_fn = aug_fn
 
 	def __getitem__(self, i):
+		print('test in augmaxdataset')
+		# print(f"{a}")  
 		x, y = self.dataset[i]
 
 		img_tuples = []
@@ -77,6 +79,7 @@ class AugMaxModule(nn.Module):
 			m: Tensor. m.size=(N)
 			q: Tensor. q.size()=(N,3). w = softmax(q)
 		'''
+		print('test in augmax module')
 		
 		x_ori = xs[0]
 		w = torch.nn.functional.softmax(q, dim=1) # w.size()=(N,3)
@@ -109,7 +112,8 @@ class AugMixModule(nn.Module):
 			xs: tuple of Tensors. len(x)=3. xs = (x_ori, x_aug1, x_aug2, x_aug3). x_ori.size()=(N,W,H,C)
 		'''
 		# mixture_width = len(xs) - 1
-
+		print(f"13.1 in Augmix module ")
+		# print(f"	xs type: {type(xs)}  len: {len(xs)}  xs[0] {xs[0]}")
 		x_ori = xs[0]
 		N = x_ori.size()[0]
 

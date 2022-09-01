@@ -42,7 +42,7 @@ parser.add_argument('--num_workers', '--cpus', default=16, type=int)
 # dataset:
 parser.add_argument('--dataset', '--ds', default='MNIST', choices=['cifar10', 'cifar100', 'tin', 'IN', 'MNIST'], help='which dataset to use')
 parser.add_argument('--data_root_path', '--drp', help='Where you save all your datasets.')
-parser.add_argument('--model', '--md', default='WRN40', choices=['ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29'], help='which model to use')
+parser.add_argument('--model', '--md', default='MNIST', choices=['MNIST','ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # Optimization options
 parser.add_argument('--epochs', '-e', type=int, default=200, help='Number of epochs to train.')
@@ -151,11 +151,11 @@ def train(gpu_id, ngpus_per_node):
     # get globale rank (thread id):
     rank = args.node_id * ngpus_per_node + gpu_id
 
-    print(f"Running on rank {rank}.")
+    print(f"1. Running on rank {rank}.")
 
     if gpu_id == 0:
         print(args)
-
+        print(f"2. in gpu id == 0")
     # Initializes ddp:
     if args.ddp:
         setup(rank, ngpus_per_node)
@@ -167,9 +167,11 @@ def train(gpu_id, ngpus_per_node):
     # get batch size:
     train_batch_size = args.batch_size if not args.ddp else int(args.batch_size/ngpus_per_node/args.num_nodes)
     num_workers = args.num_workers if not args.ddp else int((args.num_workers+ngpus_per_node)/ngpus_per_node)
+    print(f"3. train batch size {train_batch_size}   num workers {num_workers}")
 
     # data loader:
     if args.dataset == 'MNIST':
+        print(f"4. MNIST data loader")
         num_classes = 10
         init_stride = 1
         train_data, val_data = MNIST_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
@@ -177,9 +179,10 @@ def train(gpu_id, ngpus_per_node):
             batch_size = args.batch_size
         )
 
-        print(f"MNIST data len Train {len(train_data)}    val {len(val_data)}")
+        print(f"8. in main fn -> MNIST data len Train {len(train_data)}   & val {len(val_data)}")
 
     elif args.dataset in ['cifar10', 'cifar100']:
+            print(f"4. cifar data loader")
             num_classes=10 if args.dataset == 'cifar10' else 100
             init_stride = 1
             train_data, val_data = cifar_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
@@ -220,9 +223,11 @@ def train(gpu_id, ngpus_per_node):
     else:
         train_sampler = None
     
+    print(f"9. Starting dataloader")
+    print(f"9. batch size train {train_batch_size}     test {args.test_batch_size}")
     train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
     val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
-    print(f"MNIST data loaders complete")
+    print(f"10. data loaders complete")
 
     # model:
     if args.dataset == 'MNIST':
@@ -266,13 +271,22 @@ def train(gpu_id, ngpus_per_node):
         training_loss, val_SA = [], []
 
     # attacker
+
     if args.attacker == 'pgd':
+        print('11. Creating attack class pgd')
         attacker = AugMaxAttack(steps=args.steps, alpha=args.alpha, targeted=args.targeted)
     elif args.attacker == 'fat':
+        print('11. Creating attack class fat')
         attacker = FriendlyAugMaxAttack(steps=args.steps, alpha=args.alpha, tau=args.tau, targeted=args.targeted)
-    
+    print (f"   Temp attacker {type(attacker)}")
+    print('12. End of attk class')
+
+    print(f"13. Augmix module start")
     augmix_model = AugMixModule(args.mixture_width, device=device)
+    print(f'augmix model {type(augmix_model)} ')
+
     augmax_model = AugMaxModule(device=device)
+    print(f"    Augmix augmax module create stop")
 
 
     # train loader testing
@@ -282,6 +296,7 @@ def train(gpu_id, ngpus_per_node):
 
     # train:
     for epoch in range(start_epoch, args.epochs):
+        print(f"14. Start trg epoch num {epoch}")
         # reset sampler when using ddp:
         if args.ddp:
             train_sampler.set_epoch(epoch)
@@ -295,7 +310,18 @@ def train(gpu_id, ngpus_per_node):
 
         # print(f"train loader    type {type(train_loader)}   len {len(train_loader)}")
 
+        print(f"    start enumeration over train_loader")
         for i, (images_tuples, labels) in enumerate(train_loader):
+            
+            print(f"    In train loader", flush=True)
+            # print(f"    images_tuples len {len(images_tuples)}  len[0] {len(images_tuples[0])} len[1] {len(images_tuples[1])}", flush=True)
+            # print(f"    images_tuples[0][0] == images_tuples[0][1]  {images_tuples[0][0] == images_tuples[0][1]} ", flush = True)
+            
+            # print(f"    images_tuples len[0][0] {len(images_tuples[0][0])}  len[0][1] {len(images_tuples[0][1])}")
+            # print(f"    images_tuples[0][0] {images_tuples[0][0].shape}  [0][1] {images_tuples[0][1].shape}")
+            # print(f"    images_tuples len[1][0] {len(images_tuples[1][0])}  len[1][1] {len(images_tuples[1][1])}")
+            # print(f'    data has not been augmented, but contains a tuple of size 2, each element is another tuple of size 2,')
+            # print(f"    every such tuple is a tensor of shape [batch_size, 1, 28, 28], 4 copies of the same image")
 
             # get batch:
             images_tuple = images_tuples[0]
@@ -308,9 +334,11 @@ def train(gpu_id, ngpus_per_node):
             if 'DuBIN' in model_fn.__name__:
                 model.apply(lambda m: setattr(m, 'route', 'A')) # use auxilary BN for AugMax images
 
+            print(f"15. Start generation of augmax images {i}")
             # generate and forward augmax images:
             with ctx_noparamgrad_and_eval(model):
                 # generate augmax images:
+                print(f"    args.targeted  {args.targeted}", flush = True)
                 if args.targeted:
                     targets = torch.fmod(labels + torch.randint(low=1, high=num_classes, size=labels.size()).to(device), num_classes)
                     imgs_augmax_1, _, _ = attacker.attack(augmax_model, model, images_tuple, labels=labels, targets=targets, device=device)

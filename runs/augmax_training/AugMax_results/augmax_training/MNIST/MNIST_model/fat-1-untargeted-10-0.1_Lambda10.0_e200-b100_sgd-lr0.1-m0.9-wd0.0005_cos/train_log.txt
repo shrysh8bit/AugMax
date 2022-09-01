@@ -207,3 +207,7 @@ Epoch 199 | Validation | Time: 41.1457 | lr: 6.168375916970619e-06 | SA: 0.0980
 Epoch 0 | Validation | Time: 9.6685 | lr: 0.1 | SA: 0.5516
 Epoch 1 | Validation | Time: 8.9423 | lr: 0.09999383162408304 | SA: 0.7175
 Epoch 2 | Validation | Time: 9.1124 | lr: 0.09997532801828658 | SA: 0.6502
+Epoch 0 | Validation | Time: 72.1419 | lr: 0.1 | SA: 0.7927
+Epoch 0 | Validation | Time: 71.4729 | lr: 0.1 | SA: 0.7662
+Epoch 0 | Validation | Time: 72.1198 | lr: 0.1 | SA: 0.8011
+Epoch 0 | Validation | Time: 71.6257 | lr: 0.1 | SA: 0.7771

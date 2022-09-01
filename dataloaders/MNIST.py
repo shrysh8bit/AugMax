@@ -20,36 +20,38 @@ import numpy as np
 from PIL import Image
 
 def MNIST_dataloaders(data_dir, num_classes=10, AugMax=None, batch_size = 96, **AugMax_args):
-    print('==> Loading data..MNIST')
+    print('5. Loading dataset MNIST')
     
-    # transform=transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.1307,), (0.3081,))])
-
-    # train_data = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=transform)
-    # val_set = torchvision.datasets.MNIST(root='./data/', train=False, download=True, transform=transform)
-
-    # transform=transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.1307,), (0.3081,))])
-    # MNIST = datasets.MNIST
-
-    # trainset = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=transform)
-    # valset = torchvision.datasets.MNIST(root='./data/', train=False, download=True, transform=transform)
-
-
-    # print(f"train loader mnist len {len(trainloader)}")
-    # assert num_classes in [10, 100]
-    # CIFAR = datasets.CIFAR10 if num_classes == 10 else datasets.CIFAR100
-
     if AugMax is not None:
-        train_transform = transforms.Compose(
+        all_train_transform = transforms.Compose(
             [transforms.RandomHorizontalFlip(),
             transforms.RandomCrop(28, padding=4)])
         test_transform = transforms.Compose([transforms.ToTensor()])
 
-        train_data = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=train_transform)
+        all_train_data = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=all_train_transform)
         test_data = torchvision.datasets.MNIST(root='./data/', train=False, download=True, transform=test_transform)
         
-        train_data = AugMax(train_data, test_transform, 
-            mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'], 
-        )
+        train_aug_indices = np.load('indices/mnist_train_aug_indices.npy')
+        train_non_aug_indices = np.load('indices/mnist_train_non_aug_indices.npy')
+
+        clean_data = torch.utils.data.Subset(all_train_data, train_non_aug_indices)
+        augmax_data =torch.utils.data.Subset(all_train_data, train_aug_indices)
+
+        print(f"6. Len of data: clean {len(clean_data)}    augmax {len(augmax_data)}")
+        print(f"6. type of augmax data {type(augmax_data)}")
+
+        augmax_data = AugMax(augmax_data, test_transform, 
+            mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'])
+        
+        clean_data = AugMax(clean_data, test_transform, 
+            mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'])
+
+        print(f"7. type of augmax data {type(augmax_data)}")
+
+        train_data = torch.utils.data.ConcatDataset([augmax_data, clean_data])
+
+        print(f"7. Data loading complete")
+
 
     else:
         train_transform = transforms.Compose(
