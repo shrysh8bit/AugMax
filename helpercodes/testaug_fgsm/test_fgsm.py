@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 from PIL import Image
-from subsetpack.fgsm import FGSM
+from fgsm import FGSM
 from torch.utils.data import Dataset
 import torch.backends.cudnn as cudnn
 from skimage.util import random_noise
