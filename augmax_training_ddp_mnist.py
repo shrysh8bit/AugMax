@@ -298,7 +298,7 @@ def train(gpu_id, ngpus_per_node):
 
     # train:
     for epoch in range(start_epoch, args.epochs):
-        print(f"14. Start trg epoch num {epoch}")
+        # print(f"14. Start trg epoch num {epoch}")
         # reset sampler when using ddp:
         if args.ddp:
             train_sampler.set_epoch(epoch)
