@@ -385,7 +385,7 @@ def train(gpu_id, ngpus_per_node):
             accs_augmax.append((logits_augmax_1.argmax(1) == labels).float().mean().item())
             losses.append(loss.item())
 
-            if i % 50 == 0:
+            if i % 20 == 0:
                 train_str = 'Epoch %d-%d | Train | Loss: %.4f (%.4f, %.4f), SA: %.4f, RA: %.4f' % (epoch, i, losses.avg, loss_clean, loss_cst, accs.avg, accs_augmax.avg)
                 if gpu_id == 0:
                     print(train_str)

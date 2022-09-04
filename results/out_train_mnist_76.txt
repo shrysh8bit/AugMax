@@ -197,3 +197,429 @@ Epoch 56 | Validation | Time: 27.2626 | lr: 0.0818711994874345 | SA: 0.9331
 Epoch 57-0 | Train | Loss: 0.6328 (0.3135, 0.3193), SA: 0.8968, RA: 0.8920
 False
 Epoch 57 | Validation | Time: 27.4909 | lr: 0.08126213281678528 | SA: 0.9256
+Epoch 58-0 | Train | Loss: 0.6747 (0.3377, 0.3370), SA: 0.8933, RA: 0.8895
+False
+Epoch 58 | Validation | Time: 27.5523 | lr: 0.08064535268264884 | SA: 0.9337
+Epoch 59-0 | Train | Loss: 0.6844 (0.3415, 0.3429), SA: 0.8920, RA: 0.8918
+False
+Epoch 59 | Validation | Time: 27.5210 | lr: 0.08002101126629421 | SA: 0.9471
+Epoch 60-0 | Train | Loss: 0.6361 (0.3221, 0.3140), SA: 0.9013, RA: 0.9043
+False
+Epoch 60 | Validation | Time: 27.4586 | lr: 0.07938926261462367 | SA: 0.9411
+Epoch 61-0 | Train | Loss: 0.6383 (0.3132, 0.3251), SA: 0.9025, RA: 0.9000
+False
+Epoch 61 | Validation | Time: 27.5334 | lr: 0.07875026260216395 | SA: 0.9419
+Epoch 62-0 | Train | Loss: 0.6486 (0.3128, 0.3359), SA: 0.9023, RA: 0.9018
+False
+Epoch 62 | Validation | Time: 27.4745 | lr: 0.07810416889260656 | SA: 0.9433
+Epoch 63-0 | Train | Loss: 0.6880 (0.3283, 0.3597), SA: 0.9005, RA: 0.8933
+False
+Epoch 63 | Validation | Time: 27.9144 | lr: 0.07745114089990661 | SA: 0.9320
+Epoch 64-0 | Train | Loss: 0.6443 (0.3136, 0.3307), SA: 0.8930, RA: 0.8963
+False
+Epoch 64 | Validation | Time: 27.1963 | lr: 0.07679133974894985 | SA: 0.9385
+Epoch 65-0 | Train | Loss: 0.6346 (0.3036, 0.3310), SA: 0.9050, RA: 0.8973
+False
+Epoch 65 | Validation | Time: 27.2779 | lr: 0.07612492823579746 | SA: 0.9315
+Epoch 66-0 | Train | Loss: 0.6255 (0.2966, 0.3288), SA: 0.8965, RA: 0.8923
+False
+Epoch 66 | Validation | Time: 27.2481 | lr: 0.07545207078751859 | SA: 0.9378
+Epoch 67-0 | Train | Loss: 0.6373 (0.3139, 0.3234), SA: 0.9100, RA: 0.9033
+False
+Epoch 67 | Validation | Time: 27.5433 | lr: 0.0747729334216204 | SA: 0.9420
+Epoch 68-0 | Train | Loss: 0.6372 (0.3176, 0.3196), SA: 0.9045, RA: 0.9020
+False
+Epoch 68 | Validation | Time: 27.2760 | lr: 0.07408768370508578 | SA: 0.9442
+Epoch 69-0 | Train | Loss: 0.6640 (0.3163, 0.3477), SA: 0.8988, RA: 0.8938
+False
+Epoch 69 | Validation | Time: 27.5126 | lr: 0.0733964907130287 | SA: 0.9445
+Epoch 70-0 | Train | Loss: 0.6472 (0.3199, 0.3273), SA: 0.9000, RA: 0.9023
+False
+Epoch 70 | Validation | Time: 27.2132 | lr: 0.07269952498697736 | SA: 0.9376
+Epoch 71-0 | Train | Loss: 0.6485 (0.3263, 0.3222), SA: 0.9003, RA: 0.8980
+False
+Epoch 71 | Validation | Time: 27.5646 | lr: 0.07199695849279578 | SA: 0.9459
+Epoch 72-0 | Train | Loss: 0.6506 (0.3086, 0.3420), SA: 0.9040, RA: 0.8990
+False
+Epoch 72 | Validation | Time: 27.4832 | lr: 0.07128896457825366 | SA: 0.9395
+Epoch 73-0 | Train | Loss: 0.6393 (0.3081, 0.3313), SA: 0.8933, RA: 0.8995
+False
+Epoch 73 | Validation | Time: 27.7488 | lr: 0.07057571793025548 | SA: 0.9484
+Epoch 74-0 | Train | Loss: 0.6146 (0.3052, 0.3094), SA: 0.9090, RA: 0.9070
+False
+Epoch 74 | Validation | Time: 27.4752 | lr: 0.06985739453173906 | SA: 0.9392
+Epoch 75-0 | Train | Loss: 0.6427 (0.3111, 0.3316), SA: 0.8968, RA: 0.9045
+False
+Epoch 75 | Validation | Time: 27.4291 | lr: 0.06913417161825453 | SA: 0.9324
+Epoch 76-0 | Train | Loss: 0.6282 (0.3015, 0.3267), SA: 0.9000, RA: 0.8943
+False
+Epoch 76 | Validation | Time: 27.2687 | lr: 0.06840622763423394 | SA: 0.9432
+Epoch 77-0 | Train | Loss: 0.6176 (0.3049, 0.3128), SA: 0.9063, RA: 0.9083
+False
+Epoch 77 | Validation | Time: 27.3258 | lr: 0.0676737421889629 | SA: 0.9429
+Epoch 78-0 | Train | Loss: 0.6163 (0.2862, 0.3301), SA: 0.9098, RA: 0.9050
+False
+Epoch 78 | Validation | Time: 27.5764 | lr: 0.06693689601226462 | SA: 0.9478
+Epoch 79-0 | Train | Loss: 0.6088 (0.2975, 0.3113), SA: 0.9105, RA: 0.9150
+False
+Epoch 79 | Validation | Time: 27.3990 | lr: 0.06619587090990751 | SA: 0.9369
+Epoch 80-0 | Train | Loss: 0.6153 (0.2891, 0.3262), SA: 0.9080, RA: 0.9015
+False
+Epoch 80 | Validation | Time: 27.6580 | lr: 0.06545084971874741 | SA: 0.9447
+Epoch 81-0 | Train | Loss: 0.6039 (0.2919, 0.3120), SA: 0.9013, RA: 0.9048
+False
+Epoch 81 | Validation | Time: 27.5919 | lr: 0.06470201626161524 | SA: 0.9440
+Epoch 82-0 | Train | Loss: 0.6206 (0.3013, 0.3193), SA: 0.9085, RA: 0.9100
+False
+Epoch 82 | Validation | Time: 27.5195 | lr: 0.06394955530196152 | SA: 0.9472
+Epoch 83-0 | Train | Loss: 0.5995 (0.2820, 0.3175), SA: 0.9135, RA: 0.9165
+False
+Epoch 83 | Validation | Time: 27.7032 | lr: 0.06319365249826868 | SA: 0.9456
+Epoch 84-0 | Train | Loss: 0.5977 (0.2883, 0.3094), SA: 0.9143, RA: 0.9113
+False
+Epoch 84 | Validation | Time: 27.5925 | lr: 0.06243449435824277 | SA: 0.9474
+Epoch 85-0 | Train | Loss: 0.6181 (0.2962, 0.3219), SA: 0.9113, RA: 0.9063
+False
+Epoch 85 | Validation | Time: 27.4427 | lr: 0.06167226819279532 | SA: 0.9494
+Epoch 86-0 | Train | Loss: 0.5816 (0.2832, 0.2985), SA: 0.9165, RA: 0.9118
+False
+Epoch 86 | Validation | Time: 27.1403 | lr: 0.06090716206982718 | SA: 0.9440
+Epoch 87-0 | Train | Loss: 0.5783 (0.2747, 0.3036), SA: 0.9143, RA: 0.9115
+False
+Epoch 87 | Validation | Time: 27.4113 | lr: 0.06013936476782568 | SA: 0.9471
+Epoch 88-0 | Train | Loss: 0.5776 (0.2797, 0.2979), SA: 0.9108, RA: 0.9103
+False
+Epoch 88 | Validation | Time: 27.5395 | lr: 0.05936906572928629 | SA: 0.9360
+Epoch 89-0 | Train | Loss: 0.5810 (0.2815, 0.2995), SA: 0.9065, RA: 0.9028
+False
+Epoch 89 | Validation | Time: 27.7225 | lr: 0.05859645501397052 | SA: 0.9439
+Epoch 90-0 | Train | Loss: 0.5677 (0.2666, 0.3012), SA: 0.9178, RA: 0.9108
+False
+Epoch 90 | Validation | Time: 27.2511 | lr: 0.05782172325201159 | SA: 0.9433
+Epoch 91-0 | Train | Loss: 0.5985 (0.2869, 0.3116), SA: 0.9048, RA: 0.9005
+False
+Epoch 91 | Validation | Time: 27.4520 | lr: 0.057045061596879186 | SA: 0.9413
+Epoch 92-0 | Train | Loss: 0.5922 (0.2981, 0.2941), SA: 0.9023, RA: 0.9053
+False
+Epoch 92 | Validation | Time: 27.2589 | lr: 0.056266661678215264 | SA: 0.9483
+Epoch 93-0 | Train | Loss: 0.5624 (0.2713, 0.2911), SA: 0.9155, RA: 0.9118
+False
+Epoch 93 | Validation | Time: 27.5672 | lr: 0.055486715554552306 | SA: 0.9503
+Epoch 94-0 | Train | Loss: 0.6114 (0.2861, 0.3253), SA: 0.9160, RA: 0.9115
+False
+Epoch 94 | Validation | Time: 27.6707 | lr: 0.05470541566592575 | SA: 0.9465
+Epoch 95-0 | Train | Loss: 0.5768 (0.2742, 0.3026), SA: 0.9183, RA: 0.9133
+False
+Epoch 95 | Validation | Time: 27.6255 | lr: 0.05392295478639229 | SA: 0.9509
+Epoch 96-0 | Train | Loss: 0.5618 (0.2721, 0.2897), SA: 0.9180, RA: 0.9168
+False
+Epoch 96 | Validation | Time: 27.3538 | lr: 0.05313952597646571 | SA: 0.9472
+Epoch 97-0 | Train | Loss: 0.5588 (0.2690, 0.2899), SA: 0.9245, RA: 0.9140
+False
+Epoch 97 | Validation | Time: 27.3705 | lr: 0.05235532253548216 | SA: 0.9455
+Epoch 98-0 | Train | Loss: 0.5906 (0.2950, 0.2956), SA: 0.9030, RA: 0.9095
+False
+Epoch 98 | Validation | Time: 27.3745 | lr: 0.051570537953906447 | SA: 0.9461
+Epoch 99-0 | Train | Loss: 0.5891 (0.2826, 0.3065), SA: 0.9110, RA: 0.9073
+False
+Epoch 99 | Validation | Time: 27.3938 | lr: 0.05078536586559106 | SA: 0.9470
+Epoch 100-0 | Train | Loss: 0.5615 (0.2595, 0.3020), SA: 0.9223, RA: 0.9178
+False
+Epoch 100 | Validation | Time: 27.6460 | lr: 0.050000000000000024 | SA: 0.9514
+Epoch 101-0 | Train | Loss: 0.5292 (0.2558, 0.2734), SA: 0.9185, RA: 0.9163
+False
+Epoch 101 | Validation | Time: 27.4676 | lr: 0.049214634134409 | SA: 0.9484
+Epoch 102-0 | Train | Loss: 0.5560 (0.2589, 0.2970), SA: 0.9210, RA: 0.9175
+False
+Epoch 102 | Validation | Time: 27.5032 | lr: 0.04842946204609361 | SA: 0.9493
+Epoch 103-0 | Train | Loss: 0.5730 (0.2729, 0.3001), SA: 0.9150, RA: 0.9093
+False
+Epoch 103 | Validation | Time: 27.3883 | lr: 0.04764467746451789 | SA: 0.9486
+Epoch 104-0 | Train | Loss: 0.5653 (0.2747, 0.2905), SA: 0.9193, RA: 0.9123
+False
+Epoch 104 | Validation | Time: 27.4488 | lr: 0.046860474023534354 | SA: 0.9492
+Epoch 105-0 | Train | Loss: 0.5480 (0.2700, 0.2780), SA: 0.9173, RA: 0.9200
+False
+Epoch 105 | Validation | Time: 27.7172 | lr: 0.04607704521360778 | SA: 0.9498
+Epoch 106-0 | Train | Loss: 0.5599 (0.2583, 0.3016), SA: 0.9138, RA: 0.9148
+False
+Epoch 106 | Validation | Time: 27.7826 | lr: 0.04529458433407431 | SA: 0.9460
+Epoch 107-0 | Train | Loss: 0.5718 (0.2738, 0.2980), SA: 0.9140, RA: 0.9088
+False
+Epoch 107 | Validation | Time: 27.6145 | lr: 0.04451328444544776 | SA: 0.9508
+Epoch 108-0 | Train | Loss: 0.5868 (0.2729, 0.3139), SA: 0.9100, RA: 0.9053
+False
+Epoch 108 | Validation | Time: 27.1802 | lr: 0.04373333832178482 | SA: 0.9526
+Epoch 109-0 | Train | Loss: 0.5252 (0.2446, 0.2806), SA: 0.9295, RA: 0.9238
+False
+Epoch 109 | Validation | Time: 27.5172 | lr: 0.0429549384031209 | SA: 0.9488
+Epoch 110-0 | Train | Loss: 0.5835 (0.2796, 0.3039), SA: 0.9143, RA: 0.9148
+False
+Epoch 110 | Validation | Time: 27.3888 | lr: 0.042178276747988484 | SA: 0.9524
+Epoch 111-0 | Train | Loss: 0.5661 (0.2659, 0.3002), SA: 0.9238, RA: 0.9173
+False
+Epoch 111 | Validation | Time: 27.7514 | lr: 0.04140354498602954 | SA: 0.9454
+Epoch 112-0 | Train | Loss: 0.5238 (0.2535, 0.2702), SA: 0.9228, RA: 0.9213
+False
+Epoch 112 | Validation | Time: 27.8009 | lr: 0.0406309342707138 | SA: 0.9572
+Epoch 113-0 | Train | Loss: 0.5430 (0.2563, 0.2867), SA: 0.9258, RA: 0.9243
+False
+Epoch 113 | Validation | Time: 27.7993 | lr: 0.03986063523217441 | SA: 0.9522
+Epoch 114-0 | Train | Loss: 0.5692 (0.2853, 0.2839), SA: 0.9160, RA: 0.9193
+False
+Epoch 114 | Validation | Time: 27.3608 | lr: 0.039092837930172916 | SA: 0.9560
+Epoch 115-0 | Train | Loss: 0.5806 (0.2823, 0.2983), SA: 0.9190, RA: 0.9128
+False
+Epoch 115 | Validation | Time: 27.3051 | lr: 0.03832773180720475 | SA: 0.9514
+Epoch 116-0 | Train | Loss: 0.5577 (0.2665, 0.2911), SA: 0.9218, RA: 0.9230
+False
+Epoch 116 | Validation | Time: 27.3845 | lr: 0.037565505641757285 | SA: 0.9511
+Epoch 117-0 | Train | Loss: 0.5476 (0.2619, 0.2858), SA: 0.9245, RA: 0.9205
+False
+Epoch 117 | Validation | Time: 27.4740 | lr: 0.03680634750173138 | SA: 0.9519
+Epoch 118-0 | Train | Loss: 0.5321 (0.2560, 0.2760), SA: 0.9245, RA: 0.9225
+False
+Epoch 118 | Validation | Time: 27.6672 | lr: 0.036050444698038565 | SA: 0.9495
+Epoch 119-0 | Train | Loss: 0.5279 (0.2603, 0.2676), SA: 0.9255, RA: 0.9243
+False
+Epoch 119 | Validation | Time: 27.2700 | lr: 0.03529798373838483 | SA: 0.9529
+Epoch 120-0 | Train | Loss: 0.5441 (0.2646, 0.2796), SA: 0.9170, RA: 0.9158
+False
+Epoch 120 | Validation | Time: 27.0801 | lr: 0.03454915028125267 | SA: 0.9541
+Epoch 121-0 | Train | Loss: 0.5559 (0.2697, 0.2862), SA: 0.9178, RA: 0.9165
+False
+Epoch 121 | Validation | Time: 27.3175 | lr: 0.03380412909009255 | SA: 0.9543
+Epoch 122-0 | Train | Loss: 0.5255 (0.2420, 0.2835), SA: 0.9290, RA: 0.9228
+False
+Epoch 122 | Validation | Time: 27.6371 | lr: 0.03306310398773545 | SA: 0.9549
+Epoch 123-0 | Train | Loss: 0.5323 (0.2483, 0.2840), SA: 0.9268, RA: 0.9180
+False
+Epoch 123 | Validation | Time: 27.3744 | lr: 0.03232625781103717 | SA: 0.9533
+Epoch 124-0 | Train | Loss: 0.5779 (0.2818, 0.2961), SA: 0.9133, RA: 0.9203
+False
+Epoch 124 | Validation | Time: 27.5158 | lr: 0.03159377236576613 | SA: 0.9524
+Epoch 125-0 | Train | Loss: 0.5441 (0.2503, 0.2938), SA: 0.9168, RA: 0.9195
+False
+Epoch 125 | Validation | Time: 27.5048 | lr: 0.030865828381745543 | SA: 0.9540
+Epoch 126-0 | Train | Loss: 0.5378 (0.2542, 0.2836), SA: 0.9160, RA: 0.9158
+False
+Epoch 126 | Validation | Time: 27.4433 | lr: 0.03014260546826098 | SA: 0.9495
+Epoch 127-0 | Train | Loss: 0.5415 (0.2533, 0.2882), SA: 0.9213, RA: 0.9205
+False
+Epoch 127 | Validation | Time: 27.7154 | lr: 0.02942428206974458 | SA: 0.9530
+Epoch 128-0 | Train | Loss: 0.5560 (0.2690, 0.2870), SA: 0.9198, RA: 0.9173
+False
+Epoch 128 | Validation | Time: 27.4166 | lr: 0.028711035421746387 | SA: 0.9559
+Epoch 129-0 | Train | Loss: 0.5414 (0.2657, 0.2757), SA: 0.9280, RA: 0.9250
+False
+Epoch 129 | Validation | Time: 27.5469 | lr: 0.02800304150720426 | SA: 0.9566
+Epoch 130-0 | Train | Loss: 0.5991 (0.2913, 0.3079), SA: 0.9160, RA: 0.9135
+False
+Epoch 130 | Validation | Time: 27.2878 | lr: 0.02730047501302268 | SA: 0.9560
+Epoch 131-0 | Train | Loss: 0.5351 (0.2621, 0.2731), SA: 0.9240, RA: 0.9195
+False
+Epoch 131 | Validation | Time: 27.4282 | lr: 0.026603509286971357 | SA: 0.9601
+Epoch 132-0 | Train | Loss: 0.5197 (0.2436, 0.2761), SA: 0.9275, RA: 0.9235
+False
+Epoch 132 | Validation | Time: 27.5119 | lr: 0.025912316294914244 | SA: 0.9535
+Epoch 133-0 | Train | Loss: 0.5507 (0.2691, 0.2816), SA: 0.9203, RA: 0.9168
+False
+Epoch 133 | Validation | Time: 27.4505 | lr: 0.025227066578379632 | SA: 0.9550
+Epoch 134-0 | Train | Loss: 0.5306 (0.2547, 0.2759), SA: 0.9265, RA: 0.9218
+False
+Epoch 134 | Validation | Time: 27.3781 | lr: 0.024547929212481445 | SA: 0.9535
+Epoch 135-0 | Train | Loss: 0.5597 (0.2716, 0.2881), SA: 0.9190, RA: 0.9165
+False
+Epoch 135 | Validation | Time: 27.6407 | lr: 0.02387507176420257 | SA: 0.9578
+Epoch 136-0 | Train | Loss: 0.5693 (0.2718, 0.2976), SA: 0.9198, RA: 0.9203
+False
+Epoch 136 | Validation | Time: 27.4874 | lr: 0.023208660251050166 | SA: 0.9526
+Epoch 137-0 | Train | Loss: 0.5120 (0.2448, 0.2673), SA: 0.9245, RA: 0.9168
+False
+Epoch 137 | Validation | Time: 27.3294 | lr: 0.022548859100093414 | SA: 0.9536
+Epoch 138-0 | Train | Loss: 0.5315 (0.2557, 0.2758), SA: 0.9220, RA: 0.9163
+False
+Epoch 138 | Validation | Time: 27.5711 | lr: 0.021895831107393474 | SA: 0.9531
+Epoch 139-0 | Train | Loss: 0.5430 (0.2659, 0.2770), SA: 0.9193, RA: 0.9183
+False
+Epoch 139 | Validation | Time: 27.4981 | lr: 0.02124973739783608 | SA: 0.9547
+Epoch 140-0 | Train | Loss: 0.5541 (0.2766, 0.2776), SA: 0.9220, RA: 0.9225
+False
+Epoch 140 | Validation | Time: 27.2639 | lr: 0.02061073738537636 | SA: 0.9555
+Epoch 141-0 | Train | Loss: 0.5310 (0.2645, 0.2664), SA: 0.9193, RA: 0.9248
+False
+Epoch 141 | Validation | Time: 27.3936 | lr: 0.019978988733705814 | SA: 0.9534
+Epoch 142-0 | Train | Loss: 0.5229 (0.2417, 0.2812), SA: 0.9260, RA: 0.9218
+False
+Epoch 142 | Validation | Time: 27.2210 | lr: 0.01935464731735118 | SA: 0.9547
+Epoch 143-0 | Train | Loss: 0.5602 (0.2711, 0.2890), SA: 0.9133, RA: 0.9203
+False
+Epoch 143 | Validation | Time: 27.3282 | lr: 0.018737867183214747 | SA: 0.9558
+Epoch 144-0 | Train | Loss: 0.5272 (0.2517, 0.2755), SA: 0.9245, RA: 0.9273
+False
+Epoch 144 | Validation | Time: 27.7124 | lr: 0.01812880051256552 | SA: 0.9535
+Epoch 145-0 | Train | Loss: 0.5189 (0.2593, 0.2597), SA: 0.9255, RA: 0.9148
+False
+Epoch 145 | Validation | Time: 27.6373 | lr: 0.017527597583490827 | SA: 0.9575
+Epoch 146-0 | Train | Loss: 0.5374 (0.2436, 0.2937), SA: 0.9278, RA: 0.9173
+False
+Epoch 146 | Validation | Time: 27.7516 | lr: 0.01693440673381742 | SA: 0.9550
+Epoch 147-0 | Train | Loss: 0.5313 (0.2580, 0.2732), SA: 0.9230, RA: 0.9183
+False
+Epoch 147 | Validation | Time: 27.5837 | lr: 0.016349374324511334 | SA: 0.9545
+Epoch 148-0 | Train | Loss: 0.5116 (0.2414, 0.2702), SA: 0.9288, RA: 0.9263
+False
+Epoch 148 | Validation | Time: 27.6251 | lr: 0.01577264470356557 | SA: 0.9542
+Epoch 149-0 | Train | Loss: 0.5317 (0.2573, 0.2744), SA: 0.9235, RA: 0.9193
+False
+Epoch 149 | Validation | Time: 27.5261 | lr: 0.01520436017038429 | SA: 0.9560
+Epoch 150-0 | Train | Loss: 0.4869 (0.2366, 0.2503), SA: 0.9275, RA: 0.9325
+False
+Epoch 150 | Validation | Time: 27.4828 | lr: 0.014644660940672632 | SA: 0.9567
+Epoch 151-0 | Train | Loss: 0.4881 (0.2148, 0.2733), SA: 0.9343, RA: 0.9245
+False
+Epoch 151 | Validation | Time: 27.8899 | lr: 0.01409368511184057 | SA: 0.9540
+Epoch 152-0 | Train | Loss: 0.5054 (0.2354, 0.2699), SA: 0.9303, RA: 0.9305
+False
+Epoch 152 | Validation | Time: 27.4420 | lr: 0.013551568628929438 | SA: 0.9559
+Epoch 153-0 | Train | Loss: 0.5145 (0.2386, 0.2759), SA: 0.9275, RA: 0.9203
+False
+Epoch 153 | Validation | Time: 27.4895 | lr: 0.013018445251069516 | SA: 0.9555
+Epoch 154-0 | Train | Loss: 0.5558 (0.2766, 0.2792), SA: 0.9160, RA: 0.9155
+False
+Epoch 154 | Validation | Time: 27.2758 | lr: 0.012494446518477026 | SA: 0.9559
+Epoch 155-0 | Train | Loss: 0.5360 (0.2658, 0.2702), SA: 0.9183, RA: 0.9183
+False
+Epoch 155 | Validation | Time: 27.6109 | lr: 0.011979701719998459 | SA: 0.9581
+Epoch 156-0 | Train | Loss: 0.5354 (0.2497, 0.2857), SA: 0.9193, RA: 0.9198
+False
+Epoch 156 | Validation | Time: 27.6520 | lr: 0.011474337861210548 | SA: 0.9573
+Epoch 157-0 | Train | Loss: 0.4857 (0.2329, 0.2529), SA: 0.9350, RA: 0.9348
+False
+Epoch 157 | Validation | Time: 27.7134 | lr: 0.010978479633083526 | SA: 0.9561
+Epoch 158-0 | Train | Loss: 0.5212 (0.2478, 0.2734), SA: 0.9205, RA: 0.9215
+False
+Epoch 158 | Validation | Time: 27.2436 | lr: 0.010492249381215483 | SA: 0.9565
+Epoch 159-0 | Train | Loss: 0.5028 (0.2472, 0.2556), SA: 0.9285, RA: 0.9283
+False
+Epoch 159 | Validation | Time: 27.2864 | lr: 0.010015767075645474 | SA: 0.9559
+Epoch 160-0 | Train | Loss: 0.5299 (0.2532, 0.2767), SA: 0.9250, RA: 0.9188
+False
+Epoch 160 | Validation | Time: 27.4844 | lr: 0.009549150281252637 | SA: 0.9573
+Epoch 161-0 | Train | Loss: 0.5027 (0.2438, 0.2589), SA: 0.9295, RA: 0.9210
+False
+Epoch 161 | Validation | Time: 27.5643 | lr: 0.00909251412874884 | SA: 0.9579
+Epoch 162-0 | Train | Loss: 0.5255 (0.2516, 0.2739), SA: 0.9315, RA: 0.9260
+False
+Epoch 162 | Validation | Time: 27.3563 | lr: 0.008645971286271918 | SA: 0.9576
+Epoch 163-0 | Train | Loss: 0.5251 (0.2599, 0.2653), SA: 0.9240, RA: 0.9225
+False
+Epoch 163 | Validation | Time: 27.4479 | lr: 0.008209631931586501 | SA: 0.9554
+Epoch 164-0 | Train | Loss: 0.5360 (0.2541, 0.2819), SA: 0.9245, RA: 0.9240
+False
+Epoch 164 | Validation | Time: 27.2250 | lr: 0.0077836037248992605 | SA: 0.9576
+Epoch 165-0 | Train | Loss: 0.5183 (0.2553, 0.2629), SA: 0.9258, RA: 0.9285
+False
+Epoch 165 | Validation | Time: 27.4650 | lr: 0.0073679917822954055 | SA: 0.9574
+Epoch 166-0 | Train | Loss: 0.5487 (0.2579, 0.2908), SA: 0.9193, RA: 0.9173
+False
+Epoch 166 | Validation | Time: 27.3288 | lr: 0.006962898649802815 | SA: 0.9570
+Epoch 167-0 | Train | Loss: 0.5180 (0.2494, 0.2687), SA: 0.9288, RA: 0.9298
+False
+Epoch 167 | Validation | Time: 27.5350 | lr: 0.006568424278090438 | SA: 0.9561
+Epoch 168-0 | Train | Loss: 0.5260 (0.2436, 0.2824), SA: 0.9235, RA: 0.9250
+False
+Epoch 168 | Validation | Time: 27.6354 | lr: 0.006184665997806824 | SA: 0.9590
+Epoch 169-0 | Train | Loss: 0.5313 (0.2478, 0.2834), SA: 0.9253, RA: 0.9273
+False
+Epoch 169 | Validation | Time: 27.3565 | lr: 0.00581171849556533 | SA: 0.9579
+Epoch 170-0 | Train | Loss: 0.4987 (0.2341, 0.2646), SA: 0.9333, RA: 0.9290
+False
+Epoch 170 | Validation | Time: 27.4966 | lr: 0.0054496737905816136 | SA: 0.9578
+Epoch 171-0 | Train | Loss: 0.5003 (0.2407, 0.2595), SA: 0.9343, RA: 0.9280
+False
+Epoch 171 | Validation | Time: 27.5549 | lr: 0.005098621211969226 | SA: 0.9561
+Epoch 172-0 | Train | Loss: 0.5224 (0.2518, 0.2705), SA: 0.9248, RA: 0.9238
+False
+Epoch 172 | Validation | Time: 27.3761 | lr: 0.004758647376699035 | SA: 0.9556
+Epoch 173-0 | Train | Loss: 0.5079 (0.2427, 0.2653), SA: 0.9275, RA: 0.9253
+False
+Epoch 173 | Validation | Time: 27.6276 | lr: 0.00442983616822775 | SA: 0.9574
+Epoch 174-0 | Train | Loss: 0.5099 (0.2550, 0.2549), SA: 0.9275, RA: 0.9233
+False
+Epoch 174 | Validation | Time: 27.5801 | lr: 0.004112268715800957 | SA: 0.9578
+Epoch 175-0 | Train | Loss: 0.4992 (0.2319, 0.2672), SA: 0.9305, RA: 0.9288
+False
+Epoch 175 | Validation | Time: 27.5838 | lr: 0.003806023374435677 | SA: 0.9583
+Epoch 176-0 | Train | Loss: 0.5067 (0.2546, 0.2522), SA: 0.9245, RA: 0.9230
+False
+Epoch 176 | Validation | Time: 27.3201 | lr: 0.003511175705587435 | SA: 0.9566
+Epoch 177-0 | Train | Loss: 0.5202 (0.2599, 0.2603), SA: 0.9218, RA: 0.9200
+False
+Epoch 177 | Validation | Time: 27.5897 | lr: 0.0032277984585066333 | SA: 0.9564
+Epoch 178-0 | Train | Loss: 0.5311 (0.2674, 0.2636), SA: 0.9273, RA: 0.9238
+False
+Epoch 178 | Validation | Time: 27.4299 | lr: 0.002955961552288729 | SA: 0.9576
+Epoch 179-0 | Train | Loss: 0.5290 (0.2531, 0.2759), SA: 0.9278, RA: 0.9218
+False
+Epoch 179 | Validation | Time: 27.5405 | lr: 0.0026957320586227366 | SA: 0.9564
+Epoch 180-0 | Train | Loss: 0.5060 (0.2359, 0.2701), SA: 0.9280, RA: 0.9275
+False
+Epoch 180 | Validation | Time: 27.5069 | lr: 0.002447174185242325 | SA: 0.9570
+Epoch 181-0 | Train | Loss: 0.5288 (0.2522, 0.2767), SA: 0.9300, RA: 0.9288
+False
+Epoch 181 | Validation | Time: 27.8642 | lr: 0.0022103492600834954 | SA: 0.9575
+Epoch 182-0 | Train | Loss: 0.5168 (0.2389, 0.2778), SA: 0.9320, RA: 0.9250
+False
+Epoch 182 | Validation | Time: 27.4609 | lr: 0.0019853157161528537 | SA: 0.9566
+Epoch 183-0 | Train | Loss: 0.5060 (0.2450, 0.2610), SA: 0.9280, RA: 0.9263
+False
+Epoch 183 | Validation | Time: 27.3744 | lr: 0.001772129077110103 | SA: 0.9569
+Epoch 184-0 | Train | Loss: 0.5084 (0.2409, 0.2676), SA: 0.9258, RA: 0.9225
+False
+Epoch 184 | Validation | Time: 27.4749 | lr: 0.0015708419435684529 | SA: 0.9569
+Epoch 185-0 | Train | Loss: 0.5220 (0.2466, 0.2754), SA: 0.9270, RA: 0.9230
+False
+Epoch 185 | Validation | Time: 27.3639 | lr: 0.0013815039801161732 | SA: 0.9573
+Epoch 186-0 | Train | Loss: 0.5152 (0.2519, 0.2633), SA: 0.9228, RA: 0.9308
+False
+Epoch 186 | Validation | Time: 27.4423 | lr: 0.0012041619030626347 | SA: 0.9572
+Epoch 187-0 | Train | Loss: 0.5152 (0.2522, 0.2631), SA: 0.9305, RA: 0.9245
+False
+Epoch 187 | Validation | Time: 27.5421 | lr: 0.0010388594689117077 | SA: 0.9578
+Epoch 188-0 | Train | Loss: 0.4868 (0.2312, 0.2555), SA: 0.9280, RA: 0.9300
+False
+Epoch 188 | Validation | Time: 27.4162 | lr: 0.0008856374635655645 | SA: 0.9566
+Epoch 189-0 | Train | Loss: 0.4969 (0.2360, 0.2609), SA: 0.9280, RA: 0.9248
+False
+Epoch 189 | Validation | Time: 27.5423 | lr: 0.000744533692261307 | SA: 0.9565
+Epoch 190-0 | Train | Loss: 0.5100 (0.2431, 0.2668), SA: 0.9210, RA: 0.9240
+False
+Epoch 190 | Validation | Time: 27.9339 | lr: 0.0006155829702431174 | SA: 0.9569
+Epoch 191-0 | Train | Loss: 0.5128 (0.2363, 0.2766), SA: 0.9310, RA: 0.9248
+False
+Epoch 191 | Validation | Time: 27.5871 | lr: 0.0004988171141721235 | SA: 0.9569
+Epoch 192-0 | Train | Loss: 0.5212 (0.2416, 0.2796), SA: 0.9345, RA: 0.9308
+False
+Epoch 192 | Validation | Time: 27.4390 | lr: 0.00039426493427611206 | SA: 0.9569
+Epoch 193-0 | Train | Loss: 0.5358 (0.2628, 0.2731), SA: 0.9213, RA: 0.9190
+False
+Epoch 193 | Validation | Time: 27.5867 | lr: 0.00030195222724102046 | SA: 0.9567
+Epoch 194-0 | Train | Loss: 0.5351 (0.2515, 0.2836), SA: 0.9238, RA: 0.9158
+False
+Epoch 194 | Validation | Time: 30.3089 | lr: 0.00022190176984600036 | SA: 0.9569
+Epoch 195-0 | Train | Loss: 0.5078 (0.2483, 0.2595), SA: 0.9253, RA: 0.9278
+False
+Epoch 195 | Validation | Time: 27.7857 | lr: 0.00015413331334360192 | SA: 0.9568
+Epoch 196-0 | Train | Loss: 0.4783 (0.2240, 0.2542), SA: 0.9368, RA: 0.9308
+False
+Epoch 196 | Validation | Time: 27.4005 | lr: 9.866357858642213e-05 | SA: 0.9566
+Epoch 197-0 | Train | Loss: 0.5082 (0.2321, 0.2761), SA: 0.9325, RA: 0.9275
+False
+Epoch 197 | Validation | Time: 27.4294 | lr: 5.5506251901504864e-05 | SA: 0.9566
+Epoch 198-0 | Train | Loss: 0.5363 (0.2722, 0.2640), SA: 0.9235, RA: 0.9193
+False
+Epoch 198 | Validation | Time: 30.2233 | lr: 2.4671981713420017e-05 | SA: 0.9567
+Epoch 199-0 | Train | Loss: 0.5344 (0.2577, 0.2767), SA: 0.9275, RA: 0.9175
+False
+Epoch 199 | Validation | Time: 27.7031 | lr: 6.168375916970619e-06 | SA: 0.9567
