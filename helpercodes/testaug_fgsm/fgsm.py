@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from subsetpack.attack import Attack
+from attack import Attack
 
 
 class FGSM(Attack):
@@ -20,7 +20,7 @@ class FGSM(Attack):
         >>> attack = torchattacks.FGSM(model, eps=0.007)
         >>> adv_images = attack(images, labels)
     """
-    def __init__(self, model, eps=0.007):
+    def __init__(self, model, eps=0.3):
         super().__init__("FGSM", model)
         self.eps = eps
         self._supported_mode = ['default', 'targeted']
