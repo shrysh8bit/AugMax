@@ -1,3 +1,5 @@
+nohup python augmax_training_ddp_mnist.py --gpu 0 --drp ./data --ds MNIST --md MNIST --Lambda 10 --steps 10 --save_root_path ./runs/ --batch_size 96 > results/out_train_temp.txt &
+
 dataset MNIST     img size 28
 loss str Lambda10.0
 attack str fat-1-untargeted-10-0.1
