@@ -148,7 +148,7 @@ class TrajSel(object):
 		ytrain = []
 		#random.seed(123)
 		#trainind = list(random.sample(list(np.arange(0,60000)),6000))
-		trainind = np.load('./mnist_train_aug_indices.npy')
+		#trainind = np.load('./mnist_train_aug_indices.npy')
 		test_transform = transforms.Compose([transforms.ToTensor()])
 		#print(trainind)
 		for batchid, (ip, targ) in enumerate(trainl):
