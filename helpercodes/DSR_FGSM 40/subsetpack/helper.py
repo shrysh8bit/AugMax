@@ -113,8 +113,8 @@ class HelperFunc(object):
 		#else:
 		model.eval()
 		self.net1.eval()
-		atk_curr = FGSM(model, eps=0.5)
-		atk_prev = FGSM(self.net1, eps=0.5)
+		atk_curr = FGSM(model, eps=0.3)
+		atk_prev = FGSM(self.net1, eps=0.3)
 		for testi, data in enumerate(self.test_loader,0):
 			delv = []
 			delvc = []
