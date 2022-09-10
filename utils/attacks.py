@@ -151,10 +151,7 @@ class FriendlyAugMaxAttack():
 		# print(f"	x_adv {x_adv.shape}  type {type(x_adv)}")
 
 		# attack step size
-		if random_level:
-			alpha = self.alpha * np.random.choice([1,0.5,0.2,0.1])
-		else:
-			alpha = self.alpha
+		alpha = self.alpha
 		# print(f"	random lvl {random_level}, aplha {alpha}")
 
 		# intialize counter

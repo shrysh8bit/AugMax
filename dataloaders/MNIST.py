@@ -28,27 +28,32 @@ def MNIST_dataloaders(data_dir, num_classes=10, AugMax=None, batch_size = 96, **
             transforms.RandomCrop(28, padding=4)])
         test_transform = transforms.Compose([transforms.ToTensor()])
 
-        all_train_data = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=all_train_transform)
+        train_data = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=all_train_transform)
         test_data = torchvision.datasets.MNIST(root='./data/', train=False, download=True, transform=test_transform)
         
-        train_aug_indices = np.load('indices/mnist_train_aug_indices.npy')
-        train_non_aug_indices = np.load('indices/mnist_train_non_aug_indices.npy')
+        # train_aug_indices = np.load('indices/mnist_train_aug_indices.npy')
+        # train_non_aug_indices = np.load('indices/mnist_train_non_aug_indices.npy')
 
-        clean_data = torch.utils.data.Subset(all_train_data, train_non_aug_indices)
-        augmax_data =torch.utils.data.Subset(all_train_data, train_aug_indices)
+        # clean_data = torch.utils.data.Subset(train_data, train_non_aug_indices)
+        # augmax_data =torch.utils.data.Subset(train_data, train_aug_indices)
 
-        print(f"6. Len of data: clean {len(clean_data)}    augmax {len(augmax_data)}")
-        print(f"6. type of augmax data {type(augmax_data)}")
+        # print(f"6. Len of data: clean {len(clean_data)}    augmax {len(augmax_data)}")
+        # print(f"6. type of augmax data {type(augmax_data)}")
 
-        augmax_data = AugMax(augmax_data, test_transform, 
+        # augmax_data = AugMax(augmax_data, test_transform, 
+        #     mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'])
+        
+        
+        # clean_data = AugMax(clean_data, test_transform, 
+        #     mixture_width=1, mixture_depth=0, aug_severity=AugMax_args['aug_severity'])
+
+        # train_data = torch.utils.data.ConcatDataset([augmax_data, clean_data])
+        
+        train_data = AugMax(train_data, test_transform, 
             mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'])
         
-        clean_data = AugMax(clean_data, test_transform, 
-            mixture_width=1, mixture_depth=0, aug_severity=AugMax_args['aug_severity'])
+        # print(f"7. type of augmax data {type(augmax_data)}")
 
-        print(f"7. type of augmax data {type(augmax_data)}")
-
-        train_data = torch.utils.data.ConcatDataset([augmax_data, clean_data])
 
         print(f"7. Data loading complete")
 

@@ -86,7 +86,8 @@ class AugMaxModule(nn.Module):
 			q: Tensor. q.size()=(N,3). w = softmax(q)
 		'''
 		# print('	15.1 test in augmax module')
-		
+		# print (f"in augmax fwd   type xs {type(xs)}   m {type(m)}    q {type(q)}")
+		# print (f"in augmax fwd   len xs {len(xs)}   m {m.shape}    q {q.shape}")
 		x_ori = xs[0]
 		w = torch.nn.functional.softmax(q, dim=1) # w.size()=(N,3)
 

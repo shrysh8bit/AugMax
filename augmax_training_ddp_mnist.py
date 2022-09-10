@@ -31,10 +31,13 @@ from dataloaders.cifar10 import cifar_dataloaders
 from dataloaders.tiny_imagenet import tiny_imagenet_dataloaders, tiny_imagenet_deepaug_dataloaders
 from dataloaders.imagenet import imagenet_dataloaders, imagenet_deepaug_dataloaders
 from dataloaders.MNIST import MNIST_dataloaders
+from dataloaders.MNIST_FGSM import MNIST_FGSM_dataloader
 
 from utils.utils import *
 from utils.context import ctx_noparamgrad_and_eval
 from utils.attacks import AugMaxAttack, FriendlyAugMaxAttack
+
+from helpercodes.testaug_fgsm.fgsm import FGSM
 
 parser = argparse.ArgumentParser(description='Trains a CIFAR Classifier')
 parser.add_argument('--gpu', default='0')
@@ -75,6 +78,10 @@ parser.add_argument('--ddp_backend', '--ddpbed', default='nccl', choices=['nccl'
 parser.add_argument('--num_nodes', default=1, type=int, help='Number of nodes')
 parser.add_argument('--node_id', default=0, type=int, help='Node ID')
 parser.add_argument('--dist_url', default='tcp://localhost:23456', type=str, help='url used to set up distributed training')
+#FGSM Settings
+parser.add_argument('--attk', default='augmax', choices=['augmax', 'FGSM'], help='which attack to use')
+parser.add_argument('--eps', default=0.3, type=float, help='epsilon value')
+
 args = parser.parse_args()
 
 # adjust learning rate:
@@ -174,64 +181,83 @@ def train(gpu_id, ngpus_per_node):
     print(f"3. train batch size {train_batch_size}   num workers {num_workers}")
 
     # data loader:
-    if args.dataset == 'MNIST':
-        print(f"4. MNIST data loader")
+    if args.attk == 'FGSM':
+        print(f"4. MNIST FGSM data loader")
         num_classes = 10
         init_stride = 1
-        train_data, val_data = MNIST_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
-            AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity,
-            batch_size = args.batch_size
-        )
+        train_data, val_data = MNIST_FGSM_dataloader(num_classes=num_classes, batch_size = args.batch_size)
 
-        print(f"8. in main fn -> MNIST data len Train {len(train_data)}   & val {len(val_data)}")
+        if args.ddp:
+            train_sampler = torch.utils.data.distributed.DistributedSampler(train_data)
+        else:
+            train_sampler = None
+        print(f"->FGSM len train data {len(train_data)}   val_data {len(val_data)}")
+        
+        train_loader = DataLoader(train_data, batch_size=args.batch_size, shuffle=True, num_workers=num_workers)
+        val_loader = DataLoader(val_data, batch_size=args.batch_size, shuffle=False, num_workers=num_workers)
+        
+        print("len train loader and val_loader ",len(train_loader), len(val_loader))
 
-    elif args.dataset in ['cifar10', 'cifar100']:
-            print(f"4. cifar data loader")
-            num_classes=10 if args.dataset == 'cifar10' else 100
+    else:    
+        if args.dataset == 'MNIST':
+            print(f"4. MNIST data loader")
+            num_classes = 10
             init_stride = 1
-            train_data, val_data = cifar_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
-                AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+            train_data, val_data = MNIST_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
+                AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity,
+                batch_size = args.batch_size
             )
 
-            print(f"cifar train data len {len(train_data)}  val data len {len(val_data)}")
+            print(f"8. in main fn -> MNIST data len Train {len(train_data)}   & val {len(val_data)}")
 
-    elif args.dataset == 'tin':
-            num_classes, init_stride = 200, 2
-            train_data, val_data = tiny_imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200'),
-                AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
-            )
-            if args.deepaug:
-                edsr_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-EDSR'),
+        elif args.dataset in ['cifar10', 'cifar100']:
+                print(f"4. cifar data loader")
+                num_classes=10 if args.dataset == 'cifar10' else 100
+                init_stride = 1
+                train_data, val_data = cifar_dataloaders(data_dir=args.data_root_path, num_classes=num_classes,
                     AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
                 )
-                cae_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-CAE'),
+
+                print(f"cifar train data len {len(train_data)}  val data len {len(val_data)}")
+
+        elif args.dataset == 'tin':
+                num_classes, init_stride = 200, 2
+                train_data, val_data = tiny_imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200'),
                     AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
                 )
-                train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
-    elif args.dataset == 'IN':
-            num_classes, init_stride = 1000, None
-            train_data, val_data = imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet'), 
-                AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
-            )
-            if args.deepaug:
-                edsr_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-EDSR'), 
+                if args.deepaug:
+                    edsr_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-EDSR'),
+                        AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                    )
+                    cae_data = tiny_imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'tiny-imagenet-200-DeepAug-CAE'),
+                        AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                    )
+                    train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
+        elif args.dataset == 'IN':
+                num_classes, init_stride = 1000, None
+                train_data, val_data = imagenet_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet'), 
                     AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
                 )
-                cae_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-CAE'), 
-                    AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
-                )
-                train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
-     
-    if args.ddp:
-        train_sampler = torch.utils.data.distributed.DistributedSampler(train_data)
-    else:
-        train_sampler = None
+                if args.deepaug:
+                    edsr_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-EDSR'), 
+                        AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                    )
+                    cae_data = imagenet_deepaug_dataloaders(data_dir=os.path.join(args.data_root_path, 'imagenet-DeepAug-CAE'), 
+                        AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity
+                    )
+                    train_data = torch.utils.data.ConcatDataset([train_data, edsr_data, cae_data])
+        
+        if args.ddp:
+            train_sampler = torch.utils.data.distributed.DistributedSampler(train_data)
+        else:
+            train_sampler = None
     
-    print(f"9. Starting dataloader")
-    print(f"9. batch size train {train_batch_size}     test {args.test_batch_size}")
-    train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
-    val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
-    print(f"10. data loaders complete")
+        print(f"9. Starting dataloader")
+        print(f"9. batch size train {train_batch_size}     test {args.test_batch_size}")
+        train_loader = DataLoader(train_data, batch_size=train_batch_size, shuffle=(train_sampler is None), num_workers=num_workers, pin_memory=True, sampler=train_sampler)
+        val_loader = DataLoader(val_data, batch_size=args.test_batch_size, shuffle=False, num_workers=num_workers, pin_memory=True)
+        print("len train loader and test_loader ",len(train_loader), len(val_loader))
+        print(f"10. data loaders complete")
 
     # model:
     if args.dataset == 'MNIST':
@@ -297,6 +323,13 @@ def train(gpu_id, ngpus_per_node):
     # for i, (images_tuples, labels) in enumerate(train_loader):
     #     print(f"i {i} images_tuples {len(images_tuples)}   labels{len(labels)} ")
 
+    if args.attk == 'FGSM':
+        net = MNIST_model()
+        net = net.to(device)
+        net.load_state_dict(torch.load('helpercodes/testaug_fgsm/ckptw.pth')['net'])
+        
+        atk = FGSM(net, eps=args.eps)
+
 
     # train:
     for epoch in range(start_epoch, args.epochs):
@@ -316,16 +349,36 @@ def train(gpu_id, ngpus_per_node):
 
         # print(f"    start enumeration over train_loader")
         for i, (images_tuples, labels) in enumerate(train_loader):
-            
             # print(f"    In train loader", flush=True)
-            # print(f"    images_tuples len {len(images_tuples)}  len[0] {len(images_tuples[0])} len[1] {len(images_tuples[1])}", flush=True)
-            # print(f"    images_tuples[0][0] == images_tuples[0][1]  {images_tuples[0][0] == images_tuples[0][1]} ", flush = True)
+            # print(f"    images_tuples type {type(images_tuples)}  type[0] {type(images_tuples[0])} type[0][0] {type(images_tuples[0][0])} type[0][0][0] {type(images_tuples[0][0][0])}", flush=True)
+            # print(f"    images_tuples len {len(images_tuples)}  len[0] {len(images_tuples[0])} len[0][0] {len(images_tuples[0][0])} len[0][0][0] {len(images_tuples[0][0][0])}", flush=True)
+            # print(f"    images_tuples[0][0] shape {images_tuples[0][0].shape}  images_tuples[0][0][0] shape {images_tuples[0][0][0].shape}")
             
-            # print(f"    images_tuples len[0][0] {len(images_tuples[0][0])}  len[0][1] {len(images_tuples[0][1])}")
+            if args.attk == 'FGSM':
+                _,inputs = atk(images_tuples, labels)
+                outputs = net(inputs)
+                print(f" outputs len {len(outputs)}   shape {outputs.shape}   shape[0] {outputs[0].shape}")
+                print (f"outputs[0]   {outputs[0]}")
+                
+                images_tuples = [[images_tuples, outputs],[images_tuples, images_tuples]]   
+            
+
+            # print(f"images tuples[0]  len {len(images_tuples[0])}")
+            # for i in range(96):
+            #     print (i, images_tuples[0][1][i] == images_tuples[1][1][i])
+                # if images_tuples[0][0][i] != images_tuples[0][1][i]:
+            #     #     print ("not equal ", i)
+            #     # else:
+            #     #     print("equal")
+            # # print(f"    images_tuples[0][0] == images_tuples[0][1]  {images_tuples[0][0] == images_tuples[0][1]} ", flush = True)
+            
+            # print(f"    images_tuples len[0][0] {len(images_tuples[0][0])}  len[0][0][0] {(images_tuples[0][0][0].shape)}")
             # print(f"    images_tuples[0][0] {images_tuples[0][0].shape}  [0][1] {images_tuples[0][1].shape}")
             # print(f"    images_tuples len[1][0] {len(images_tuples[1][0])}  len[1][1] {len(images_tuples[1][1])}")
             # print(f'    data has not been augmented, but contains a tuple of size 2, each element is another tuple of size 2,')
             # print(f"    every such tuple is a tensor of shape [batch_size, 1, 28, 28], 4 copies of the same image")
+
+                
 
             # get batch:
             images_tuple = images_tuples[0]
@@ -334,6 +387,7 @@ def train(gpu_id, ngpus_per_node):
             images_tuple_2 = [images.to(device) for images in images_tuple_2]
             labels = labels.to(device)
 
+            # exit(1)
             # switch to BN-A:
             if 'DuBIN' in model_fn.__name__:
                 model.apply(lambda m: setattr(m, 'route', 'A')) # use auxilary BN for AugMax images
@@ -349,6 +403,7 @@ def train(gpu_id, ngpus_per_node):
                 else:
                     imgs_augmax_1, _, _  = attacker.attack(augmax_model, model, images_tuple, labels=labels, device=device)
             # print(f"16. imgs_augmax_1   {type(imgs_augmax_1)}  {imgs_augmax_1.shape}")
+
             # augmax image forward:
             logits_augmax_1 = model(imgs_augmax_1.detach())
 

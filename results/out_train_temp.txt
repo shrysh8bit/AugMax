@@ -1,0 +1,40 @@
+dataset MNIST     img size 28
+loss str Lambda10.0
+attack str fat-1-untargeted-10-0.1
+saving to ./runs/MNIST/fat-1-untargeted-10-0.1_Lambda10.0_e200-b100_sgd-lr0.1-m0.9-wd0.0005_cos
+1. Running on rank 0.
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', attk='FGSM', aug_severity=1, batch_size=100, data_root_path='./data', dataset='MNIST', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, eps=0.3, gpu='0', lr=0.1, mixture_depth=1, mixture_width=1, model='MNIST', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
+2. in gpu id == 0
+ddp False
+3. train batch size 100   num workers 16
+4. MNIST FGSM data loader
+5. Loading dataset MNIST FGSM
+->FGSM len train data 60000   val_data 10000
+len train loader and val_loader  600 100
+11. Creating attack class fat
+   Temp attacker <class 'utils.attacks.FriendlyAugMaxAttack'>
+12. End of attk class
+13. Augmix module start
+augmix model <class 'augmax_modules.augmax.AugMixModule'> 
+    Augmix augmax module create stop
+14. Start trg epoch num 0
+ outputs len 100   shape torch.Size([100, 10])   shape[0] torch.Size([10])
+outputs[0]   tensor([-3.1655, -3.4125, -1.9818, -2.2909, -3.4894, -3.1867, -3.2780, -3.5307,
+        -0.7091, -2.9011], device='cuda:0', grad_fn=<SelectBackward>)
+    images_tuples type <class 'list'>  type[0] <class 'list'> type[0][0] <class 'torch.Tensor'> type[0][0][0] <class 'torch.Tensor'>
+    images_tuples len 2  len[0] 2 len[0][0] 100 len[0][0][0] 1
+    images_tuples[0][0] shape torch.Size([100, 1, 28, 28])  images_tuples[0][0][0] shape torch.Size([1, 28, 28])
+in augmax fwd   type xs <class 'list'>   m <class 'torch.Tensor'>    q <class 'torch.Tensor'>
+in augmax fwd   len xs 2   m torch.Size([100])    q torch.Size([100, 1])
+Traceback (most recent call last):
+  File "augmax_training_ddp_mnist.py", line 508, in <module>
+    train(0, 0)
+  File "augmax_training_ddp_mnist.py", line 403, in train
+    imgs_augmax_1, _, _  = attacker.attack(augmax_model, model, images_tuple, labels=labels, device=device)
+  File "/home/mt1/21CS60D06/MTP/wkg_code/AugMax/utils/attacks.py", line 150, in attack
+    x_adv = augmax_model(xs, m_adv , q_adv)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mt1/21CS60D06/MTP/wkg_code/AugMax/augmax_modules/augmax.py", line 98, in forward
+    wi = w[:,i].view((N,1,1,1)).expand_as(x_aug)
+RuntimeError: expand(torch.cuda.FloatTensor{[100, 1, 1, 1]}, size=[100, 10]): the number of sizes provided (2) must be greater or equal to the number of dimensions in the tensor (4)

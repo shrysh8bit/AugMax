@@ -68,7 +68,7 @@ net.load_state_dict(torch.load('./ckptw.pth')['net'])
 net1 = Net()
 net1 = net1.to(device)
 #Change the filename here
-model_loaded = (torch.load('/home/mt1/21CS60D06/MTP/wkg_code/AugMax/runs/MNIST/fat-1-untargeted-10-0.1_Lambda10.0_e200-b4000_sgd-lr0.1-m0.9-wd0.0005_cos/best_SA.pth'))
+model_loaded = (torch.load('/home/mt1/21CS60D06/MTP/wkg_code/AugMax/runs/augmax_training1/AugMax_results/augmax_training/MNIST/MNIST_model/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos/best_SA.pth'))
 for key in list(model_loaded.keys()):
     model_loaded[key[7:]] = model_loaded.pop(key)
 
@@ -76,10 +76,10 @@ net1.load_state_dict(model_loaded)
 # net1.load_state_dict(torch.load('../../runs/MNIST/fat-1-untargeted-10-0.1_Lambda10.0_e200-b4000_sgd-lr0.1-m0.9-wd0.0005_cos/best_SA.pth')['net'])
 
 
-subset_indices_adv = np.load('../../indices/mnist_test_aug_indices.npy')
-#np.save('mnist_test_aug_indices.npy',subset_indices_adv)
-subset_test = torch.utils.data.Subset(testset, subset_indices_adv)
-testloaderb = torch.utils.data.DataLoader(subset_test, batch_size=100, shuffle=False, num_workers=2)
+# subset_indices_adv = np.load('../../indices/mnist_test_aug_indices.npy')
+##np.save('mnist_test_aug_indices.npy',subset_indices_adv)
+# subset_test = torch.utils.data.Subset(testset, subset_indices_adv)
+testloaderb = torch.utils.data.DataLoader(testset, batch_size=100, shuffle=False, num_workers=2)
 print(len(testloaderb))
 
 
@@ -113,6 +113,9 @@ def test(epoch,net):
         # Save checkpoint.
         acc.append(100.*correct/total)
         epv.append(ep)
+
+        print(f"acc {100.*correct/total}    ep {ep}")
+
     print(acc)
     print(epv)
 
