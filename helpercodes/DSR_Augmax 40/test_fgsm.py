@@ -6,15 +6,16 @@ from PIL import Image
 from subsetpack.fgsm import FGSM
 from torch.utils.data import Dataset
 import torch.backends.cudnn as cudnn
-from skimage.util import random_noise
+# from skimage.util import random_noise
 import torchvision
-import cv2
+# import cv2
 import torchvision.transforms as transforms
 import numpy as np
 import random
 import os
 import argparse
 
+print ('Test fgsm DSR augmax 40')
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
@@ -67,7 +68,7 @@ net.load_state_dict(torch.load('./checkpoint_sub/ckptw.pth')['net'])
 
 net1 = Net()
 net1 = net1.to(device)
-net1.load_state_dict(torch.load('./checkpoint_sub/ckpt_sub20_otheraug_all.pth')['net'])
+net1.load_state_dict(torch.load('./checkpoint_sub/ckpt_sub40_otheraug_all.pth')['net'])
 
 
 
@@ -161,7 +162,8 @@ subset_indices_adv = random.sample(set(list(np.arange(0,10000))).difference(set(
 print(subset_indices_adv)
 print(len(set(subset_indices_adv)))
 #np.save('mnist_test_aug_indices.npy',subset_indices_adv)
-subset_test = torch.utils.data.Subset(testset, subset_indices_adv)
+# subset_test = torch.utils.data.Subset(testset, subset_indices_adv)
+# testset = torchvision.datasets.MNIST(root='./data/', train=False, download=True, transform=transform)
 #testloaderb = torch.utils.data.DataLoader(subset_test, batch_size=100, shuffle=False, num_workers=2)
 #print(len(testloaderb))
 testloaderb = torch.utils.data.DataLoader(testset, batch_size=100, shuffle=False, num_workers=2)

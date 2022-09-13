@@ -6,15 +6,16 @@ from PIL import Image
 from subsetpack.fgsm import FGSM
 from torch.utils.data import Dataset
 import torch.backends.cudnn as cudnn
-from skimage.util import random_noise
+# from skimage.util import random_noise
 import torchvision
-import cv2
+# import cv2
 import torchvision.transforms as transforms
 import numpy as np
 import random
 import os
 import argparse
 
+print('test fgsm DSR augmax 60')
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
@@ -67,7 +68,7 @@ net.load_state_dict(torch.load('./checkpoint_sub/ckptw.pth')['net'])
 
 net1 = Net()
 net1 = net1.to(device)
-net1.load_state_dict(torch.load('./checkpoint_sub/ckpt_sub20_otheraug_all.pth')['net'])
+net1.load_state_dict(torch.load('./checkpoint_sub/ckpt_sub60_otheraug_all.pth')['net'])
 
 
 

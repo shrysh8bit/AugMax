@@ -62,4 +62,4 @@ dependencies:
     - scipy==1.6.3
     - threadpoolctl==2.1.0
     - tqdm==4.60.0
-prefix: /home/rs/17CS91P08/anaconda3/envs/subsetfind
+prefix: /home/mt1/21CS60D06/anaconda3/envs/subsetfind

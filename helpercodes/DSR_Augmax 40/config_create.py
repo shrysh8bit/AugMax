@@ -16,8 +16,8 @@ params['simsel'] = False #Flag for using SubSel to obtain subset
 #Hyperparameters during Trajectory Selection
 params['trainbatch'] = 100 #Training data batch size
 params['testbatch'] = 100 #Test data batch size
-params['epochs'] = 100 #Training epochs
-params['num_trajpoint'] = 240 #Number of to-be selected batches
+params['epochs'] = 200 #Training epochs
+params['num_trajpoint'] = 480 #Number of to-be selected batches
 params['num_freqcp'] = 50 #Frequency of updates at which training checkpoints will be saved
 params['num_freqep'] = 20 #Frequency of epochs at which CheckSel algorithm will be executed
 params['num_freqbatch'] = 10 #Frequency of batches at which CheckSel algorithm will be executed

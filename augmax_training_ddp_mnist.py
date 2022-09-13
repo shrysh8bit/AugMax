@@ -331,7 +331,7 @@ def train(gpu_id, ngpus_per_node):
             images_tuple_2 = images_tuples[1]
             images_tuple_2 = [images.to(device) for images in images_tuple_2]
             labels = labels.to(device)
-
+            exit(1)
             # switch to BN-A:
             if 'DuBIN' in model_fn.__name__:
                 model.apply(lambda m: setattr(m, 'route', 'A')) # use auxilary BN for AugMax images

@@ -1,0 +1,724 @@
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... Building graph of deps:   0%|          | 0/50 [00:00<?, ?it/s]Examining _openmp_mutex==4.5=1_gnu:   0%|          | 0/50 [00:00<?, ?it/s]Examining libgcc-ng==9.3.0=h2828fa1_19:   2%|▏         | 1/50 [00:00<00:00, 114.77it/s]Examining openssl==1.1.1k=h7f98852_0:   4%|▍         | 2/50 [00:00<00:00, 207.84it/s]  Examining jpeg==9d=h36c2ea0_0:   6%|▌         | 3/50 [00:00<00:00, 209.39it/s]       Examining blas==1.0=mkl:   8%|▊         | 4/50 [00:00<00:00, 188.21it/s]      Examining _libgcc_mutex==0.1=conda_forge:  10%|█         | 5/50 [00:00<00:00, 210.97it/s]Examining python_abi==3.7=1_cp37m:  12%|█▏        | 6/50 [00:00<00:00, 250.94it/s]       Examining libffi==3.3=h58526e2_2:  14%|█▍        | 7/50 [00:00<00:00, 139.27it/s] Examining wheel==0.36.2=pyhd3deb0d_0:  16%|█▌        | 8/50 [00:00<00:00, 139.63it/s]Examining sqlite==3.35.5=h74cdb3f_0:  18%|█▊        | 9/50 [00:00<00:00, 44.22it/s]  Examining sqlite==3.35.5=h74cdb3f_0:  20%|██        | 10/50 [00:00<00:00, 49.09it/s]Examining openjpeg==2.4.0=hf7af979_0:  20%|██        | 10/50 [00:00<00:00, 49.09it/s]Examining libstdcxx-ng==9.3.0=h6de172a_19:  22%|██▏       | 11/50 [00:00<00:00, 49.09it/s]Examining readline==8.1=h46c0cb4_0:  24%|██▍       | 12/50 [00:00<00:00, 49.09it/s]       Examining pillow==8.1.2=py37h4600e1f_1:  26%|██▌       | 13/50 [00:00<00:00, 49.09it/s]Examining cudatoolkit==9.2.148=h80a95b2_8:  28%|██▊       | 14/50 [00:00<00:00, 49.09it/s]Examining ncurses==6.2=h58526e2_4:  30%|███       | 15/50 [00:00<00:00, 49.09it/s]        Examining pip==21.1.1=pyhd8ed1ab_0:  32%|███▏      | 16/50 [00:00<00:00, 49.09it/s]Examining tk==8.6.10=h21135ba_1:  34%|███▍      | 17/50 [00:00<00:00, 49.09it/s]   Examining tk==8.6.10=h21135ba_1:  36%|███▌      | 18/50 [00:00<00:00, 36.38it/s]Examining certifi==2020.12.5=py37h89c1867_1:  36%|███▌      | 18/50 [00:00<00:00, 36.38it/s]Examining xz==5.2.5=h516909a_1:  38%|███▊      | 19/50 [00:00<00:00, 36.38it/s]             Examining numpy-base==1.20.1=py37h7d8b39e_0:  40%|████      | 20/50 [00:00<00:00, 36.38it/s]Examining olefile==0.46=pyh9f0ad1d_1:  42%|████▏     | 21/50 [00:00<00:00, 36.38it/s]       Examining libwebp-base==1.2.0=h7f98852_2:  44%|████▍     | 22/50 [00:00<00:00, 36.38it/s]Examining libwebp-base==1.2.0=h7f98852_2:  46%|████▌     | 23/50 [00:00<00:00, 29.59it/s]Examining python==3.7.10=hffdb5ce_100_cpython:  46%|████▌     | 23/50 [00:00<00:00, 29.59it/s]Examining six==1.16.0=pyh6c4a22f_0:  48%|████▊     | 24/50 [00:00<00:00, 29.59it/s]           Examining pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0:  50%|█████     | 25/50 [00:00<00:00, 29.59it/s]Examining @/linux-64::__unix==0=0:  52%|█████▏    | 26/50 [00:01<00:00, 29.59it/s]                      Examining @/linux-64::__unix==0=0:  54%|█████▍    | 27/50 [00:01<00:01, 19.65it/s]Examining @/linux-64::__cuda==11.4=0:  54%|█████▍    | 27/50 [00:01<00:01, 19.65it/s]Examining zstd==1.4.9=ha95c52a_0:  56%|█████▌    | 28/50 [00:01<00:01, 19.65it/s]    Examining ca-certificates==2020.12.5=ha878542_0:  58%|█████▊    | 29/50 [00:01<00:01, 19.65it/s]Examining freetype==2.10.4=h0708190_1:  60%|██████    | 30/50 [00:01<00:01, 19.65it/s]          Examining libtiff==4.2.0=hdc55705_1:  62%|██████▏   | 31/50 [00:01<00:00, 19.65it/s]  Examining mkl_random==1.2.1=py37ha9443f7_2:  64%|██████▍   | 32/50 [00:01<00:00, 19.65it/s]Examining libpng==1.6.37=h21135ba_2:  66%|██████▌   | 33/50 [00:01<00:00, 19.65it/s]       Examining libpng==1.6.37=h21135ba_2:  68%|██████▊   | 34/50 [00:01<00:00, 24.89it/s]Examining ninja==1.10.2=h4bd325d_0:  68%|██████▊   | 34/50 [00:01<00:00, 24.89it/s] Examining mkl_fft==1.3.0=py37h42c9631_2:  70%|███████   | 35/50 [00:01<00:00, 24.89it/s]Examining torchvision==0.7.0=py37_cu92:  72%|███████▏  | 36/50 [00:01<00:00, 24.89it/s] Examining torchvision==0.7.0=py37_cu92:  74%|███████▍  | 37/50 [00:01<00:00, 24.07it/s]Examining libgomp==9.3.0=h2828fa1_19:  74%|███████▍  | 37/50 [00:01<00:00, 24.07it/s]  Examining lcms2==2.12=hddcbb42_0:  76%|███████▌  | 38/50 [00:01<00:00, 24.07it/s]    Examining @/linux-64::__linux==5.15.0=0:  78%|███████▊  | 39/50 [00:01<00:00, 24.07it/s]Examining @/linux-64::__linux==5.15.0=0:  80%|████████  | 40/50 [00:01<00:00, 18.13it/s]Examining mkl-service==2.3.0=py37h27cfd23_1:  80%|████████  | 40/50 [00:01<00:00, 18.13it/s]Examining ld_impl_linux-64==2.35.1=hea4e1c9_2:  82%|████████▏ | 41/50 [00:01<00:00, 18.13it/s]Examining lz4-c==1.9.3=h9c3ff4c_0:  84%|████████▍ | 42/50 [00:01<00:00, 18.13it/s]            Examining intel-openmp==2021.2.0=h06a4308_610:  86%|████████▌ | 43/50 [00:01<00:00, 18.13it/s]Examining @/linux-64::__glibc==2.35=0:  88%|████████▊ | 44/50 [00:01<00:00, 18.13it/s]        Examining numpy==1.20.1=py37h93e21f0_0:  90%|█████████ | 45/50 [00:01<00:00, 18.13it/s]Examining zlib==1.2.11=h516909a_1010:  92%|█████████▏| 46/50 [00:01<00:00, 18.13it/s]  Examining zlib==1.2.11=h516909a_1010:  94%|█████████▍| 47/50 [00:01<00:00, 25.61it/s]Examining setuptools==49.6.0=py37h89c1867_3:  94%|█████████▍| 47/50 [00:01<00:00, 25.61it/s]Examining @/linux-64::__archspec==1=x86_64:  96%|█████████▌| 48/50 [00:01<00:00, 25.61it/s] Examining mkl==2021.2.0=h06a4308_296:  98%|█████████▊| 49/50 [00:01<00:00, 25.61it/s]                                                                                           Determining conflicts:   0%|          | 0/50 [00:00<?, ?it/s]Examining conflict for _openmp_mutex libgcc-ng jpeg openssl blas libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python pytorch zstd freetype libtiff mkl_random libpng ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy zlib:   0%|          | 0/50 [00:00<?, ?it/s]Examining conflict for libgomp _openmp_mutex libgcc-ng:   2%|▏         | 1/50 [00:03<02:40,  3.28s/it]                                                                                                                                                                                                               Examining conflict for libgomp _openmp_mutex libgcc-ng:   4%|▍         | 2/50 [00:03<01:18,  1.64s/it]Examining conflict for _openmp_mutex libgcc-ng jpeg openssl _libgcc_mutex libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python zstd freetype libtiff mkl_random libpng ninja mkl_fft libgomp lcms2 mkl-service lz4-c numpy zlib:   4%|▍         | 2/50 [00:03<01:18,  1.64s/it]Examining conflict for libgcc-ng jpeg openssl blas python_abi libffi wheel sqlite openjpeg readline pillow cudatoolkit ncurses pip tk certifi xz numpy-base olefile libwebp-base python six pytorch zstd freetype libtiff mkl_random libpng ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy zlib setuptools:   6%|▌         | 3/50 [00:04<01:17,  1.64s/it]Examining conflict for libgcc-ng jpeg openssl blas python_abi libffi wheel sqlite openjpeg readline pillow cudatoolkit ncurses pip tk certifi xz numpy-base olefile libwebp-base python six pytorch zstd freetype libtiff mkl_random libpng ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy zlib setuptools:   8%|▊         | 4/50 [00:04<00:46,  1.02s/it]Examining conflict for pytorch mkl-service libgcc-ng blas numpy mkl_random numpy-base mkl_fft:   8%|▊         | 4/50 [00:08<00:46,  1.02s/it]                                                                                                                                                                                                                      Examining conflict for pytorch mkl-service libgcc-ng blas numpy mkl_random numpy-base mkl_fft:  10%|█         | 5/50 [00:08<01:21,  1.81s/it]Examining conflict for pytorch mkl-service openssl pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  10%|█         | 5/50 [00:10<01:21,  1.81s/it]Examining conflict for pytorch mkl-service openssl pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  12%|█▏        | 6/50 [00:10<01:25,  1.93s/it]Examining conflict for openssl ca-certificates wheel olefile python six:  12%|█▏        | 6/50 [00:13<01:25,  1.93s/it]                                                                                             Examining conflict for openssl ca-certificates wheel olefile python six:  14%|█▍        | 7/50 [00:13<01:44,  2.44s/it]Examining conflict for openssl jpeg libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python zstd freetype libtiff libpng mkl_random ninja mkl_fft lcms2 mkl-service lz4-c __glibc numpy zlib:  14%|█▍        | 7/50 [00:14<01:44,  2.44s/it]Examining conflict for openssl jpeg libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python zstd freetype libtiff libpng mkl_random ninja mkl_fft lcms2 mkl-service lz4-c __glibc numpy zlib:  16%|█▌        | 8/50 [00:14<01:14,  1.77s/it]Examining conflict for jpeg pillow libtiff openjpeg torchvision lcms2:  16%|█▌        | 8/50 [00:15<01:14,  1.77s/it]                                                                                                                                                               Examining conflict for jpeg pillow libtiff openjpeg torchvision lcms2:  18%|█▊        | 9/50 [00:15<01:05,  1.59s/it]Examining conflict for pytorch blas numpy mkl_random numpy-base mkl_fft torchvision:  18%|█▊        | 9/50 [00:16<01:05,  1.59s/it]Examining conflict for pytorch blas numpy mkl_random numpy-base mkl_fft torchvision:  20%|██        | 10/50 [00:16<00:56,  1.42s/it]Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft:  20%|██        | 10/50 [00:19<00:56,  1.42s/it]Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft:  22%|██▏       | 11/50 [00:19<01:15,  1.92s/it]Examining conflict for pytorch mkl-service blas intel-openmp numpy mkl_random numpy-base mkl_fft mkl:  22%|██▏       | 11/50 [00:21<01:15,  1.92s/it]Examining conflict for pytorch mkl-service blas intel-openmp numpy mkl_random numpy-base mkl_fft mkl:  24%|██▍       | 12/50 [00:21<01:16,  2.02s/it]Examining conflict for blas python_abi libffi wheel sqlite openjpeg libstdcxx-ng readline pillow cudatoolkit pip certifi numpy-base olefile python six pytorch zstd libtiff mkl_random ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy setuptools:  24%|██▍       | 12/50 [00:23<01:16,  2.02s/it]Examining conflict for blas python_abi libffi wheel sqlite openjpeg libstdcxx-ng readline pillow cudatoolkit pip certifi numpy-base olefile python six pytorch zstd libtiff mkl_random ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy setuptools:  26%|██▌       | 13/50 [00:23<01:17,  2.09s/it]Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft torchvision mkl:  26%|██▌       | 13/50 [00:27<01:17,  2.09s/it]                                                                                                                                                      Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft torchvision mkl:  28%|██▊       | 14/50 [00:27<01:32,  2.57s/it]Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision numpy six:  28%|██▊       | 14/50 [00:30<01:32,  2.57s/it]Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision numpy six:  30%|███       | 15/50 [00:30<01:35,  2.74s/it]Examining conflict for python_abi wheel openjpeg pillow pip certifi xz numpy-base olefile python six pytorch zstd libtiff mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  30%|███       | 15/50 [00:34<01:35,  2.74s/it]Examining conflict for python_abi wheel openjpeg pillow pip certifi xz numpy-base olefile python six pytorch zstd libtiff mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  32%|███▏      | 16/50 [00:34<01:41,  3.00s/it]Examining conflict for pytorch mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  32%|███▏      | 16/50 [00:37<01:41,  3.00s/it]                        Examining conflict for pytorch mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  34%|███▍      | 17/50 [00:37<01:44,  3.18s/it]Examining conflict for pytorch mkl-service pillow mkl_random python_abi setuptools pip wheel tk certifi numpy-base mkl_fft olefile torchvision python numpy six:  34%|███▍      | 17/50 [00:41<01:44,  3.18s/it]    Examining conflict for pytorch mkl-service pillow mkl_random python_abi setuptools pip wheel tk certifi numpy-base mkl_fft olefile torchvision python numpy six:  36%|███▌      | 18/50 [00:41<01:46,  3.32s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  36%|███▌      | 18/50 [00:45<01:46,  3.32s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  38%|███▊      | 19/50 [00:45<01:45,  3.40s/it]Examining conflict for pytorch mkl-service pillow python_abi libffi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  38%|███▊      | 19/50 [00:48<01:45,  3.40s/it]                                               Examining conflict for pytorch mkl-service pillow python_abi libffi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  40%|████      | 20/50 [00:48<01:44,  3.47s/it]Examining conflict for python_abi wheel sqlite readline pillow ncurses pip certifi numpy-base olefile python six pytorch mkl_random mkl_fft torchvision mkl-service numpy setuptools:  40%|████      | 20/50 [00:52<01:44,  3.47s/it]Examining conflict for python_abi wheel sqlite readline pillow ncurses pip certifi numpy-base olefile python six pytorch mkl_random mkl_fft torchvision mkl-service numpy setuptools:  42%|████▏     | 21/50 [00:52<01:41,  3.50s/it]Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  42%|████▏     | 21/50 [00:56<01:41,  3.50s/it]                        Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  44%|████▍     | 22/50 [00:56<01:38,  3.54s/it]Examining conflict for pytorch readline mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  44%|████▍     | 22/50 [00:59<01:38,  3.54s/it]Examining conflict for pytorch readline mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  46%|████▌     | 23/50 [00:59<01:35,  3.52s/it]Examining conflict for pytorch mkl-service pillow python_abi ld_impl_linux-64 setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  46%|████▌     | 23/50 [01:03<01:35,  3.52s/it]Examining conflict for pytorch mkl-service pillow python_abi ld_impl_linux-64 setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  48%|████▊     | 24/50 [01:03<01:32,  3.54s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy zlib setuptools:  48%|████▊     | 24/50 [01:06<01:32,  3.54s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy zlib setuptools:  50%|█████     | 25/50 [01:06<01:28,  3.55s/it]Examining conflict for pip python wheel:  50%|█████     | 25/50 [01:10<01:28,  3.55s/it]                                                                                                                                                                                Examining conflict for pip python wheel:  52%|█████▏    | 26/50 [01:10<01:25,  3.56s/it]Examining conflict for olefile pip wheel six:  52%|█████▏    | 26/50 [01:10<01:25,  3.56s/it]Examining conflict for pip wheel olefile python six:  54%|█████▍    | 27/50 [01:10<01:21,  3.56s/it]Examining conflict for pip wheel olefile python six:  56%|█████▌    | 28/50 [01:10<00:44,  2.00s/it]Examining conflict for pytorch pip wheel mkl_fft mkl_random setuptools olefile torchvision six:  56%|█████▌    | 28/50 [01:10<00:44,  2.00s/it]Examining conflict for pytorch pip wheel mkl_fft mkl_random setuptools olefile torchvision six:  58%|█████▊    | 29/50 [01:10<00:33,  1.58s/it]Examining conflict for pytorch setuptools pip wheel mkl_fft mkl_random numpy-base numpy olefile torchvision six:  58%|█████▊    | 29/50 [01:14<00:33,  1.58s/it]Examining conflict for pytorch setuptools pip wheel mkl_fft mkl_random numpy-base numpy olefile torchvision six:  60%|██████    | 30/50 [01:14<00:40,  2.04s/it]Examining conflict for pillow openjpeg torchvision:  60%|██████    | 30/50 [01:18<00:40,  2.04s/it]                                                             Examining conflict for pillow openjpeg torchvision:  62%|██████▏   | 31/50 [01:18<00:52,  2.74s/it]Examining conflict for pillow zstd libtiff openjpeg lcms2:  62%|██████▏   | 31/50 [01:19<00:52,  2.74s/it]Examining conflict for pillow zstd libtiff openjpeg lcms2:  64%|██████▍   | 32/50 [01:19<00:40,  2.23s/it]Examining conflict for pillow openjpeg lcms2:  64%|██████▍   | 32/50 [01:19<00:40,  2.23s/it]             Examining conflict for pillow openjpeg libpng freetype:  66%|██████▌   | 33/50 [01:20<00:37,  2.23s/it]Examining conflict for pillow openjpeg libpng freetype:  68%|██████▊   | 34/50 [01:20<00:20,  1.30s/it]Examining conflict for pillow torchvision libtiff openjpeg libwebp-base lcms2:  68%|██████▊   | 34/50 [01:20<00:20,  1.30s/it]Examining conflict for pillow libtiff openjpeg torchvision lcms2:  70%|███████   | 35/50 [01:21<00:19,  1.30s/it]             Examining conflict for pillow libtiff openjpeg torchvision lcms2:  72%|███████▏  | 36/50 [01:21<00:14,  1.00s/it]Examining conflict for openjpeg torchvision:  72%|███████▏  | 36/50 [01:22<00:14,  1.00s/it]                     Examining conflict for openjpeg torchvision:  74%|███████▍  | 37/50 [01:22<00:12,  1.00it/s]Examining conflict for pillow torchvision:  74%|███████▍  | 37/50 [01:23<00:12,  1.00it/s]  Examining conflict for pillow torchvision:  76%|███████▌  | 38/50 [01:23<00:11,  1.02it/s]Examining conflict for pillow torchvision lcms2:  76%|███████▌  | 38/50 [01:23<00:11,  1.02it/s]Examining conflict for pillow torchvision freetype:  78%|███████▊  | 39/50 [01:24<00:10,  1.02it/s]Examining conflict for pillow torchvision freetype:  80%|████████  | 40/50 [01:24<00:07,  1.29it/s]Examining conflict for pillow olefile torchvision:  80%|████████  | 40/50 [01:24<00:07,  1.29it/s] Examining conflict for pillow olefile torchvision:  82%|████████▏ | 41/50 [01:24<00:07,  1.23it/s]Examining conflict for pytorch torchvision cudatoolkit:  82%|████████▏ | 41/50 [01:25<00:07,  1.23it/s]Examining conflict for pytorch torchvision cudatoolkit:  84%|████████▍ | 42/50 [01:25<00:06,  1.19it/s]Examining conflict for setuptools pip certifi:  84%|████████▍ | 42/50 [01:26<00:06,  1.19it/s]         Examining conflict for setuptools pip certifi:  86%|████████▌ | 43/50 [01:26<00:06,  1.16it/s]Examining conflict for setuptools pip python:  86%|████████▌ | 43/50 [01:26<00:06,  1.16it/s] Examining conflict for pytorch numpy mkl_random numpy-base mkl_fft torchvision:  88%|████████▊ | 44/50 [01:26<00:05,  1.16it/s]Examining conflict for pytorch numpy mkl_random numpy-base mkl_fft torchvision:  90%|█████████ | 45/50 [01:26<00:02,  1.92it/s]Examining conflict for pytorch mkl-service numpy mkl_random numpy-base mkl_fft torchvision:  90%|█████████ | 45/50 [01:30<00:02,  1.92it/s]Examining conflict for pytorch mkl-service numpy mkl_random numpy-base mkl_fft torchvision:  92%|█████████▏| 46/50 [01:30<00:04,  1.22s/it]Examining conflict for mkl-service numpy mkl_random numpy-base mkl_fft six:  92%|█████████▏| 46/50 [01:33<00:04,  1.22s/it]                Examining conflict for mkl-service numpy mkl_random numpy-base mkl_fft six:  94%|█████████▍| 47/50 [01:33<00:05,  1.68s/it]Examining conflict for pytorch torchvision:  94%|█████████▍| 47/50 [01:34<00:05,  1.68s/it]                                Examining conflict for pytorch torchvision:  96%|█████████▌| 48/50 [01:34<00:03,  1.50s/it]Examining conflict for pytorch mkl_fft torchvision mkl_random:  96%|█████████▌| 48/50 [01:34<00:03,  1.50s/it]Examining conflict for pytorch mkl_random:  98%|█████████▊| 49/50 [01:44<00:01,  1.50s/it]                    Examining conflict for pytorch mkl_random: 100%|██████████| 50/50 [01:44<00:00,  3.04s/it]Examining conflict for pytorch numpy mkl_random mkl_fft torchvision: 100%|██████████| 50/50 [01:48<00:00,  3.04s/it]Examining conflict for pytorch numpy mkl_random mkl_fft torchvision: : 51it [01:48,  3.31s/it]                      Examining conflict for pytorch ninja torchvision: : 51it [01:49,  3.31s/it]                   Examining conflict for pytorch ninja torchvision: : 52it [01:49,  2.71s/it]Examining conflict for zstd libtiff lz4-c: : 52it [01:50,  2.71s/it]       Examining conflict for zstd libtiff lz4-c: : 53it [01:50,  2.24s/it]                                                                    
+Found conflicts! Looking for incompatible packages.
+This can take several minutes.  Press CTRL-C to abort.
+failed
+Solving environment: ...working... Building graph of deps:   0%|          | 0/50 [00:00<?, ?it/s]Examining _openmp_mutex==4.5=1_gnu:   0%|          | 0/50 [00:00<?, ?it/s]Examining libgcc-ng==9.3.0=h2828fa1_19:   2%|▏         | 1/50 [00:00<00:00, 135.37it/s]Examining openssl==1.1.1k=h7f98852_0:   4%|▍         | 2/50 [00:00<00:00, 241.20it/s]  Examining jpeg==9d=h36c2ea0_0:   6%|▌         | 3/50 [00:00<00:00, 228.64it/s]       Examining blas==1.0=mkl:   8%|▊         | 4/50 [00:00<00:00, 199.17it/s]      Examining _libgcc_mutex==0.1=conda_forge:  10%|█         | 5/50 [00:00<00:00, 222.63it/s]Examining python_abi==3.7=1_cp37m:  12%|█▏        | 6/50 [00:00<00:00, 264.76it/s]       Examining libffi==3.3=h58526e2_2:  14%|█▍        | 7/50 [00:00<00:00, 141.73it/s] Examining wheel==0.36.2=pyhd3deb0d_0:  16%|█▌        | 8/50 [00:00<00:00, 141.31it/s]Examining sqlite==3.35.5=h74cdb3f_0:  18%|█▊        | 9/50 [00:00<00:00, 43.46it/s]  Examining sqlite==3.35.5=h74cdb3f_0:  20%|██        | 10/50 [00:00<00:00, 48.25it/s]Examining openjpeg==2.4.0=hf7af979_0:  20%|██        | 10/50 [00:00<00:00, 48.25it/s]Examining libstdcxx-ng==9.3.0=h6de172a_19:  22%|██▏       | 11/50 [00:00<00:00, 48.25it/s]Examining readline==8.1=h46c0cb4_0:  24%|██▍       | 12/50 [00:00<00:00, 48.25it/s]       Examining pillow==8.1.2=py37h4600e1f_1:  26%|██▌       | 13/50 [00:00<00:00, 48.25it/s]Examining cudatoolkit==9.2.148=h80a95b2_8:  28%|██▊       | 14/50 [00:00<00:00, 48.25it/s]Examining ncurses==6.2=h58526e2_4:  30%|███       | 15/50 [00:00<00:00, 48.25it/s]        Examining pip==21.1.1=pyhd8ed1ab_0:  32%|███▏      | 16/50 [00:00<00:00, 48.25it/s]Examining tk==8.6.10=h21135ba_1:  34%|███▍      | 17/50 [00:00<00:00, 48.25it/s]   Examining tk==8.6.10=h21135ba_1:  36%|███▌      | 18/50 [00:00<00:00, 35.41it/s]Examining certifi==2020.12.5=py37h89c1867_1:  36%|███▌      | 18/50 [00:00<00:00, 35.41it/s]Examining xz==5.2.5=h516909a_1:  38%|███▊      | 19/50 [00:00<00:00, 35.41it/s]             Examining numpy-base==1.20.1=py37h7d8b39e_0:  40%|████      | 20/50 [00:00<00:00, 35.41it/s]Examining olefile==0.46=pyh9f0ad1d_1:  42%|████▏     | 21/50 [00:00<00:00, 35.41it/s]       Examining libwebp-base==1.2.0=h7f98852_2:  44%|████▍     | 22/50 [00:00<00:00, 35.41it/s]Examining libwebp-base==1.2.0=h7f98852_2:  46%|████▌     | 23/50 [00:00<00:00, 29.29it/s]Examining python==3.7.10=hffdb5ce_100_cpython:  46%|████▌     | 23/50 [00:00<00:00, 29.29it/s]Examining six==1.16.0=pyh6c4a22f_0:  48%|████▊     | 24/50 [00:00<00:00, 29.29it/s]           Examining pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0:  50%|█████     | 25/50 [00:00<00:00, 29.29it/s]Examining pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0:  52%|█████▏    | 26/50 [00:00<00:00, 24.67it/s]Examining @/linux-64::__unix==0=0:  52%|█████▏    | 26/50 [00:01<00:00, 24.67it/s]                      Examining @/linux-64::__cuda==11.4=0:  54%|█████▍    | 27/50 [00:01<00:00, 24.67it/s]Examining zstd==1.4.9=ha95c52a_0:  56%|█████▌    | 28/50 [00:01<00:00, 24.67it/s]    Examining zstd==1.4.9=ha95c52a_0:  58%|█████▊    | 29/50 [00:01<00:00, 21.05it/s]Examining ca-certificates==2020.12.5=ha878542_0:  58%|█████▊    | 29/50 [00:01<00:00, 21.05it/s]Examining freetype==2.10.4=h0708190_1:  60%|██████    | 30/50 [00:01<00:00, 21.05it/s]          Examining libtiff==4.2.0=hdc55705_1:  62%|██████▏   | 31/50 [00:01<00:00, 21.05it/s]  Examining mkl_random==1.2.1=py37ha9443f7_2:  64%|██████▍   | 32/50 [00:01<00:00, 21.05it/s]Examining libpng==1.6.37=h21135ba_2:  66%|██████▌   | 33/50 [00:01<00:00, 21.05it/s]       Examining libpng==1.6.37=h21135ba_2:  68%|██████▊   | 34/50 [00:01<00:00, 23.80it/s]Examining ninja==1.10.2=h4bd325d_0:  68%|██████▊   | 34/50 [00:01<00:00, 23.80it/s] Examining mkl_fft==1.3.0=py37h42c9631_2:  70%|███████   | 35/50 [00:01<00:00, 23.80it/s]Examining torchvision==0.7.0=py37_cu92:  72%|███████▏  | 36/50 [00:01<00:00, 23.80it/s] Examining torchvision==0.7.0=py37_cu92:  74%|███████▍  | 37/50 [00:01<00:00, 22.83it/s]Examining libgomp==9.3.0=h2828fa1_19:  74%|███████▍  | 37/50 [00:01<00:00, 22.83it/s]  Examining lcms2==2.12=hddcbb42_0:  76%|███████▌  | 38/50 [00:01<00:00, 22.83it/s]    Examining @/linux-64::__linux==5.15.0=0:  78%|███████▊  | 39/50 [00:01<00:00, 22.83it/s]Examining @/linux-64::__linux==5.15.0=0:  80%|████████  | 40/50 [00:01<00:00, 16.61it/s]Examining mkl-service==2.3.0=py37h27cfd23_1:  80%|████████  | 40/50 [00:01<00:00, 16.61it/s]Examining ld_impl_linux-64==2.35.1=hea4e1c9_2:  82%|████████▏ | 41/50 [00:01<00:00, 16.61it/s]Examining lz4-c==1.9.3=h9c3ff4c_0:  84%|████████▍ | 42/50 [00:01<00:00, 16.61it/s]            Examining intel-openmp==2021.2.0=h06a4308_610:  86%|████████▌ | 43/50 [00:01<00:00, 16.61it/s]Examining @/linux-64::__glibc==2.35=0:  88%|████████▊ | 44/50 [00:01<00:00, 16.61it/s]        Examining numpy==1.20.1=py37h93e21f0_0:  90%|█████████ | 45/50 [00:01<00:00, 16.61it/s]Examining zlib==1.2.11=h516909a_1010:  92%|█████████▏| 46/50 [00:01<00:00, 16.61it/s]  Examining zlib==1.2.11=h516909a_1010:  94%|█████████▍| 47/50 [00:01<00:00, 24.40it/s]Examining setuptools==49.6.0=py37h89c1867_3:  94%|█████████▍| 47/50 [00:01<00:00, 24.40it/s]Examining @/linux-64::__archspec==1=x86_64:  96%|█████████▌| 48/50 [00:01<00:00, 24.40it/s] Examining mkl==2021.2.0=h06a4308_296:  98%|█████████▊| 49/50 [00:01<00:00, 24.40it/s]                                                                                           Determining conflicts:   0%|          | 0/50 [00:00<?, ?it/s]Examining conflict for _openmp_mutex libgcc-ng jpeg openssl blas libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python pytorch zstd freetype libtiff mkl_random libpng ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy zlib:   0%|          | 0/50 [00:00<?, ?it/s]Examining conflict for libgomp _openmp_mutex libgcc-ng:   2%|▏         | 1/50 [00:03<02:50,  3.49s/it]                                                                                                                                                                                                               Examining conflict for libgomp _openmp_mutex libgcc-ng:   4%|▍         | 2/50 [00:03<01:23,  1.74s/it]Examining conflict for _openmp_mutex libgcc-ng jpeg openssl _libgcc_mutex libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python zstd freetype libtiff mkl_random libpng ninja mkl_fft libgomp lcms2 mkl-service lz4-c numpy zlib:   4%|▍         | 2/50 [00:03<01:23,  1.74s/it]Examining conflict for libgcc-ng jpeg openssl blas python_abi libffi wheel sqlite openjpeg readline pillow cudatoolkit ncurses pip tk certifi xz numpy-base olefile libwebp-base python six pytorch zstd freetype libtiff mkl_random libpng ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy zlib setuptools:   6%|▌         | 3/50 [00:04<01:21,  1.74s/it]Examining conflict for libgcc-ng jpeg openssl blas python_abi libffi wheel sqlite openjpeg readline pillow cudatoolkit ncurses pip tk certifi xz numpy-base olefile libwebp-base python six pytorch zstd freetype libtiff mkl_random libpng ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy zlib setuptools:   8%|▊         | 4/50 [00:04<00:49,  1.08s/it]Examining conflict for pytorch mkl-service libgcc-ng blas numpy mkl_random numpy-base mkl_fft:   8%|▊         | 4/50 [00:08<00:49,  1.08s/it]                                                                                                                                                                                                                      Examining conflict for pytorch mkl-service libgcc-ng blas numpy mkl_random numpy-base mkl_fft:  10%|█         | 5/50 [00:08<01:26,  1.91s/it]Examining conflict for pytorch mkl-service openssl pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  10%|█         | 5/50 [00:11<01:26,  1.91s/it]Examining conflict for pytorch mkl-service openssl pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  12%|█▏        | 6/50 [00:11<01:30,  2.05s/it]Examining conflict for openssl ca-certificates wheel olefile python six:  12%|█▏        | 6/50 [00:14<01:30,  2.05s/it]                                                                                             Examining conflict for openssl ca-certificates wheel olefile python six:  14%|█▍        | 7/50 [00:14<01:51,  2.58s/it]Examining conflict for openssl jpeg libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python zstd freetype libtiff libpng mkl_random ninja mkl_fft lcms2 mkl-service lz4-c __glibc numpy zlib:  14%|█▍        | 7/50 [00:15<01:51,  2.58s/it]Examining conflict for openssl jpeg libffi sqlite openjpeg readline pillow cudatoolkit ncurses tk xz numpy-base libwebp-base python zstd freetype libtiff libpng mkl_random ninja mkl_fft lcms2 mkl-service lz4-c __glibc numpy zlib:  16%|█▌        | 8/50 [00:15<01:18,  1.88s/it]Examining conflict for jpeg pillow libtiff openjpeg torchvision lcms2:  16%|█▌        | 8/50 [00:16<01:18,  1.88s/it]                                                                                                                                                               Examining conflict for jpeg pillow libtiff openjpeg torchvision lcms2:  18%|█▊        | 9/50 [00:16<01:08,  1.68s/it]Examining conflict for pytorch blas numpy mkl_random numpy-base mkl_fft torchvision:  18%|█▊        | 9/50 [00:17<01:08,  1.68s/it]Examining conflict for pytorch blas numpy mkl_random numpy-base mkl_fft torchvision:  20%|██        | 10/50 [00:17<00:59,  1.50s/it]Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft:  20%|██        | 10/50 [00:20<00:59,  1.50s/it]Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft:  22%|██▏       | 11/50 [00:20<01:19,  2.04s/it]Examining conflict for pytorch mkl-service blas intel-openmp numpy mkl_random numpy-base mkl_fft mkl:  22%|██▏       | 11/50 [00:23<01:19,  2.04s/it]Examining conflict for pytorch mkl-service blas intel-openmp numpy mkl_random numpy-base mkl_fft mkl:  24%|██▍       | 12/50 [00:23<01:21,  2.14s/it]Examining conflict for blas python_abi libffi wheel sqlite openjpeg libstdcxx-ng readline pillow cudatoolkit pip certifi numpy-base olefile python six pytorch zstd libtiff mkl_random ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy setuptools:  24%|██▍       | 12/50 [00:25<01:21,  2.14s/it]Examining conflict for blas python_abi libffi wheel sqlite openjpeg libstdcxx-ng readline pillow cudatoolkit pip certifi numpy-base olefile python six pytorch zstd libtiff mkl_random ninja mkl_fft torchvision lcms2 mkl-service lz4-c numpy setuptools:  26%|██▌       | 13/50 [00:25<01:21,  2.21s/it]Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft torchvision mkl:  26%|██▌       | 13/50 [00:29<01:21,  2.21s/it]                                                                                                                                                      Examining conflict for pytorch mkl-service blas numpy mkl_random numpy-base mkl_fft torchvision mkl:  28%|██▊       | 14/50 [00:29<01:37,  2.71s/it]Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision numpy six:  28%|██▊       | 14/50 [00:32<01:37,  2.71s/it]Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision numpy six:  30%|███       | 15/50 [00:32<01:41,  2.90s/it]Examining conflict for python_abi wheel openjpeg pillow pip certifi xz numpy-base olefile python six pytorch zstd libtiff mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  30%|███       | 15/50 [00:36<01:41,  2.90s/it]Examining conflict for python_abi wheel openjpeg pillow pip certifi xz numpy-base olefile python six pytorch zstd libtiff mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  32%|███▏      | 16/50 [00:36<01:47,  3.17s/it]Examining conflict for pytorch mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  32%|███▏      | 16/50 [00:40<01:47,  3.17s/it]                        Examining conflict for pytorch mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  34%|███▍      | 17/50 [00:40<01:51,  3.37s/it]Examining conflict for pytorch mkl-service pillow mkl_random python_abi setuptools pip wheel tk certifi numpy-base mkl_fft olefile torchvision python numpy six:  34%|███▍      | 17/50 [00:44<01:51,  3.37s/it]    Examining conflict for pytorch mkl-service pillow mkl_random python_abi setuptools pip wheel tk certifi numpy-base mkl_fft olefile torchvision python numpy six:  36%|███▌      | 18/50 [00:44<01:52,  3.51s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  36%|███▌      | 18/50 [00:47<01:52,  3.51s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy setuptools:  38%|███▊      | 19/50 [00:47<01:51,  3.60s/it]Examining conflict for pytorch mkl-service pillow python_abi libffi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  38%|███▊      | 19/50 [00:51<01:51,  3.60s/it]                                               Examining conflict for pytorch mkl-service pillow python_abi libffi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  40%|████      | 20/50 [00:51<01:50,  3.68s/it]Examining conflict for python_abi wheel sqlite readline pillow ncurses pip certifi numpy-base olefile python six pytorch mkl_random mkl_fft torchvision mkl-service numpy setuptools:  40%|████      | 20/50 [00:55<01:50,  3.68s/it]Examining conflict for python_abi wheel sqlite readline pillow ncurses pip certifi numpy-base olefile python six pytorch mkl_random mkl_fft torchvision mkl-service numpy setuptools:  42%|████▏     | 21/50 [00:55<01:47,  3.71s/it]Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  42%|████▏     | 21/50 [00:59<01:47,  3.71s/it]                        Examining conflict for pytorch mkl-service pillow python_abi setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  44%|████▍     | 22/50 [00:59<01:44,  3.75s/it]Examining conflict for pytorch readline mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  44%|████▍     | 22/50 [01:03<01:44,  3.75s/it]Examining conflict for pytorch readline mkl-service pillow torchvision python_abi setuptools pip wheel certifi mkl_random numpy-base sqlite olefile mkl_fft python numpy six:  46%|████▌     | 23/50 [01:03<01:40,  3.73s/it]Examining conflict for pytorch mkl-service pillow python_abi ld_impl_linux-64 setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  46%|████▌     | 23/50 [01:06<01:40,  3.73s/it]Examining conflict for pytorch mkl-service pillow python_abi ld_impl_linux-64 setuptools pip wheel certifi mkl_random numpy-base mkl_fft olefile torchvision python numpy six:  48%|████▊     | 24/50 [01:06<01:37,  3.76s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy zlib setuptools:  48%|████▊     | 24/50 [01:10<01:37,  3.76s/it]Examining conflict for python_abi wheel sqlite openjpeg pillow pip tk certifi numpy-base olefile python six pytorch zstd freetype libtiff libpng mkl_random mkl_fft torchvision lcms2 mkl-service numpy zlib setuptools:  50%|█████     | 25/50 [01:10<01:34,  3.77s/it]Examining conflict for pip python wheel:  50%|█████     | 25/50 [01:14<01:34,  3.77s/it]                                                                                                                                                                                Examining conflict for pip python wheel:  52%|█████▏    | 26/50 [01:14<01:31,  3.79s/it]Examining conflict for olefile pip wheel six:  52%|█████▏    | 26/50 [01:14<01:31,  3.79s/it]Examining conflict for pip wheel olefile python six:  54%|█████▍    | 27/50 [01:14<01:27,  3.79s/it]Examining conflict for pip wheel olefile python six:  56%|█████▌    | 28/50 [01:14<00:46,  2.13s/it]Examining conflict for pytorch pip wheel mkl_fft mkl_random setuptools olefile torchvision six:  56%|█████▌    | 28/50 [01:15<00:46,  2.13s/it]Examining conflict for pytorch pip wheel mkl_fft mkl_random setuptools olefile torchvision six:  58%|█████▊    | 29/50 [01:15<00:35,  1.68s/it]Examining conflict for pytorch setuptools pip wheel mkl_fft mkl_random numpy-base numpy olefile torchvision six:  58%|█████▊    | 29/50 [01:18<00:35,  1.68s/it]Examining conflict for pytorch setuptools pip wheel mkl_fft mkl_random numpy-base numpy olefile torchvision six:  60%|██████    | 30/50 [01:18<00:43,  2.17s/it]Examining conflict for pillow openjpeg torchvision:  60%|██████    | 30/50 [01:23<00:43,  2.17s/it]                                                             Examining conflict for pillow openjpeg torchvision:  62%|██████▏   | 31/50 [01:23<00:55,  2.92s/it]Examining conflict for pillow zstd libtiff openjpeg lcms2:  62%|██████▏   | 31/50 [01:24<00:55,  2.92s/it]Examining conflict for pillow zstd libtiff openjpeg lcms2:  64%|██████▍   | 32/50 [01:24<00:42,  2.38s/it]Examining conflict for pillow openjpeg lcms2:  64%|██████▍   | 32/50 [01:24<00:42,  2.38s/it]             Examining conflict for pillow openjpeg libpng freetype:  66%|██████▌   | 33/50 [01:25<00:40,  2.38s/it]Examining conflict for pillow openjpeg libpng freetype:  68%|██████▊   | 34/50 [01:25<00:22,  1.39s/it]Examining conflict for pillow torchvision libtiff openjpeg libwebp-base lcms2:  68%|██████▊   | 34/50 [01:25<00:22,  1.39s/it]Examining conflict for pillow libtiff openjpeg torchvision lcms2:  70%|███████   | 35/50 [01:26<00:20,  1.39s/it]             Examining conflict for pillow libtiff openjpeg torchvision lcms2:  72%|███████▏  | 36/50 [01:26<00:14,  1.07s/it]Examining conflict for openjpeg torchvision:  72%|███████▏  | 36/50 [01:27<00:14,  1.07s/it]                     Examining conflict for openjpeg torchvision:  74%|███████▍  | 37/50 [01:27<00:13,  1.06s/it]Examining conflict for pillow torchvision:  74%|███████▍  | 37/50 [01:28<00:13,  1.06s/it]  Examining conflict for pillow torchvision:  76%|███████▌  | 38/50 [01:28<00:12,  1.05s/it]Examining conflict for pillow torchvision lcms2:  76%|███████▌  | 38/50 [01:28<00:12,  1.05s/it]Examining conflict for pillow torchvision freetype:  78%|███████▊  | 39/50 [01:29<00:11,  1.05s/it]Examining conflict for pillow torchvision freetype:  80%|████████  | 40/50 [01:29<00:08,  1.21it/s]Examining conflict for pillow olefile torchvision:  80%|████████  | 40/50 [01:30<00:08,  1.21it/s] Examining conflict for pillow olefile torchvision:  82%|████████▏ | 41/50 [01:30<00:07,  1.16it/s]Examining conflict for pytorch torchvision cudatoolkit:  82%|████████▏ | 41/50 [01:31<00:07,  1.16it/s]Examining conflict for pytorch torchvision cudatoolkit:  84%|████████▍ | 42/50 [01:31<00:07,  1.12it/s]Examining conflict for setuptools pip certifi:  84%|████████▍ | 42/50 [01:32<00:07,  1.12it/s]         Examining conflict for setuptools pip certifi:  86%|████████▌ | 43/50 [01:32<00:06,  1.09it/s]Examining conflict for setuptools pip python:  86%|████████▌ | 43/50 [01:32<00:06,  1.09it/s] Examining conflict for setuptools pip python:  88%|████████▊ | 44/50 [01:32<00:04,  1.43it/s]Examining conflict for pytorch numpy mkl_random numpy-base mkl_fft torchvision:  88%|████████▊ | 44/50 [01:32<00:04,  1.43it/s]Examining conflict for pytorch mkl-service numpy mkl_random numpy-base mkl_fft torchvision:  90%|█████████ | 45/50 [01:35<00:03,  1.43it/s]Examining conflict for pytorch mkl-service numpy mkl_random numpy-base mkl_fft torchvision:  92%|█████████▏| 46/50 [01:35<00:04,  1.14s/it]Examining conflict for mkl-service numpy mkl_random numpy-base mkl_fft six:  92%|█████████▏| 46/50 [01:38<00:04,  1.14s/it]                Examining conflict for mkl-service numpy mkl_random numpy-base mkl_fft six:  94%|█████████▍| 47/50 [01:38<00:04,  1.65s/it]Examining conflict for pytorch torchvision:  94%|█████████▍| 47/50 [01:40<00:04,  1.65s/it]                                Examining conflict for pytorch torchvision:  96%|█████████▌| 48/50 [01:40<00:03,  1.51s/it]Examining conflict for pytorch mkl_fft torchvision mkl_random:  96%|█████████▌| 48/50 [01:40<00:03,  1.51s/it]Examining conflict for pytorch mkl_random:  98%|█████████▊| 49/50 [01:50<00:01,  1.51s/it]                    Examining conflict for pytorch mkl_random: 100%|██████████| 50/50 [01:50<00:00,  3.15s/it]Examining conflict for pytorch numpy mkl_random mkl_fft torchvision: 100%|██████████| 50/50 [01:55<00:00,  3.15s/it]Examining conflict for pytorch numpy mkl_random mkl_fft torchvision: : 51it [01:55,  3.45s/it]                      Examining conflict for pytorch ninja torchvision: : 51it [01:56,  3.45s/it]                   Examining conflict for pytorch ninja torchvision: : 52it [01:56,  2.84s/it]Examining conflict for zstd libtiff lz4-c: : 52it [01:57,  2.84s/it]       Examining conflict for zstd libtiff lz4-c: : 53it [01:57,  2.36s/it]                                                                    
+Found conflicts! Looking for incompatible packages.
+This can take several minutes.  Press CTRL-C to abort.
+failed
+
+UnsatisfiableError: The following specifications were found to be incompatible with each other:
+
+Output in format: Requested package -> Available versions
+
+Package _libgcc_mutex conflicts for:
+cudatoolkit==9.2.148=h80a95b2_8 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+libgcc-ng==9.3.0=h2828fa1_19 -> _openmp_mutex[version='>=4.5'] -> _libgcc_mutex==0.1=main
+sqlite==3.35.5=h74cdb3f_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+_libgcc_mutex==0.1=conda_forge
+numpy-base==1.20.1=py37h7d8b39e_0 -> libgcc-ng[version='>=7.3.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+openjpeg==2.4.0=hf7af979_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+jpeg==9d=h36c2ea0_0 -> libgcc-ng[version='>=7.5.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+mkl_random==1.2.1=py37ha9443f7_2 -> libgcc-ng[version='>=7.3.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+libffi==3.3=h58526e2_2 -> libgcc-ng[version='>=7.5.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+mkl_fft==1.3.0=py37h42c9631_2 -> libgcc-ng[version='>=7.3.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+libwebp-base==1.2.0=h7f98852_2 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+libtiff==4.2.0=hdc55705_1 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+openssl==1.1.1k=h7f98852_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+lz4-c==1.9.3=h9c3ff4c_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+mkl-service==2.3.0=py37h27cfd23_1 -> libgcc-ng[version='>=7.3.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+pillow==8.1.2=py37h4600e1f_1 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+freetype==2.10.4=h0708190_1 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+zlib==1.2.11=h516909a_1010 -> libgcc-ng[version='>=7.5.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+ninja==1.10.2=h4bd325d_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+libpng==1.6.37=h21135ba_2 -> libgcc-ng[version='>=7.5.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+libgcc-ng==9.3.0=h2828fa1_19 -> _libgcc_mutex==0.1=conda_forge
+ncurses==6.2=h58526e2_4 -> libgcc-ng[version='>=7.5.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+numpy==1.20.1=py37h93e21f0_0 -> libgcc-ng[version='>=7.3.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+xz==5.2.5=h516909a_1 -> libgcc-ng[version='>=7.5.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+readline==8.1=h46c0cb4_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+python==3.7.10=hffdb5ce_100_cpython -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+zstd==1.4.9=ha95c52a_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+lcms2==2.12=hddcbb42_0 -> libgcc-ng[version='>=9.3.0'] -> _libgcc_mutex[version='*|0.1',build='main|conda_forge|main']
+tk==8.6.10=h21135ba_1 -> libgcc-ng[version='>=7.5.0'] -> _libgcc_mutex[version='*|0.1|0.1',build='main|conda_forge|main']
+libgomp==9.3.0=h2828fa1_19 -> _libgcc_mutex==0.1=conda_forge
+
+Package six conflicts for:
+mkl-service==2.3.0=py37h27cfd23_1 -> six
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> six
+numpy==1.20.1=py37h93e21f0_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> six
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> six
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> six
+six==1.16.0=pyh6c4a22f_0
+
+Package ncurses conflicts for:
+sqlite==3.35.5=h74cdb3f_0 -> readline[version='>=8.0,<9.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> ncurses[version='5.9.*|5.9|>=6.1,<7.0.0a0|>=6.2,<6.3.0a0|>=6.3,<7.0a0|>=6.2,<7.0.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0|>=6.0,<7.0a0|6.0.*']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> readline[version='>=8.0,<9.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> ncurses[version='>=6.2,<7.0.0a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> ncurses[version='5.9.*|5.9|>=6.1,<7.0.0a0|>=6.2,<6.3.0a0|>=6.3,<7.0a0|>=6.2,<7.0.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0|>=6.0,<7.0a0|6.0.*']
+python_abi==3.7=1_cp37m -> python=3.7 -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+readline==8.1=h46c0cb4_0 -> ncurses[version='>=6.2,<7.0.0a0']
+ncurses==6.2=h58526e2_4
+wheel==0.36.2=pyhd3deb0d_0 -> python -> ncurses[version='5.9.*|5.9|>=6.1,<7.0.0a0|>=6.2,<6.3.0a0|>=6.3,<7.0a0|>=6.2,<7.0.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0|>=6.0,<7.0a0|6.0.*']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+sqlite==3.35.5=h74cdb3f_0 -> ncurses[version='>=6.2,<7.0.0a0']
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='>=6.1,<7.0.0a0|>=6.2,<7.0.0a0|>=6.3,<7.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> ncurses[version='5.9.*|5.9|>=6.1,<7.0.0a0|>=6.2,<6.3.0a0|>=6.3,<7.0a0|>=6.2,<7.0.0a0|>=6.2,<7.0a0|>=6.1,<7.0a0|>=6.0,<7.0a0|6.0.*']
+
+Package libzlib conflicts for:
+libpng==1.6.37=h21135ba_2 -> zlib[version='>=1.2.11,<1.3.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+libtiff==4.2.0=hdc55705_1 -> zlib[version='>=1.2.11,<1.3.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> freetype[version='>=2.10.4,<3.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12|1.2.12|1.2.12|>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+six==1.16.0=pyh6c4a22f_0 -> python -> libzlib[version='>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0']
+python_abi==3.7=1_cp37m -> python=3.7 -> libzlib[version='>=1.2.11,<1.3.0a0']
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> libzlib[version='>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0']
+freetype==2.10.4=h0708190_1 -> libpng[version='>=1.6.37,<1.7.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12|1.2.12|1.2.12|>=1.2.12,<1.3.0a0',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> libzlib[version='>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0']
+tk==8.6.10=h21135ba_1 -> zlib[version='>=1.2.11,<1.3.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+openjpeg==2.4.0=hf7af979_0 -> libpng[version='>=1.6.37,<1.7.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12|1.2.12|1.2.12|>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+python==3.7.10=hffdb5ce_100_cpython -> sqlite[version='>=3.34.0,<4.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12|1.2.12|1.2.12|>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+sqlite==3.35.5=h74cdb3f_0 -> zlib[version='>=1.2.11,<1.3.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+olefile==0.46=pyh9f0ad1d_1 -> python -> libzlib[version='>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> libzlib[version='>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> libzlib[version='>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0']
+zstd==1.4.9=ha95c52a_0 -> zlib[version='>=1.2.11,<1.3.0a0'] -> libzlib[version='1.2.11|1.2.11|1.2.11|1.2.12',build='h36c2ea0_1012|h166bdaf_1014|h166bdaf_0|h166bdaf_1|h166bdaf_2|h36c2ea0_1013']
+
+Package libstdcxx-ng conflicts for:
+olefile==0.46=pyh9f0ad1d_1 -> python -> libstdcxx-ng[version='>=11.2.0|>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> libstdcxx-ng[version='>=11.2.0|>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> libstdcxx-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> libstdcxx-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> libstdcxx-ng[version='>=11.2.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=7.3.0']
+openjpeg==2.4.0=hf7af979_0 -> libstdcxx-ng[version='>=9.3.0']
+pillow==8.1.2=py37h4600e1f_1 -> libtiff[version='>=4.2.0,<4.4.0a0'] -> libstdcxx-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=7.3.0|>=4.9|>=7.2.0']
+zstd==1.4.9=ha95c52a_0 -> libstdcxx-ng[version='>=9.3.0']
+python==3.7.10=hffdb5ce_100_cpython -> libstdcxx-ng[version='>=9.3.0']
+lz4-c==1.9.3=h9c3ff4c_0 -> libstdcxx-ng[version='>=9.3.0']
+mkl_random==1.2.1=py37ha9443f7_2 -> numpy[version='>=1.16,<2.0a0'] -> libstdcxx-ng[version='>=10.3.0|>=12|>=9.4.0|>=11.2.0|>=7.5.0|>=9.3.0|>=4.9|>=7.2.0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> libstdcxx-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+numpy==1.20.1=py37h93e21f0_0 -> mkl_fft -> libstdcxx-ng[version='>=11.2.0|>=7.3.0|>=7.5.0|>=7.2.0|>=9.4.0|>=9.3.0|>=4.9']
+readline==8.1=h46c0cb4_0 -> ncurses[version='>=6.2,<7.0.0a0'] -> libstdcxx-ng[version='>=7.3.0|>=7.5.0']
+mkl_random==1.2.1=py37ha9443f7_2 -> libstdcxx-ng[version='>=7.3.0']
+torchvision==0.7.0=py37_cu92 -> cudatoolkit[version='>=9.2,<9.3'] -> libstdcxx-ng[version='>=10.3.0|>=9.4.0|>=9.3.0|>=12|>=7.3.0|>=4.9|>=11.2.0|>=7.5.0|>=8.4.0|>=7.2.0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> libstdcxx-ng[version='>=11.2.0|>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+libstdcxx-ng==9.3.0=h6de172a_19
+libffi==3.3=h58526e2_2 -> libstdcxx-ng[version='>=7.5.0']
+mkl_fft==1.3.0=py37h42c9631_2 -> numpy[version='>=1.16,<2.0a0'] -> libstdcxx-ng[version='>=10.3.0|>=12|>=9.4.0|>=11.2.0|>=7.5.0|>=9.3.0|>=4.9|>=7.2.0']
+cudatoolkit==9.2.148=h80a95b2_8 -> libstdcxx-ng[version='>=9.3.0']
+zstd==1.4.9=ha95c52a_0 -> lz4-c[version='>=1.9.3,<1.9.4.0a0'] -> libstdcxx-ng[version='>=7.3.0|>=7.5.0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> cudatoolkit[version='>=9.2,<9.3'] -> libstdcxx-ng[version='>=10.3.0|>=9.4.0|>=9.3.0|>=11.2.0|>=7.5.0|>=7.3.0|>=4.9|>=7.2.0|>=12']
+sqlite==3.35.5=h74cdb3f_0 -> ncurses[version='>=6.2,<7.0.0a0'] -> libstdcxx-ng[version='>=7.3.0|>=7.5.0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> libstdcxx-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+ninja==1.10.2=h4bd325d_0 -> libstdcxx-ng[version='>=9.3.0']
+python==3.7.10=hffdb5ce_100_cpython -> libffi[version='>=3.3,<3.4.0a0'] -> libstdcxx-ng[version='>=7.3.0|>=7.5.0']
+six==1.16.0=pyh6c4a22f_0 -> python -> libstdcxx-ng[version='>=11.2.0|>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0'] -> libstdcxx-ng[version='>=11.2.0|>=12|>=9.4.0|>=7.5.0|>=7.3.0']
+python_abi==3.7=1_cp37m -> python=3.7 -> libstdcxx-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+libtiff==4.2.0=hdc55705_1 -> zstd[version='>=1.4.9,<1.5.0a0'] -> libstdcxx-ng[version='>=7.3.0']
+blas==1.0=mkl -> mkl -> libstdcxx-ng[version='>=11.2.0']
+libtiff==4.2.0=hdc55705_1 -> libstdcxx-ng[version='>=9.3.0']
+mkl_fft==1.3.0=py37h42c9631_2 -> libstdcxx-ng[version='>=7.3.0']
+
+Package olefile conflicts for:
+pillow==8.1.2=py37h4600e1f_1 -> olefile
+olefile==0.46=pyh9f0ad1d_1
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> olefile
+
+Package sqlite conflicts for:
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> sqlite[version='>=3.34.0,<4.0a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> sqlite[version='3.13.*|3.20.*|>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.35.5,<4.0a0|>=3.36.0,<4.0a0|>=3.37.0,<4.0a0|>=3.37.1,<4.0a0|>=3.38.5,<4.0a0|3.9.*|>=3.38.0,<4.0a0|>=3.37.2,<4.0a0|>=3.39.2,<4.0a0|>=3.38.3,<4.0a0|>=3.38.2,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.30.0,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0|>=3.23.1,<4.0a0|>=3.22.0,<4.0a0|>=3.20.1,<4.0a0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> sqlite[version='3.13.*|3.20.*|>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.35.5,<4.0a0|>=3.36.0,<4.0a0|>=3.37.0,<4.0a0|>=3.37.1,<4.0a0|>=3.38.5,<4.0a0|3.9.*|>=3.38.0,<4.0a0|>=3.37.2,<4.0a0|>=3.39.2,<4.0a0|>=3.38.3,<4.0a0|>=3.38.2,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.30.0,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0|>=3.23.1,<4.0a0|>=3.22.0,<4.0a0|>=3.20.1,<4.0a0']
+sqlite==3.35.5=h74cdb3f_0
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> sqlite[version='3.13.*|3.20.*|>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.35.5,<4.0a0|>=3.36.0,<4.0a0|>=3.37.0,<4.0a0|>=3.37.1,<4.0a0|>=3.38.5,<4.0a0|>=3.38.0,<4.0a0|>=3.37.2,<4.0a0|>=3.39.2,<4.0a0|>=3.38.3,<4.0a0|>=3.38.2,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.30.0,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0|>=3.23.1,<4.0a0|>=3.22.0,<4.0a0|>=3.20.1,<4.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> sqlite[version='3.13.*|3.20.*|>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.35.5,<4.0a0|>=3.36.0,<4.0a0|>=3.37.0,<4.0a0|>=3.37.1,<4.0a0|>=3.38.5,<4.0a0|3.9.*|>=3.38.0,<4.0a0|>=3.37.2,<4.0a0|>=3.39.2,<4.0a0|>=3.38.3,<4.0a0|>=3.38.2,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.30.0,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0|>=3.23.1,<4.0a0|>=3.22.0,<4.0a0|>=3.20.1,<4.0a0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+python_abi==3.7=1_cp37m -> python=3.7 -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> sqlite[version='>=3.24.0,<4.0a0|>=3.25.1,<4.0a0|>=3.25.2,<4.0a0|>=3.25.3,<4.0a0|>=3.26.0,<4.0a0|>=3.28.0,<4.0a0|>=3.30.1,<4.0a0|>=3.32.3,<4.0a0|>=3.33.0,<4.0a0|>=3.34.0,<4.0a0|>=3.36.0,<4.0a0|>=3.38.0,<4.0a0|>=3.35.4,<4.0a0|>=3.31.1,<4.0a0|>=3.29.0,<4.0a0|>=3.27.2,<4.0a0']
+
+Package tk conflicts for:
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> tk[version='8.5.*|8.6.*|>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.12,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> tk[version='8.5.*|8.6.*|>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.12,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+python_abi==3.7=1_cp37m -> python=3.7 -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> tk[version='8.5.*|8.6.*|>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.12,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> tk[version='>=8.6.10,<8.7.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> tk[version='>=8.6.10,<8.7.0a0']
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> tk[version='8.6.*|>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.12,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> tk[version='8.5.*|8.6.*|>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.12,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+tk==8.6.10=h21135ba_1
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> tk[version='>=8.6.10,<8.7.0a0|>=8.6.11,<8.7.0a0|>=8.6.9,<8.7.0a0|>=8.6.8,<8.7.0a0|>=8.6.7,<8.7.0a0']
+
+Package libwebp conflicts for:
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> libwebp[version='>=0.3.0|>=1.2.0,<1.3.0a0']
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0'] -> libwebp
+
+Package zlib conflicts for:
+pillow==8.1.2=py37h4600e1f_1 -> libtiff[version='>=4.2.0,<4.4.0a0'] -> zlib[version='>=1.2.12,<1.3.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> zlib[version='>=1.2.11,<1.3.0a0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+libtiff==4.2.0=hdc55705_1 -> zlib[version='>=1.2.11,<1.3.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> sqlite[version='>=3.34.0,<4.0a0'] -> zlib[version='>=1.2.12,<1.3.0a0']
+tk==8.6.10=h21135ba_1 -> zlib[version='>=1.2.11,<1.3.0a0']
+libpng==1.6.37=h21135ba_2 -> zlib[version='>=1.2.11,<1.3.0a0']
+openjpeg==2.4.0=hf7af979_0 -> zlib[version='>=1.2.11,<1.3.0a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> zlib[version='1.2.*|1.2.11|>=1.2.11,<1.3.0a0|1.2.8|1.2.11.*|>=1.2.12,<1.3.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+python_abi==3.7=1_cp37m -> python=3.7 -> zlib[version='>=1.2.11,<1.3.0a0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> zlib[version='1.2.*|1.2.11|>=1.2.11,<1.3.0a0|1.2.8|>=1.2.12,<1.3.0a0']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> zlib[version='1.2.*|1.2.11|>=1.2.11,<1.3.0a0|1.2.8|1.2.11.*|>=1.2.12,<1.3.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+freetype==2.10.4=h0708190_1 -> zlib[version='>=1.2.11,<1.3.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+sqlite==3.35.5=h74cdb3f_0 -> zlib[version='>=1.2.11,<1.3.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> zlib[version='>=1.2.11,<1.3.0a0']
+zlib==1.2.11=h516909a_1010
+wheel==0.36.2=pyhd3deb0d_0 -> python -> zlib[version='1.2.*|1.2.11|>=1.2.11,<1.3.0a0|1.2.8|1.2.11.*|>=1.2.12,<1.3.0a0']
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> zlib[version='1.2.*|1.2.11|1.2.11.*|>=1.2.11,<1.3.0a0|>=1.2.12,<1.3.0a0|1.2.8']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+openjpeg==2.4.0=hf7af979_0 -> libpng[version='>=1.6.37,<1.7.0a0'] -> zlib[version='>=1.2.12,<1.3.0a0']
+zstd==1.4.9=ha95c52a_0 -> zlib[version='>=1.2.11,<1.3.0a0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> zlib[version='>=1.2.11,<1.3.0a0']
+freetype==2.10.4=h0708190_1 -> libpng[version='>=1.6.37,<1.7.0a0'] -> zlib[version='>=1.2.12,<1.3.0a0']
+
+Package pypy3.9 conflicts for:
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> pypy3.9[version='>=7.3.8|>=7.3.9']
+six==1.16.0=pyh6c4a22f_0 -> python -> pypy3.9[version='7.3.8.*|7.3.9.*']
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> pypy3.9[version='>=7.3.8|>=7.3.9']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> numpy[version='>=1.11'] -> pypy3.9[version='>=7.3.8|>=7.3.9']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> pypy3.9[version='7.3.8.*|7.3.9.*']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> pypy3.9[version='7.3.8.*|7.3.9.*|>=7.3.9|>=7.3.8']
+setuptools==49.6.0=py37h89c1867_3 -> certifi[version='>=2016.9.26'] -> pypy3.9[version='>=7.3.8|>=7.3.9']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> pypy3.9[version='>=7.3.8|>=7.3.9']
+olefile==0.46=pyh9f0ad1d_1 -> python -> pypy3.9[version='7.3.8.*|7.3.9.*']
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> pypy3.9[version='>=7.3.9']
+numpy==1.20.1=py37h93e21f0_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> pypy3.9[version='>=7.3.9']
+
+Package tzdata conflicts for:
+wheel==0.36.2=pyhd3deb0d_0 -> python -> tzdata
+olefile==0.46=pyh9f0ad1d_1 -> python -> tzdata
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> tzdata
+six==1.16.0=pyh6c4a22f_0 -> python -> tzdata
+
+Package ld_impl_linux-64 conflicts for:
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> ld_impl_linux-64[version='>=2.34|>=2.36.1']
+olefile==0.46=pyh9f0ad1d_1 -> python -> ld_impl_linux-64[version='>=2.34|>=2.36.1']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+python==3.7.10=hffdb5ce_100_cpython -> ld_impl_linux-64[version='>=2.34']
+six==1.16.0=pyh6c4a22f_0 -> python -> ld_impl_linux-64[version='>=2.34|>=2.36.1']
+ld_impl_linux-64==2.35.1=hea4e1c9_2
+python_abi==3.7=1_cp37m -> python=3.7 -> ld_impl_linux-64[version='>=2.34']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> ld_impl_linux-64[version='>=2.34|>=2.36.1']
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> ld_impl_linux-64[version='>=2.34']
+
+Package _openmp_mutex conflicts for:
+cudatoolkit==9.2.148=h80a95b2_8 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+libffi==3.3=h58526e2_2 -> libgcc-ng[version='>=7.5.0'] -> _openmp_mutex[version='>=4.5']
+_openmp_mutex==4.5=1_gnu
+libgcc-ng==9.3.0=h2828fa1_19 -> _openmp_mutex[version='>=4.5']
+openjpeg==2.4.0=hf7af979_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> blas=[build=mkl] -> _openmp_mutex[version='*|>=4.5',build=*_llvm]
+numpy==1.20.1=py37h93e21f0_0 -> libgcc-ng[version='>=7.3.0'] -> _openmp_mutex[version='*|>=4.5',build=*_llvm]
+xz==5.2.5=h516909a_1 -> libgcc-ng[version='>=7.5.0'] -> _openmp_mutex[version='>=4.5']
+libwebp-base==1.2.0=h7f98852_2 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+zstd==1.4.9=ha95c52a_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+openssl==1.1.1k=h7f98852_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+blas==1.0=mkl -> mkl -> _openmp_mutex[version='*|>=4.5',build=*_llvm]
+libtiff==4.2.0=hdc55705_1 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+lz4-c==1.9.3=h9c3ff4c_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+zlib==1.2.11=h516909a_1010 -> libgcc-ng[version='>=7.5.0'] -> _openmp_mutex[version='>=4.5']
+tk==8.6.10=h21135ba_1 -> libgcc-ng[version='>=7.5.0'] -> _openmp_mutex[version='>=4.5']
+libpng==1.6.37=h21135ba_2 -> libgcc-ng[version='>=7.5.0'] -> _openmp_mutex[version='>=4.5']
+ncurses==6.2=h58526e2_4 -> libgcc-ng[version='>=7.5.0'] -> _openmp_mutex[version='>=4.5']
+readline==8.1=h46c0cb4_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+pillow==8.1.2=py37h4600e1f_1 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+ninja==1.10.2=h4bd325d_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+freetype==2.10.4=h0708190_1 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+jpeg==9d=h36c2ea0_0 -> libgcc-ng[version='>=7.5.0'] -> _openmp_mutex[version='>=4.5']
+torchvision==0.7.0=py37_cu92 -> pytorch==1.6.0 -> _openmp_mutex[version='>=4.5']
+numpy-base==1.20.1=py37h7d8b39e_0 -> libgcc-ng[version='>=7.3.0'] -> _openmp_mutex[version='*|>=4.5',build=*_llvm]
+mkl_random==1.2.1=py37ha9443f7_2 -> libgcc-ng[version='>=7.3.0'] -> _openmp_mutex[version='*|>=4.5',build=*_llvm]
+sqlite==3.35.5=h74cdb3f_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+python==3.7.10=hffdb5ce_100_cpython -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+mkl_fft==1.3.0=py37h42c9631_2 -> libgcc-ng[version='>=7.3.0'] -> _openmp_mutex[version='*|>=4.5',build=*_llvm]
+lcms2==2.12=hddcbb42_0 -> libgcc-ng[version='>=9.3.0'] -> _openmp_mutex[version='>=4.5']
+mkl-service==2.3.0=py37h27cfd23_1 -> libgcc-ng[version='>=7.3.0'] -> _openmp_mutex[version='*|>=4.5',build=*_llvm]
+
+Package libtiff conflicts for:
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> lcms2[version='>=2.12,<3.0a0'] -> libtiff[version='>=4.1.0,<5.0a0|>=4.2.0,<5.0a0|>=4.4.0,<5.0a0|>=4.3.0,<5.0a0']
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> libtiff[version='4.0.*|>=4.0.10,<4.4.0a0|>=4.1.0,<4.4.0a0|>=4.2.0,<4.4.0a0|>=4.3.0,<4.4.0a0|>=4.3.0,<5.0a0|>=4.4.0,<5.0a0|>=4.0.9,<4.4.0a0|>=4.0.8,<4.0.10|>=4.0.3,<4.0.8|>=4.1.0,<5.0a0|>=4.0.10,<5.0a0|>=4.0.9,<5.0a0|>=4.0.8,<5.0a0']
+libtiff==4.2.0=hdc55705_1
+pillow==8.1.2=py37h4600e1f_1 -> libtiff[version='>=4.2.0,<4.4.0a0']
+
+Package numpy-base conflicts for:
+numpy==1.20.1=py37h93e21f0_0 -> mkl_fft -> numpy-base[version='>=1.0.14,<2.0a0|>=1.0.6,<2.0a0|>=1.2.1,<2.0a0|>=1.0.2,<2.0a0|>=1.0.4,<2.0a0']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> numpy-base[version='1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.14.3|1.14.3|1.14.3|1.14.3|1.14.3|1.14.3|1.14.4|1.14.4|1.14.4|1.14.4|1.14.4|1.14.4|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.3|1.15.3|1.15.3|1.15.3|1.15.3|1.15.3|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.17.2.*|1.17.3.*|1.17.4.*|1.18.1.*|1.18.5.*|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.23.1|1.17.0|1.17.0|1.17.0|1.17.0',build='py36h2f8d375_0|py27hdbf6ddf_7|py36hdbf6ddf_7|py36hdbf6ddf_8|py36h2b20989_8|py37hdbf6ddf_8|py27h2b20989_8|py27hdbf6ddf_8|py36h7cdd4dd_9|py35h7cdd4dd_9|py27h7cdd4dd_9|py37h7cdd4dd_9|py37h3dfced4_9|py27h3dfced4_9|py36h81de0dd_9|py37h81de0dd_9|py35h74e8950_9|py36h74e8950_9|py35h74e8950_10|py27h74e8950_10|py27h81de0dd_10|py36h81de0dd_10|py37h2f8d375_10|py37h2f8d375_11|py27h2f8d375_11|py37hde5b4d6_11|py37h2f8d375_12|py27h2f8d375_12|py27hde5b4d6_12|py37hde5b4d6_12|py38hde5b4d6_12|py36h0ea5e3f_1|py36h9be14a7_1|py27h9be14a7_1|py36hdbf6ddf_0|py36hdbf6ddf_0|py27hdbf6ddf_0|py36h2b20989_1|py37h2b20989_1|py36hdbf6ddf_1|py37hdbf6ddf_1|py27h2b20989_1|py36h2b20989_2|py37h2b20989_2|py27hdbf6ddf_2|py37hdbf6ddf_2|py36hdbf6ddf_2|py36h2b20989_3|py37h2b20989_3|py37hdbf6ddf_3|py27h2b20989_3|py37h2b20989_4|py37hdbf6ddf_4|py36h2b20989_4|py36hdbf6ddf_4|py37h2f8d375_4|py35h2f8d375_4|py27h81de0dd_4|py27h2f8d375_4|py35h81de0dd_4|py36h81de0dd_4|py38hde5b4d6_4|py27h2f8d375_5|py36hde5b4d6_5|py36h7cdd4dd_0|py37h7cdd4dd_0|py27h3dfced4_0|py37h3dfced4_0|py35h74e8950_0|py36h74e8950_0|py27h81de0dd_0|py37h81de0dd_0|py35h81de0dd_0|py27h2f8d375_0|py37h2f8d375_0|py37h81de0dd_0|py27h81de0dd_0|py35h81de0dd_0|py36h2f8d375_0|py36h2f8d375_1|py37h81de0dd_1|py37h2f8d375_1|py27h81de0dd_0|py37h81de0dd_0|py37h2f8d375_0|py36h2f8d375_0|py27h2f8d375_0|py27hde5b4d6_0|py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py27h2f8d375_1|py36hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py27h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_1|py27hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py27hde5b4d6_0|py27hde5b4d6_0|py38h2f8d375_0|py38hde5b4d6_0|py27h2f8d375_0|py39h76555f2_1|py38h41b4c56_3|py37h41b4c56_3|py36h41b4c56_3|py36hdc34a94_3|py37ha8aedfd_4|py38ha8aedfd_4|py37h73d599e_4|py38h73d599e_4|py38h75fe3a5_0|py37hfa32c7d_0|py38h75fe3a5_0|py39h4c65ebe_1|py38h4c65ebe_1|py39h21a3de8_1|py37h34387ca_0|py39h34387ca_0|py38he2ba247_0|py39hfae3a4d_0|py37h74d4b33_0|py38h74d4b33_0|py38h39b7dee_0|py37h39b7dee_0|py37h2b8c604_0|py39hb8be1f0_1|py39hf524024_1|py38hb8be1f0_1|py310h9585f30_1|py310hf2716ce_2|py37hb8be1f0_2|py38hb8be1f0_2|py38hf524024_2|py37h1e6e340_3|py310h375b286_3|py38ha15fc14_3|py310hcba007f_3|py39ha15fc14_3|py39hf524024_0|py310hf2716ce_0|py310h375b286_0|py38ha15fc14_0|py310hcba007f_0|py39ha15fc14_0|py38h1e6e340_0|py39h1e6e340_0|py38hb8be1f0_0|py39hb8be1f0_0|py38hf524024_0|py310h9585f30_0|py37ha15fc14_3|py39h1e6e340_3|py38h1e6e340_3|py37hf524024_2|py39hf524024_2|py310h9585f30_2|py39hb8be1f0_2|py310hf2716ce_1|py37hf524024_1|py38hf524024_1|py37hb8be1f0_1|py310h79a1101_0|py310h2b8c604_0|py38h2b8c604_0|py37h79a1101_0|py39h2b8c604_0|py39h79a1101_0|py38h79a1101_0|py39h39b7dee_0|py39h74d4b33_0|py37he2ba247_0|py37hfae3a4d_0|py39he2ba247_0|py38hfae3a4d_0|py39h7d8b39e_0|py38h7d8b39e_0|py38h34387ca_0|py37h7d8b39e_0|py38h21a3de8_1|py37h21a3de8_1|py37h4c65ebe_1|py39h0f7b65f_0|py39h2ae0177_0|py38hfa32c7d_0|py36hfa32c7d_0|py36h75fe3a5_0|py37h75fe3a5_0|py37h75fe3a5_0|py36h75fe3a5_0|py36hfa32c7d_0|py38hfa32c7d_0|py37hfa32c7d_0|py39h73d599e_4|py39ha8aedfd_4|py37hdc34a94_3|py39hdc34a94_3|py38hdc34a94_3|py39h41b4c56_3|py39hfb011de_1|py27hde5b4d6_0|py36hde5b4d6_0|py37hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0|py27h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36h2f8d375_0|py37h2f8d375_0|py37hde5b4d6_1|py36h2f8d375_1|py37hde5b4d6_0|py27h2f8d375_0|py27hde5b4d6_1|py37hde5b4d6_1|py36h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py37hde5b4d6_0|py36hde5b4d6_0|py27h81de0dd_0|py36h81de0dd_0|py37h81de0dd_0|py36h81de0dd_0|py37h2f8d375_0|py36h2f8d375_0|py27h2f8d375_0|py36h81de0dd_1|py27h81de0dd_1|py27h2f8d375_1|py36h81de0dd_0|py35h2f8d375_0|py27h2f8d375_0|py37h2f8d375_0|py36h2f8d375_0|py35h2f8d375_0|py36h81de0dd_0|py37h74e8950_0|py27h74e8950_0|py35h3dfced4_0|py36h3dfced4_0|py35h7cdd4dd_0|py27h7cdd4dd_0|py37hde5b4d6_5|py27hde5b4d6_5|py37h2f8d375_5|py36h2f8d375_5|py38h2f8d375_4|py37h81de0dd_4|py36h2f8d375_4|py35h2b20989_4|py35hdbf6ddf_4|py27hdbf6ddf_4|py27h2b20989_4|py27hdbf6ddf_3|py36hdbf6ddf_3|py27h2b20989_2|py27hdbf6ddf_1|py35hdbf6ddf_0|py27h2b20989_0|py36h2b20989_0|py35hdbf6ddf_0|py27hdbf6ddf_0|py35h2b20989_0|py36h2b20989_0|py27h2b20989_0|py35h9be14a7_1|py35h0ea5e3f_1|py27h0ea5e3f_1|py38h2f8d375_12|py36hde5b4d6_12|py36h2f8d375_12|py27hde5b4d6_11|py36hde5b4d6_11|py36h2f8d375_11|py35h2f8d375_10|py27h2f8d375_10|py36h2f8d375_10|py35h81de0dd_10|py37h81de0dd_10|py36h74e8950_10|py37h74e8950_10|py35h81de0dd_9|py27h81de0dd_9|py37h74e8950_9|py27h74e8950_9|py35h3dfced4_9|py36h3dfced4_9|py35h2b20989_8|py35hdbf6ddf_8|py37h2b20989_8|py37hdbf6ddf_7|py36h2b20989_7|py27h2b20989_7|py37h2b20989_7|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> numpy[version='>=1.11'] -> numpy-base[version='1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.11.3|1.14.3|1.14.3|1.14.3|1.14.3|1.14.3|1.14.3|1.14.4|1.14.4|1.14.4|1.14.4|1.14.4|1.14.4|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.5|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.14.6|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.0|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.1|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.2|1.15.3|1.15.3|1.15.3|1.15.3|1.15.3|1.15.3|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.15.4|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.17.2.*|1.17.3.*|1.17.4.*|1.18.1.*|1.18.5.*|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.23.1|1.17.0|1.17.0|1.17.0|1.17.0',build='py36h2f8d375_0|py27hdbf6ddf_7|py36hdbf6ddf_7|py36hdbf6ddf_8|py36h2b20989_8|py37hdbf6ddf_8|py27h2b20989_8|py27hdbf6ddf_8|py36h7cdd4dd_9|py35h7cdd4dd_9|py27h7cdd4dd_9|py37h7cdd4dd_9|py37h3dfced4_9|py27h3dfced4_9|py36h81de0dd_9|py37h81de0dd_9|py35h74e8950_9|py36h74e8950_9|py35h74e8950_10|py27h74e8950_10|py27h81de0dd_10|py36h81de0dd_10|py37h2f8d375_10|py37h2f8d375_11|py27h2f8d375_11|py37hde5b4d6_11|py37h2f8d375_12|py27h2f8d375_12|py27hde5b4d6_12|py37hde5b4d6_12|py38hde5b4d6_12|py36h0ea5e3f_1|py36h9be14a7_1|py27h9be14a7_1|py36hdbf6ddf_0|py36hdbf6ddf_0|py27hdbf6ddf_0|py36h2b20989_1|py37h2b20989_1|py36hdbf6ddf_1|py37hdbf6ddf_1|py27h2b20989_1|py36h2b20989_2|py37h2b20989_2|py27hdbf6ddf_2|py37hdbf6ddf_2|py36hdbf6ddf_2|py36h2b20989_3|py37h2b20989_3|py37hdbf6ddf_3|py27h2b20989_3|py37h2b20989_4|py37hdbf6ddf_4|py36h2b20989_4|py36hdbf6ddf_4|py37h2f8d375_4|py35h2f8d375_4|py27h81de0dd_4|py27h2f8d375_4|py35h81de0dd_4|py36h81de0dd_4|py38hde5b4d6_4|py27h2f8d375_5|py36hde5b4d6_5|py36h7cdd4dd_0|py37h7cdd4dd_0|py27h3dfced4_0|py37h3dfced4_0|py35h74e8950_0|py36h74e8950_0|py27h81de0dd_0|py37h81de0dd_0|py35h81de0dd_0|py27h2f8d375_0|py37h2f8d375_0|py37h81de0dd_0|py27h81de0dd_0|py35h81de0dd_0|py36h2f8d375_0|py36h2f8d375_1|py37h81de0dd_1|py37h2f8d375_1|py27h81de0dd_0|py37h81de0dd_0|py37h2f8d375_0|py36h2f8d375_0|py27h2f8d375_0|py27hde5b4d6_0|py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py27h2f8d375_1|py36hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py27h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_1|py27hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py27hde5b4d6_0|py27hde5b4d6_0|py38h2f8d375_0|py38hde5b4d6_0|py27h2f8d375_0|py39h76555f2_1|py38h41b4c56_3|py37h41b4c56_3|py36h41b4c56_3|py36hdc34a94_3|py37ha8aedfd_4|py38ha8aedfd_4|py37h73d599e_4|py38h73d599e_4|py38h75fe3a5_0|py37hfa32c7d_0|py38h75fe3a5_0|py39h4c65ebe_1|py38h4c65ebe_1|py39h21a3de8_1|py37h34387ca_0|py39h34387ca_0|py38he2ba247_0|py39hfae3a4d_0|py37h74d4b33_0|py38h74d4b33_0|py38h39b7dee_0|py37h39b7dee_0|py37h2b8c604_0|py39hb8be1f0_1|py39hf524024_1|py38hb8be1f0_1|py310h9585f30_1|py310hf2716ce_2|py37hb8be1f0_2|py38hb8be1f0_2|py38hf524024_2|py37h1e6e340_3|py310h375b286_3|py38ha15fc14_3|py310hcba007f_3|py39ha15fc14_3|py39hf524024_0|py310hf2716ce_0|py310h375b286_0|py38ha15fc14_0|py310hcba007f_0|py39ha15fc14_0|py38h1e6e340_0|py39h1e6e340_0|py38hb8be1f0_0|py39hb8be1f0_0|py38hf524024_0|py310h9585f30_0|py37ha15fc14_3|py39h1e6e340_3|py38h1e6e340_3|py37hf524024_2|py39hf524024_2|py310h9585f30_2|py39hb8be1f0_2|py310hf2716ce_1|py37hf524024_1|py38hf524024_1|py37hb8be1f0_1|py310h79a1101_0|py310h2b8c604_0|py38h2b8c604_0|py37h79a1101_0|py39h2b8c604_0|py39h79a1101_0|py38h79a1101_0|py39h39b7dee_0|py39h74d4b33_0|py37he2ba247_0|py37hfae3a4d_0|py39he2ba247_0|py38hfae3a4d_0|py39h7d8b39e_0|py38h7d8b39e_0|py38h34387ca_0|py37h7d8b39e_0|py38h21a3de8_1|py37h21a3de8_1|py37h4c65ebe_1|py39h0f7b65f_0|py39h2ae0177_0|py38hfa32c7d_0|py36hfa32c7d_0|py36h75fe3a5_0|py37h75fe3a5_0|py37h75fe3a5_0|py36h75fe3a5_0|py36hfa32c7d_0|py38hfa32c7d_0|py37hfa32c7d_0|py39h73d599e_4|py39ha8aedfd_4|py37hdc34a94_3|py39hdc34a94_3|py38hdc34a94_3|py39h41b4c56_3|py39hfb011de_1|py27hde5b4d6_0|py36hde5b4d6_0|py37hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0|py27h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36h2f8d375_0|py37h2f8d375_0|py37hde5b4d6_1|py36h2f8d375_1|py37hde5b4d6_0|py27h2f8d375_0|py27hde5b4d6_1|py37hde5b4d6_1|py36h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py37hde5b4d6_0|py36hde5b4d6_0|py27h81de0dd_0|py36h81de0dd_0|py37h81de0dd_0|py36h81de0dd_0|py37h2f8d375_0|py36h2f8d375_0|py27h2f8d375_0|py36h81de0dd_1|py27h81de0dd_1|py27h2f8d375_1|py36h81de0dd_0|py35h2f8d375_0|py27h2f8d375_0|py37h2f8d375_0|py36h2f8d375_0|py35h2f8d375_0|py36h81de0dd_0|py37h74e8950_0|py27h74e8950_0|py35h3dfced4_0|py36h3dfced4_0|py35h7cdd4dd_0|py27h7cdd4dd_0|py37hde5b4d6_5|py27hde5b4d6_5|py37h2f8d375_5|py36h2f8d375_5|py38h2f8d375_4|py37h81de0dd_4|py36h2f8d375_4|py35h2b20989_4|py35hdbf6ddf_4|py27hdbf6ddf_4|py27h2b20989_4|py27hdbf6ddf_3|py36hdbf6ddf_3|py27h2b20989_2|py27hdbf6ddf_1|py35hdbf6ddf_0|py27h2b20989_0|py36h2b20989_0|py35hdbf6ddf_0|py27hdbf6ddf_0|py35h2b20989_0|py36h2b20989_0|py27h2b20989_0|py35h9be14a7_1|py35h0ea5e3f_1|py27h0ea5e3f_1|py38h2f8d375_12|py36hde5b4d6_12|py36h2f8d375_12|py27hde5b4d6_11|py36hde5b4d6_11|py36h2f8d375_11|py35h2f8d375_10|py27h2f8d375_10|py36h2f8d375_10|py35h81de0dd_10|py37h81de0dd_10|py36h74e8950_10|py37h74e8950_10|py35h81de0dd_9|py27h81de0dd_9|py37h74e8950_9|py27h74e8950_9|py35h3dfced4_9|py36h3dfced4_9|py35h2b20989_8|py35hdbf6ddf_8|py37h2b20989_8|py37hdbf6ddf_7|py36h2b20989_7|py27h2b20989_7|py37h2b20989_7|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0']
+numpy==1.20.1=py37h93e21f0_0 -> numpy-base==1.20.1=py37h7d8b39e_0
+mkl_random==1.2.1=py37ha9443f7_2 -> numpy[version='>=1.16,<2.0a0'] -> numpy-base[version='1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.17.2.*|1.17.3.*|1.17.4.*|1.18.1.*|1.18.5.*|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.23.1|1.17.0|1.17.0|1.17.0|1.17.0',build='py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py27h2f8d375_1|py36hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py27h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_1|py27hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py27hde5b4d6_0|py27hde5b4d6_0|py38h2f8d375_0|py38hde5b4d6_0|py27h2f8d375_0|py39h76555f2_1|py38h41b4c56_3|py37h41b4c56_3|py36h41b4c56_3|py36hdc34a94_3|py37ha8aedfd_4|py38ha8aedfd_4|py37h73d599e_4|py38h73d599e_4|py38h75fe3a5_0|py37hfa32c7d_0|py38h75fe3a5_0|py39h4c65ebe_1|py38h4c65ebe_1|py39h21a3de8_1|py37h34387ca_0|py39h34387ca_0|py38he2ba247_0|py39hfae3a4d_0|py37h74d4b33_0|py38h74d4b33_0|py38h39b7dee_0|py37h39b7dee_0|py37h2b8c604_0|py39hb8be1f0_1|py39hf524024_1|py38hb8be1f0_1|py310h9585f30_1|py310hf2716ce_2|py37hb8be1f0_2|py38hb8be1f0_2|py38hf524024_2|py37h1e6e340_3|py310h375b286_3|py38ha15fc14_3|py310hcba007f_3|py39ha15fc14_3|py39hf524024_0|py310hf2716ce_0|py310h375b286_0|py38ha15fc14_0|py310hcba007f_0|py39ha15fc14_0|py38h1e6e340_0|py39h1e6e340_0|py38hb8be1f0_0|py39hb8be1f0_0|py38hf524024_0|py310h9585f30_0|py37ha15fc14_3|py39h1e6e340_3|py38h1e6e340_3|py37hf524024_2|py39hf524024_2|py310h9585f30_2|py39hb8be1f0_2|py310hf2716ce_1|py37hf524024_1|py38hf524024_1|py37hb8be1f0_1|py310h79a1101_0|py310h2b8c604_0|py38h2b8c604_0|py37h79a1101_0|py39h2b8c604_0|py39h79a1101_0|py38h79a1101_0|py39h39b7dee_0|py39h74d4b33_0|py37he2ba247_0|py37hfae3a4d_0|py39he2ba247_0|py38hfae3a4d_0|py39h7d8b39e_0|py38h7d8b39e_0|py38h34387ca_0|py37h7d8b39e_0|py38h21a3de8_1|py37h21a3de8_1|py37h4c65ebe_1|py39h0f7b65f_0|py39h2ae0177_0|py38hfa32c7d_0|py36hfa32c7d_0|py36h75fe3a5_0|py37h75fe3a5_0|py37h75fe3a5_0|py36h75fe3a5_0|py36hfa32c7d_0|py38hfa32c7d_0|py37hfa32c7d_0|py39h73d599e_4|py39ha8aedfd_4|py37hdc34a94_3|py39hdc34a94_3|py38hdc34a94_3|py39h41b4c56_3|py39hfb011de_1|py27hde5b4d6_0|py36hde5b4d6_0|py37hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0|py27h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36h2f8d375_0|py37h2f8d375_0|py37hde5b4d6_1|py36h2f8d375_1|py37hde5b4d6_0|py27h2f8d375_0|py27hde5b4d6_1|py37hde5b4d6_1|py36h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0|py36h2f8d375_0']
+mkl_fft==1.3.0=py37h42c9631_2 -> numpy[version='>=1.16,<2.0a0'] -> numpy-base[version='1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.0|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.1|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.2|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.3|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.4|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.5|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.16.6|1.17.2.*|1.17.3.*|1.17.4.*|1.18.1.*|1.18.5.*|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.1|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.19.2|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.1|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.2|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.20.3|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.2|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.21.5|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.22.3|1.23.1|1.17.0|1.17.0|1.17.0|1.17.0',build='py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py27h2f8d375_1|py36hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py27h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_1|py27hde5b4d6_1|py37h2f8d375_0|py36h2f8d375_0|py27hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py27hde5b4d6_0|py27hde5b4d6_0|py38h2f8d375_0|py38hde5b4d6_0|py27h2f8d375_0|py39h76555f2_1|py38h41b4c56_3|py37h41b4c56_3|py36h41b4c56_3|py36hdc34a94_3|py37ha8aedfd_4|py38ha8aedfd_4|py37h73d599e_4|py38h73d599e_4|py38h75fe3a5_0|py37hfa32c7d_0|py38h75fe3a5_0|py39h4c65ebe_1|py38h4c65ebe_1|py39h21a3de8_1|py37h34387ca_0|py39h34387ca_0|py38he2ba247_0|py39hfae3a4d_0|py37h74d4b33_0|py38h74d4b33_0|py38h39b7dee_0|py37h39b7dee_0|py37h2b8c604_0|py39hb8be1f0_1|py39hf524024_1|py38hb8be1f0_1|py310h9585f30_1|py310hf2716ce_2|py37hb8be1f0_2|py38hb8be1f0_2|py38hf524024_2|py37h1e6e340_3|py310h375b286_3|py38ha15fc14_3|py310hcba007f_3|py39ha15fc14_3|py39hf524024_0|py310hf2716ce_0|py310h375b286_0|py38ha15fc14_0|py310hcba007f_0|py39ha15fc14_0|py38h1e6e340_0|py39h1e6e340_0|py38hb8be1f0_0|py39hb8be1f0_0|py38hf524024_0|py310h9585f30_0|py37ha15fc14_3|py39h1e6e340_3|py38h1e6e340_3|py37hf524024_2|py39hf524024_2|py310h9585f30_2|py39hb8be1f0_2|py310hf2716ce_1|py37hf524024_1|py38hf524024_1|py37hb8be1f0_1|py310h79a1101_0|py310h2b8c604_0|py38h2b8c604_0|py37h79a1101_0|py39h2b8c604_0|py39h79a1101_0|py38h79a1101_0|py39h39b7dee_0|py39h74d4b33_0|py37he2ba247_0|py37hfae3a4d_0|py39he2ba247_0|py38hfae3a4d_0|py39h7d8b39e_0|py38h7d8b39e_0|py38h34387ca_0|py37h7d8b39e_0|py38h21a3de8_1|py37h21a3de8_1|py37h4c65ebe_1|py39h0f7b65f_0|py39h2ae0177_0|py38hfa32c7d_0|py36hfa32c7d_0|py36h75fe3a5_0|py37h75fe3a5_0|py37h75fe3a5_0|py36h75fe3a5_0|py36hfa32c7d_0|py38hfa32c7d_0|py37hfa32c7d_0|py39h73d599e_4|py39ha8aedfd_4|py37hdc34a94_3|py39hdc34a94_3|py38hdc34a94_3|py39h41b4c56_3|py39hfb011de_1|py27hde5b4d6_0|py36hde5b4d6_0|py37hde5b4d6_0|py36h2f8d375_0|py37h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0|py27h2f8d375_0|py36h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py27hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36h2f8d375_0|py37h2f8d375_0|py37hde5b4d6_1|py36h2f8d375_1|py37hde5b4d6_0|py27h2f8d375_0|py27hde5b4d6_1|py37hde5b4d6_1|py36h2f8d375_1|py37h2f8d375_1|py36hde5b4d6_0|py37hde5b4d6_0|py27h2f8d375_0|py36hde5b4d6_0|py37hde5b4d6_0|py37h2f8d375_0|py36h2f8d375_0']
+numpy-base==1.20.1=py37h7d8b39e_0
+
+Package openssl conflicts for:
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> openssl[version='1.0.*|>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1l,<1.1.2a|>=1.1.1n,<1.1.2a|>=1.1.1o,<1.1.2a|>=1.1.1q,<1.1.2a|>=3.0.5,<4.0a0|>=3.0.3,<4.0a0|>=3.0.2,<4.0a0|>=3.0.0,<4.0a0|>=1.1.1m,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a|>=1.0.2n,<1.0.3a|>=1.0.2m,<1.0.3a|>=1.0.2l,<1.0.3a']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+python_abi==3.7=1_cp37m -> python=3.7 -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+openssl==1.1.1k=h7f98852_0
+python==3.7.10=hffdb5ce_100_cpython -> openssl[version='>=1.1.1j,<1.1.2a']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> openssl[version='1.0.*|>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1l,<1.1.2a|>=1.1.1n,<1.1.2a|>=1.1.1o,<1.1.2a|>=1.1.1q,<1.1.2a|>=3.0.5,<4.0a0|>=3.0.3,<4.0a0|>=3.0.2,<4.0a0|>=3.0.0,<4.0a0|>=1.1.1m,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a|>=1.0.2n,<1.0.3a|>=1.0.2m,<1.0.3a|>=1.0.2l,<1.0.3a']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> openssl[version='>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1l,<1.1.2a|>=3.0.0,<4.0a0|>=1.1.1n,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a']
+olefile==0.46=pyh9f0ad1d_1 -> python -> openssl[version='1.0.*|>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1l,<1.1.2a|>=1.1.1n,<1.1.2a|>=1.1.1o,<1.1.2a|>=1.1.1q,<1.1.2a|>=3.0.5,<4.0a0|>=3.0.3,<4.0a0|>=3.0.2,<4.0a0|>=3.0.0,<4.0a0|>=1.1.1m,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a|>=1.0.2n,<1.0.3a|>=1.0.2m,<1.0.3a|>=1.0.2l,<1.0.3a']
+six==1.16.0=pyh6c4a22f_0 -> python -> openssl[version='1.0.*|>=1.0.2o,<1.0.3a|>=1.0.2p,<1.0.3a|>=1.1.1a,<1.1.2a|>=1.1.1d,<1.1.2a|>=1.1.1e,<1.1.2a|>=1.1.1f,<1.1.2a|>=1.1.1g,<1.1.2a|>=1.1.1h,<1.1.2a|>=1.1.1i,<1.1.2a|>=1.1.1j,<1.1.2a|>=1.1.1k,<1.1.2a|>=1.1.1l,<1.1.2a|>=1.1.1n,<1.1.2a|>=1.1.1o,<1.1.2a|>=1.1.1q,<1.1.2a|>=3.0.5,<4.0a0|>=3.0.3,<4.0a0|>=3.0.2,<4.0a0|>=3.0.0,<4.0a0|>=1.1.1m,<1.1.2a|>=1.1.1c,<1.1.2a|>=1.1.1b,<1.1.2a|>=1.0.2n,<1.0.3a|>=1.0.2m,<1.0.3a|>=1.0.2l,<1.0.3a']
+
+Package blas conflicts for:
+mkl_random==1.2.1=py37ha9443f7_2 -> numpy[version='>=1.16,<2.0a0'] -> blas[version='*|1.0|1.1',build='openblas|mkl|openblas']
+numpy-base==1.20.1=py37h7d8b39e_0 -> blas==1.0=mkl
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> blas=[build=mkl]
+mkl_fft==1.3.0=py37h42c9631_2 -> numpy[version='>=1.16,<2.0a0'] -> blas[version='*|1.1',build=openblas]
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> numpy[version='>=1.11'] -> blas[version='*|1.0|1.1|1.0',build='openblas|openblas|mkl|openblas']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> blas[version='*|*|1.0|1.1|1.0',build='mkl|openblas|openblas|mkl|openblas']
+mkl_random==1.2.1=py37ha9443f7_2 -> blas=[build=mkl]
+numpy==1.20.1=py37h93e21f0_0 -> mkl_fft -> blas=[build=mkl]
+blas==1.0=mkl
+numpy==1.20.1=py37h93e21f0_0 -> blas==1.0=mkl
+mkl_fft==1.3.0=py37h42c9631_2 -> blas==1.0=mkl
+
+Package libgcc-ng conflicts for:
+freetype==2.10.4=h0708190_1 -> libgcc-ng[version='>=9.3.0']
+zstd==1.4.9=ha95c52a_0 -> lz4-c[version='>=1.9.3,<1.9.4.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=7.3.0|>=7.5.0|>=4.9|>=11.2.0|>=7.2.0']
+sqlite==3.35.5=h74cdb3f_0 -> libgcc-ng[version='>=9.3.0']
+python==3.7.10=hffdb5ce_100_cpython -> libgcc-ng[version='>=9.3.0']
+python_abi==3.7=1_cp37m -> python=3.7 -> libgcc-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+lcms2==2.12=hddcbb42_0 -> jpeg[version='>=9d,<10a'] -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=7.5.0|>=11.2.0|>=7.3.0']
+readline==8.1=h46c0cb4_0 -> ncurses[version='>=6.2,<7.0.0a0'] -> libgcc-ng[version='>=10.3.0|>=9.4.0|>=7.5.0|>=11.2.0|>=7.3.0']
+cudatoolkit==9.2.148=h80a95b2_8 -> libgcc-ng[version='>=9.3.0']
+jpeg==9d=h36c2ea0_0 -> libgcc-ng[version='>=7.5.0']
+zstd==1.4.9=ha95c52a_0 -> libgcc-ng[version='>=9.3.0']
+sqlite==3.35.5=h74cdb3f_0 -> ncurses[version='>=6.2,<7.0.0a0'] -> libgcc-ng[version='>=10.3.0|>=9.4.0|>=7.5.0|>=11.2.0|>=7.3.0|>=12|>=4.9|>=7.2.0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+libpng==1.6.37=h21135ba_2 -> zlib[version='>=1.2.11,<1.3.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+numpy==1.20.1=py37h93e21f0_0 -> libgcc-ng[version='>=7.3.0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> libgcc-ng[version='>=4.9|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+mkl_fft==1.3.0=py37h42c9631_2 -> libgcc-ng[version='>=7.3.0']
+ncurses==6.2=h58526e2_4 -> libgcc-ng[version='>=7.5.0']
+pillow==8.1.2=py37h4600e1f_1 -> libgcc-ng[version='>=9.3.0']
+xz==5.2.5=h516909a_1 -> libgcc-ng[version='>=7.5.0']
+libtiff==4.2.0=hdc55705_1 -> jpeg[version='>=9d,<10a'] -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=7.5.0|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+ninja==1.10.2=h4bd325d_0 -> libgcc-ng[version='>=9.3.0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> blas=[build=mkl] -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=7.3.0|>=11.2.0|>=7.2.0|>=4.9']
+freetype==2.10.4=h0708190_1 -> libpng[version='>=1.6.37,<1.7.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=7.5.0|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+libtiff==4.2.0=hdc55705_1 -> libgcc-ng[version='>=9.3.0']
+numpy==1.20.1=py37h93e21f0_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=4.9|>=11.2.0|>=7.2.0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> libgcc-ng[version='>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=4.9|>=7.2.0']
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=11.2.0|>=4.9|>=7.2.0']
+libgcc-ng==9.3.0=h2828fa1_19
+tk==8.6.10=h21135ba_1 -> zlib[version='>=1.2.11,<1.3.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+libpng==1.6.37=h21135ba_2 -> libgcc-ng[version='>=7.5.0']
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=11.2.0|>=4.9|>=7.2.0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> libgcc-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+openjpeg==2.4.0=hf7af979_0 -> libgcc-ng[version='>=9.3.0']
+pillow==8.1.2=py37h4600e1f_1 -> freetype[version='>=2.10.4,<3.0a0'] -> libgcc-ng[version='>=10.3.0|>=12|>=7.5.0|>=7.3.0|>=9.4.0|>=4.9|>=7.2.0|>=11.2.0']
+lz4-c==1.9.3=h9c3ff4c_0 -> libgcc-ng[version='>=9.3.0']
+tk==8.6.10=h21135ba_1 -> libgcc-ng[version='>=7.5.0']
+python==3.7.10=hffdb5ce_100_cpython -> libffi[version='>=3.3,<3.4.0a0'] -> libgcc-ng[version='>=10.3.0|>=7.3.0|>=7.5.0|>=9.4.0|>=11.2.0|>=12|>=4.9|>=7.2.0']
+zlib==1.2.11=h516909a_1010 -> libgcc-ng[version='>=7.5.0']
+openjpeg==2.4.0=hf7af979_0 -> libpng[version='>=1.6.37,<1.7.0a0'] -> libgcc-ng[version='>=10.3.0|>=11.2.0|>=12|>=7.5.0|>=7.3.0|>=9.4.0|>=4.9|>=7.2.0']
+six==1.16.0=pyh6c4a22f_0 -> python -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+blas==1.0=mkl -> mkl -> libgcc-ng[version='>=11.2.0']
+torchvision==0.7.0=py37_cu92 -> cudatoolkit[version='>=9.2,<9.3'] -> libgcc-ng[version='>=10.3.0|>=9.4.0|>=9.3.0|>=12|>=7.5.0|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0|>=8.4.0']
+readline==8.1=h46c0cb4_0 -> libgcc-ng[version='>=9.3.0']
+mkl_random==1.2.1=py37ha9443f7_2 -> libgcc-ng[version='>=7.3.0']
+mkl-service==2.3.0=py37h27cfd23_1 -> libgcc-ng[version='>=7.3.0']
+libwebp-base==1.2.0=h7f98852_2 -> libgcc-ng[version='>=9.3.0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> libgcc-ng[version='>=7.3.0']
+libffi==3.3=h58526e2_2 -> libgcc-ng[version='>=7.5.0']
+lcms2==2.12=hddcbb42_0 -> libgcc-ng[version='>=9.3.0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> libgcc-ng[version='>=4.9|>=7.3.0|>=7.5.0|>=9.3.0|>=9.4.0|>=7.2.0']
+openssl==1.1.1k=h7f98852_0 -> libgcc-ng[version='>=9.3.0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> libgcc-ng[version='>=10.3.0|>=12|>=9.4.0|>=9.3.0|>=7.5.0|>=7.3.0|>=4.9|>=11.2.0|>=7.2.0']
+
+Package readline conflicts for:
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> readline[version='6.2.*|7.0|>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0|>=8.1.2,<9.0a0|7.0.*|7.*']
+readline==8.1=h46c0cb4_0
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> readline[version='6.2.*|7.0|>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0|>=8.1.2,<9.0a0|7.*']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> sqlite[version='>=3.34.0,<4.0a0'] -> readline[version='>=8.1,<9.0a0|>=8.1.2,<9.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> readline[version='>=8.0,<9.0a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> readline[version='6.2.*|7.0|>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0|>=8.1.2,<9.0a0|7.0.*|7.*']
+sqlite==3.35.5=h74cdb3f_0 -> readline[version='>=8.0,<9.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> readline[version='6.2.*|7.0|>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0|>=8.1.2,<9.0a0|7.0.*|7.*']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+python_abi==3.7=1_cp37m -> python=3.7 -> readline[version='>=7.0,<8.0a0|>=8.0,<9.0a0|>=8.1,<9.0a0']
+
+Package xz conflicts for:
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> xz[version='>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0']
+xz==5.2.5=h516909a_1
+pillow==8.1.2=py37h4600e1f_1 -> libtiff[version='>=4.2.0,<4.4.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> xz[version='5.0.*|5.2.*|>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.6,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0|>=5.2.3,<6.0a0']
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0'] -> xz[version='>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> xz[version='5.2.*|>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.6,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0|>=5.2.3,<6.0a0']
+libtiff==4.2.0=hdc55705_1 -> zstd[version='>=1.4.9,<1.5.0a0'] -> xz[version='>=5.2.5,<6.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+python==3.7.10=hffdb5ce_100_cpython -> xz[version='>=5.2.5,<5.3.0a0']
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+zstd==1.4.9=ha95c52a_0 -> xz[version='>=5.2.5,<5.3.0a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> xz[version='5.0.*|5.2.*|>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.6,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0|>=5.2.3,<6.0a0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+libtiff==4.2.0=hdc55705_1 -> xz[version='>=5.2.5,<5.3.0a0']
+python_abi==3.7=1_cp37m -> python=3.7 -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> xz[version='5.0.*|5.2.*|>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.6,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0|>=5.2.3,<6.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> xz[version='>=5.2.3,<5.3.0a0|>=5.2.4,<5.3.0a0|>=5.2.5,<5.3.0a0|>=5.2.5,<6.0a0|>=5.2.4,<6.0a0']
+
+Package libpng conflicts for:
+pillow==8.1.2=py37h4600e1f_1 -> freetype[version='>=2.10.4,<3.0a0'] -> libpng[version='>=1.6.37,<1.7.0a0']
+libpng==1.6.37=h21135ba_2
+openjpeg==2.4.0=hf7af979_0 -> libpng[version='>=1.6.37,<1.7.0a0']
+freetype==2.10.4=h0708190_1 -> libpng[version='>=1.6.37,<1.7.0a0']
+
+Package python_abi conflicts for:
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> python_abi[version='3.10.*|3.7.*|3.8.*|3.8|3.9|3.9.*|3.6.*|3.7',build='*_cp36m|*_cp39|*_pypy38_pp73|*_pypy39_pp73|*_cp38|*_cp37m|*_cp310|*_pypy37_pp73']
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> python_abi==3.7[build=*_pypy37_pp73]
+pillow==8.1.2=py37h4600e1f_1 -> python_abi=3.7[build=*_cp37m]
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> python_abi[version='3.10.*|3.7.*|3.8.*|3.8|3.9|3.9.*|3.6.*|3.7|3.6',build='*_cp36m|*_cp39|*_pypy38_pp73|*_pypy39_pp73|*_cp38|*_cp37m|*_cp310|*_pypy37_pp73|*_pypy36_pp73']
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> python_abi[version='3.10.*|3.7.*|3.8.*|3.8|3.9|3.9.*|3.6.*|3.7|3.6',build='*_cp36m|*_cp39|*_pypy38_pp73|*_pypy39_pp73|*_cp38|*_cp37m|*_cp310|*_pypy37_pp73|*_pypy36_pp73']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> ninja -> python_abi[version='3.10.*|3.6|3.6.*|3.8.*|3.7.*|3.8|3.9|3.9.*|3.7',build='*_pypy37_pp73|*_pypy38_pp73|*_cp38|*_cp36m|*_pypy36_pp73|*_cp37m|*_cp310|*_pypy39_pp73|*_cp39']
+python_abi==3.7=1_cp37m
+wheel==0.36.2=pyhd3deb0d_0 -> python -> python_abi[version='3.6|3.7|3.8|3.9',build='*_pypy38_pp73|*_pypy39_pp73|*_pypy37_pp73|*_pypy36_pp73']
+olefile==0.46=pyh9f0ad1d_1 -> python -> python_abi[version='3.6|3.7|3.8|3.9',build='*_pypy38_pp73|*_pypy39_pp73|*_pypy37_pp73|*_pypy36_pp73']
+numpy==1.20.1=py37h93e21f0_0 -> mkl-service[version='>=2.3.0,<3.0a0'] -> python_abi[version='3.10.*|3.7.*|3.8.*|3.8|3.9|3.9.*|3.6.*|3.7',build='*_cp36m|*_cp39|*_pypy38_pp73|*_pypy39_pp73|*_cp38|*_cp37m|*_cp310|*_pypy37_pp73']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> python_abi[version='3.10.*|3.8|3.9|3.9.*|3.8.*|3.7.*|3.7|3.6.*|3.6',build='*_pypy36_pp73|*_pypy37_pp73|*_cp38|*_cp39|*_pypy38_pp73|*_cp310|*_pypy39_pp73|*_cp37m|*_cp36m']
+setuptools==49.6.0=py37h89c1867_3 -> certifi[version='>=2016.9.26'] -> python_abi[version='2.7.*|3.10.*|3.8|3.8.*|3.9.*|3.9|3.7|3.6.*|3.6',build='*_cp27mu|*_pypy37_pp73|*_cp39|*_pypy38_pp73|*_cp310|*_cp38|*_pypy39_pp73|*_cp36m|*_pypy36_pp73']
+certifi==2020.12.5=py37h89c1867_1 -> python_abi=3.7[build=*_cp37m]
+setuptools==49.6.0=py37h89c1867_3 -> python_abi=3.7[build=*_cp37m]
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> python_abi==3.7[build=*_pypy37_pp73]
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> python_abi[version='3.10.*|3.6|3.7|3.8|3.9|3.9.*|3.7.*|3.8.*|3.6.*',build='*_cp36m|*_cp39|*_pypy38_pp73|*_pypy39_pp73|*_pypy37_pp73|*_pypy36_pp73|*_cp37m|*_cp310|*_cp38']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> python_abi==3.7[build=*_pypy37_pp73]
+six==1.16.0=pyh6c4a22f_0 -> python -> python_abi[version='3.6|3.7|3.8|3.9',build='*_pypy38_pp73|*_pypy39_pp73|*_pypy37_pp73|*_pypy36_pp73']
+
+Package intel-openmp conflicts for:
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> mkl[version='>=2018'] -> intel-openmp[version='2021.*|2022.*']
+mkl-service==2.3.0=py37h27cfd23_1 -> mkl[version='>=2021.2.0,<2022.0a0'] -> intel-openmp=2021
+intel-openmp==2021.2.0=h06a4308_610
+numpy==1.20.1=py37h93e21f0_0 -> mkl[version='>=2021.2.0,<2022.0a0'] -> intel-openmp=2021
+blas==1.0=mkl -> mkl -> intel-openmp[version='2021.*|2022.*']
+mkl==2021.2.0=h06a4308_296 -> intel-openmp=2021
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl[version='>=2021.2.0,<2022.0a0'] -> intel-openmp=2021
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl[version='>=2021.2.0,<2022.0a0'] -> intel-openmp=2021
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl[version='>=2021.2.0,<2022.0a0'] -> intel-openmp=2021
+
+Package libffi conflicts for:
+python==3.7.10=hffdb5ce_100_cpython -> libffi[version='>=3.3,<3.4.0a0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> libffi[version='3.2.*|>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> libffi[version='3.2.*|>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+python_abi==3.7=1_cp37m -> python=3.7 -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> libffi[version='3.2.*|>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+libffi==3.3=h58526e2_2
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> libffi[version='>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> libffi[version='3.2.*|>=3.2.1,<3.3.0a0|>=3.3,<3.4.0a0|>=3.4.2,<3.5.0a0|>=3.2.1,<3.3a0']
+
+Package llvm-openmp conflicts for:
+numpy==1.20.1=py37h93e21f0_0 -> mkl[version='>=2021.2.0,<2022.0a0'] -> llvm-openmp[version='>=11.1.0|>=12.0.1']
+mkl-service==2.3.0=py37h27cfd23_1 -> mkl[version='>=2021.2.0,<2022.0a0'] -> llvm-openmp[version='>=11.1.0|>=12.0.1']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> blas=[build=mkl] -> llvm-openmp[version='>=10.0.0|>=11.0.0|>=11.0.1|>=11.1.0|>=12.0.1|>=13.0.1|>=14.0.4|>=14.0.3|>=9.0.1']
+blas==1.0=mkl -> mkl -> llvm-openmp[version='>=10.0.0|>=11.0.0|>=11.1.0|>=12.0.1|>=14.0.3|>=9.0.1']
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl[version='>=2021.2.0,<2022.0a0'] -> llvm-openmp[version='>=11.1.0|>=12.0.1']
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl[version='>=2021.2.0,<2022.0a0'] -> llvm-openmp[version='>=11.0.0|>=11.0.1|>=11.1.0|>=12.0.1|>=14.0.4|>=13.0.1']
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl[version='>=2021.2.0,<2022.0a0'] -> llvm-openmp[version='>=11.1.0|>=12.0.1']
+libgcc-ng==9.3.0=h2828fa1_19 -> _openmp_mutex[version='>=4.5'] -> llvm-openmp[version='>=9.0.1']
+
+Package jpeg conflicts for:
+jpeg==9d=h36c2ea0_0
+pillow==8.1.2=py37h4600e1f_1 -> lcms2[version='>=2.12,<3.0a0'] -> jpeg[version='>=9b,<10a|>=9e,<10a']
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0'] -> jpeg[version='>=9b,<10a|>=9c,<10a|>=9d,<10a|>=9e,<10a']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> jpeg[version='>=9b,<10a|>=9e,<10a']
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> jpeg[version='9.*|>=9c,<10a|>=9d,<10a|>=9e,<10a|>=9b,<10a']
+pillow==8.1.2=py37h4600e1f_1 -> jpeg[version='>=9d,<10a']
+libtiff==4.2.0=hdc55705_1 -> jpeg[version='>=9d,<10a']
+lcms2==2.12=hddcbb42_0 -> jpeg[version='>=9d,<10a']
+
+Package libsqlite conflicts for:
+python==3.7.10=hffdb5ce_100_cpython -> sqlite[version='>=3.34.0,<4.0a0'] -> libsqlite[version='3.39.2|3.39.3',build='h753d276_1|h753d276_0']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> libsqlite[version='>=3.39.2,<4.0a0']
+olefile==0.46=pyh9f0ad1d_1 -> python -> libsqlite[version='>=3.39.2,<4.0a0']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> libsqlite[version='>=3.39.2,<4.0a0']
+six==1.16.0=pyh6c4a22f_0 -> python -> libsqlite[version='>=3.39.2,<4.0a0']
+
+Package liblapacke conflicts for:
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> blas=[build=mkl] -> liblapacke[version='3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.9.0',build='4_mkl|5_mkl|7_mkl|8_mkl|9_mkl|10_mkl|12_mkl|13_mkl|14_mkl|15_mkl|16_mkl|18_mkl|19_mkl|20_mkl|5_mkl|7_mkl|8_mkl|9_mkl|10_mkl|11_linux64_mkl|12_linux64_mkl|15_linux64_mkl|16_linux64_mkl|14_linux64_mkl|13_linux64_mkl|6_mkl|21_mkl|11_mkl|6_mkl']
+mkl_random==1.2.1=py37ha9443f7_2 -> blas=[build=mkl] -> liblapacke[version='3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.8.0|3.9.0',build='4_mkl|5_mkl|7_mkl|8_mkl|9_mkl|10_mkl|12_mkl|13_mkl|14_mkl|15_mkl|16_mkl|18_mkl|19_mkl|20_mkl|5_mkl|7_mkl|8_mkl|9_mkl|10_mkl|11_linux64_mkl|12_linux64_mkl|15_linux64_mkl|16_linux64_mkl|14_linux64_mkl|13_linux64_mkl|6_mkl|21_mkl|11_mkl|6_mkl']
+
+Package pip conflicts for:
+numpy-base==1.20.1=py37h7d8b39e_0 -> python[version='>=3.7,<3.8.0a0'] -> pip
+mkl_random==1.2.1=py37ha9443f7_2 -> python[version='>=3.7,<3.8.0a0'] -> pip
+mkl_fft==1.3.0=py37h42c9631_2 -> python[version='>=3.7,<3.8.0a0'] -> pip
+python_abi==3.7=1_cp37m -> python=3.7 -> pip
+six==1.16.0=pyh6c4a22f_0 -> python -> pip
+certifi==2020.12.5=py37h89c1867_1 -> python[version='>=3.7,<3.8.0a0'] -> pip
+olefile==0.46=pyh9f0ad1d_1 -> python -> pip
+pillow==8.1.2=py37h4600e1f_1 -> python[version='>=3.7,<3.8.0a0'] -> pip
+wheel==0.36.2=pyhd3deb0d_0 -> python -> pip
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> python[version='>=3.7,<3.8.0a0'] -> pip
+pip==21.1.1=pyhd8ed1ab_0
+numpy==1.20.1=py37h93e21f0_0 -> python[version='>=3.7,<3.8.0a0'] -> pip
+mkl-service==2.3.0=py37h27cfd23_1 -> python[version='>=3.7,<3.8.0a0'] -> pip
+setuptools==49.6.0=py37h89c1867_3 -> python[version='>=3.7,<3.8.0a0'] -> pip
+torchvision==0.7.0=py37_cu92 -> python[version='>=3.7,<3.8.0a0'] -> pip
+python==3.7.10=hffdb5ce_100_cpython -> pip
+
+Package mkl conflicts for:
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl[version='>=2021.2.0,<2022.0a0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> blas==1.0=mkl -> mkl[version='>=2019.4,<2020.0a0|>=2020.2,<2021.0a0|>=2021.4.0,<2022.0a0|>=2022.0.1,<2023.0a0|>=2022.1.0,<2023.0a0|>=2019.4,<2021.0a0']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> mkl[version='>=2018|>=2018.0.0,<2019.0a0|>=2018.0.1,<2019.0a0|>=2018.0.2,<2019.0a0|>=2018.0.3,<2019.0a0|>=2019.1,<2021.0a0|>=2019.3,<2021.0a0|>=2019.4,<2021.0a0|>=2021.2.0,<2022.0a0|>=2021.3.0,<2022.0a0|>=2021.4.0,<2022.0a0|>=2019.4,<2020.0a0|>=2020.4,<2021.0a0']
+mkl==2021.2.0=h06a4308_296
+blas==1.0=mkl -> mkl
+mkl-service==2.3.0=py37h27cfd23_1 -> mkl[version='>=2021.2.0,<2022.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> blas==1.0=mkl -> mkl[version='>=2018.0.3,<2019.0a0|>=2019.1,<2020.0a0|>=2019.3,<2020.0a0|>=2019.4,<2020.0a0|>=2020.2,<2021.0a0|>=2021.4.0,<2022.0a0|>=2022.0.1,<2023.0a0|>=2022.1.0,<2023.0a0|>=2019.4,<2021.0a0|>=2020.4,<2021.0a0|>=2021.3.0,<2022.0a0|>=2019.3,<2021.0a0|>=2019.1,<2021.0a0|>=2020.0,<2021.0a0|>=2020.1,<2021.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl-service[version='>=2.3.0,<3.0a0'] -> mkl[version='>=2019.1,<2021.0a0|>=2019.3,<2021.0a0|>=2019.4,<2020.0a0|>=2020.2,<2021.0a0|>=2021.4.0,<2022.0a0|>=2022.0.1,<2023.0a0|>=2022.1.0,<2023.0a0|>=2019.4,<2021.0a0|>=2021.3.0,<2022.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> blas=[build=mkl] -> mkl[version='>=2018.0.0,<2019.0a0|>=2018.0.1,<2019.0a0|>=2018.0.2,<2019.0a0|>=2018.0.3,<2019.0a0|>=2019.1,<2021.0a0|>=2019.3,<2021.0a0|>=2019.4,<2021.0a0|>=2021.2.0,<2022.0a0|>=2021.3.0,<2022.0a0|>=2021.4.0,<2022.0a0|>=2019.4,<2020.0a0']
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl[version='>=2021.2.0,<2022.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> mkl[version='>=2018']
+mkl_fft==1.3.0=py37h42c9631_2 -> blas==1.0=mkl -> mkl[version='>=2019.1,<2021.0a0|>=2019.3,<2021.0a0|>=2019.4,<2020.0a0|>=2020.2,<2021.0a0|>=2021.4.0,<2022.0a0|>=2022.0.1,<2023.0a0|>=2022.1.0,<2023.0a0|>=2019.4,<2021.0a0|>=2021.3.0,<2022.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> mkl[version='>=2021.2.0,<2022.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl[version='>=2021.2.0,<2022.0a0']
+
+Package cudatoolkit conflicts for:
+torchvision==0.7.0=py37_cu92 -> pytorch==1.6.0 -> cudatoolkit[version='10.0|10.0.*|10.2|10.2.*|>=10.1,<10.2|>=10.2,<10.3|10.1|10.1.*|9.2|9.2.*']
+cudatoolkit==9.2.148=h80a95b2_8
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> cudatoolkit[version='>=9.2,<9.3']
+torchvision==0.7.0=py37_cu92 -> cudatoolkit[version='>=9.2,<9.3']
+
+Package lz4-c conflicts for:
+libtiff==4.2.0=hdc55705_1 -> zstd[version='>=1.4.9,<1.5.0a0'] -> lz4-c[version='>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+lz4-c==1.9.3=h9c3ff4c_0
+zstd==1.4.9=ha95c52a_0 -> lz4-c[version='>=1.9.3,<1.9.4.0a0']
+
+Package libgomp conflicts for:
+libgomp==9.3.0=h2828fa1_19
+libgcc-ng==9.3.0=h2828fa1_19 -> _openmp_mutex[version='>=4.5'] -> libgomp[version='>=7.3.0|>=7.5.0']
+
+Package libwebp-base conflicts for:
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0'] -> libwebp-base[version='>=1.1.0,<1.2.0a0|>=1.2.3,<2.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> libtiff[version='>=4.2.0,<4.4.0a0'] -> libwebp-base
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> libwebp-base[version='>=1.2.2,<2.0a0|>=1.2.4,<2.0a0']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> libwebp-base[version='>=1.2.3,<2.0a0']
+libwebp-base==1.2.0=h7f98852_2
+libtiff==4.2.0=hdc55705_1 -> libwebp-base
+
+Package libopenblas conflicts for:
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> libopenblas[version='>=0.2.20,<0.2.21.0a0|>=0.3.2,<0.3.3.0a0|>=0.3.20,<1.0a0|>=0.3.3,<1.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> numpy[version='>=1.16,<2.0a0'] -> libopenblas[version='>=0.3.20,<1.0a0|>=0.3.3,<1.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> numpy[version='>=1.16,<2.0a0'] -> libopenblas[version='>=0.3.20,<1.0a0|>=0.3.3,<1.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> numpy[version='>=1.11'] -> libopenblas[version='>=0.2.20,<0.2.21.0a0|>=0.3.2,<0.3.3.0a0|>=0.3.20,<1.0a0|>=0.3.3,<1.0a0']
+
+Package ninja conflicts for:
+ninja==1.10.2=h4bd325d_0
+torchvision==0.7.0=py37_cu92 -> pytorch==1.6.0 -> ninja
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> ninja
+
+Package libdeflate conflicts for:
+pillow==8.1.2=py37h4600e1f_1 -> libtiff[version='>=4.2.0,<4.4.0a0'] -> libdeflate[version='>=1.10,<1.11.0a0|>=1.8,<1.9.0a0|>=1.7,<1.8.0a0']
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0'] -> libdeflate[version='>=1.10,<1.11.0a0|>=1.12,<1.13.0a0|>=1.13,<1.14.0a0|>=1.8,<1.9.0a0|>=1.7,<1.8.0a0']
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> libdeflate[version='>=1.10,<1.11.0a0|>=1.12,<1.13.0a0|>=1.13,<1.14.0a0|>=1.8,<1.9.0a0|>=1.7,<1.8.0a0']
+
+Package pypy3.6 conflicts for:
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> ninja -> pypy3.6[version='>=7.3.1|>=7.3.3|>=7.3.2']
+mkl_random==1.2.1=py37ha9443f7_2 -> numpy[version='>=1.16,<2.0a0'] -> pypy3.6[version='>=7.3.1|>=7.3.2|>=7.3.3']
+six==1.16.0=pyh6c4a22f_0 -> python -> pypy3.6[version='7.3.0.*|7.3.1.*|7.3.2.*|7.3.3.*']
+setuptools==49.6.0=py37h89c1867_3 -> certifi[version='>=2016.9.26'] -> pypy3.6[version='>=7.3.1|>=7.3.2|>=7.3.3']
+mkl_fft==1.3.0=py37h42c9631_2 -> numpy[version='>=1.16,<2.0a0'] -> pypy3.6[version='>=7.3.1|>=7.3.2|>=7.3.3']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> pypy3.6[version='>=7.3.1|>=7.3.2|>=7.3.3']
+wheel==0.36.2=pyhd3deb0d_0 -> python -> pypy3.6[version='7.3.0.*|7.3.1.*|7.3.2.*|7.3.3.*']
+olefile==0.46=pyh9f0ad1d_1 -> python -> pypy3.6[version='7.3.0.*|7.3.1.*|7.3.2.*|7.3.3.*']
+pip==21.1.1=pyhd8ed1ab_0 -> python[version='>=3.6'] -> pypy3.6[version='7.3.0.*|7.3.1.*|7.3.2.*|7.3.3.*|>=7.3.3|>=7.3.2|>=7.3.1']
+
+Package setuptools conflicts for:
+python==3.7.10=hffdb5ce_100_cpython -> pip -> setuptools
+setuptools==49.6.0=py37h89c1867_3
+pip==21.1.1=pyhd8ed1ab_0 -> setuptools
+
+Package numpy conflicts for:
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> numpy[version='>=1.11']
+torchvision==0.7.0=py37_cu92 -> pytorch==1.6.0 -> numpy[version='>=1.16.6,<2.0a0|>=1.19.4,<2.0a0']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11']
+mkl_random==1.2.1=py37ha9443f7_2 -> numpy[version='>=1.16,<2.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> numpy[version='>=1.16,<2.0a0']
+numpy==1.20.1=py37h93e21f0_0
+
+Package pytorch conflicts for:
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0
+torchvision==0.7.0=py37_cu92 -> pytorch==1.6.0
+
+Package zstd conflicts for:
+openjpeg==2.4.0=hf7af979_0 -> libtiff[version='>=4.1.0,<5.0a0'] -> zstd[version='>=1.3.7,<1.3.8.0a0|>=1.4.4,<1.5.0a0|>=1.4|>=1.4.3,<1.5.0.0a0|>=1.4.4,<1.5.0.0a0|>=1.4.5,<1.5.0a0|>=1.4.9,<1.5.0a0|>=1.5.0,<1.6.0a0|>=1.5.2,<1.6.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> libtiff[version='>=4.2.0,<4.4.0a0'] -> zstd[version='>=1.4.5,<1.5.0a0|>=1.4.9,<1.5.0a0|>=1.5.0,<1.6.0a0|>=1.5.2,<1.6.0a0']
+zstd==1.4.9=ha95c52a_0
+lcms2==2.12=hddcbb42_0 -> libtiff[version='>=4.2.0,<5.0a0'] -> zstd[version='>=1.4.5,<1.5.0a0|>=1.4.9,<1.5.0a0|>=1.5.0,<1.6.0a0|>=1.5.2,<1.6.0a0']
+libtiff==4.2.0=hdc55705_1 -> zstd[version='>=1.4.9,<1.5.0a0']
+
+Package tbb conflicts for:
+mkl-service==2.3.0=py37h27cfd23_1 -> mkl[version='>=2021.2.0,<2022.0a0'] -> tbb=2021
+numpy==1.20.1=py37h93e21f0_0 -> mkl[version='>=2021.2.0,<2022.0a0'] -> tbb=2021
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> mkl[version='>=2018'] -> tbb=2021
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl[version='>=2021.2.0,<2022.0a0'] -> tbb=2021
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl[version='>=2021.2.0,<2022.0a0'] -> tbb=2021
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl[version='>=2021.2.0,<2022.0a0'] -> tbb=2021
+blas==1.0=mkl -> mkl -> tbb=2021
+
+Package mkl-service conflicts for:
+numpy==1.20.1=py37h93e21f0_0 -> mkl_fft -> mkl-service[version='>=2,<3.0a0']
+torchvision==0.7.0=py37_cu92 -> numpy[version='>=1.11'] -> mkl-service[version='>=2,<3.0a0|>=2.3.0,<3.0a0']
+numpy==1.20.1=py37h93e21f0_0 -> mkl-service[version='>=2.3.0,<3.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> mkl-service[version='>=2.3.0,<3.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> numpy[version='>=1.16,<2.0a0'] -> mkl-service[version='>=2,<3.0a0']
+mkl_fft==1.3.0=py37h42c9631_2 -> numpy[version='>=1.16,<2.0a0'] -> mkl-service[version='>=2,<3.0a0']
+mkl_random==1.2.1=py37ha9443f7_2 -> mkl-service[version='>=2.3.0,<3.0a0']
+pytorch==1.6.0=py3.7_cuda9.2.148_cudnn7.6.3_0 -> numpy[version='>=1.11'] -> mkl-service[version='>=2,<3.0a0|>=2.3.0,<3.0a0']
+mkl-service==2.3.0=py37h27cfd23_1
+numpy-base==1.20.1=py37h7d8b39e_0 -> mkl-service[version='>=2.3.0,<3.0a0']
+
+Package wheel conflicts for:
+python==3.7.10=hffdb5ce_100_cpython -> pip -> wheel
+pip==21.1.1=pyhd8ed1ab_0 -> wheel
+wheel==0.36.2=pyhd3deb0d_0
+
+Package pillow conflicts for:
+pillow==8.1.2=py37h4600e1f_1
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1']
+
+Package lcms2 conflicts for:
+lcms2==2.12=hddcbb42_0
+pillow==8.1.2=py37h4600e1f_1 -> lcms2[version='>=2.12,<3.0a0']
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> lcms2[version='>=2.11,<3.0a0|>=2.12,<3.0a0']
+
+Package ca-certificates conflicts for:
+six==1.16.0=pyh6c4a22f_0 -> python -> ca-certificates
+ca-certificates==2020.12.5=ha878542_0
+openssl==1.1.1k=h7f98852_0 -> ca-certificates
+python==3.7.10=hffdb5ce_100_cpython -> openssl[version='>=1.1.1j,<1.1.2a'] -> ca-certificates
+wheel==0.36.2=pyhd3deb0d_0 -> python -> ca-certificates
+olefile==0.46=pyh9f0ad1d_1 -> python -> ca-certificates
+
+Package openjpeg conflicts for:
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> openjpeg[version='>=2.3.0,<3.0a0|>=2.4.0,<2.5.0a0|>=2.5.0,<2.6.0a0|>=2.4.0,<3.0a0']
+pillow==8.1.2=py37h4600e1f_1 -> openjpeg[version='>=2.4.0,<3.0a0']
+openjpeg==2.4.0=hf7af979_0
+
+Package freetype conflicts for:
+freetype==2.10.4=h0708190_1
+pillow==8.1.2=py37h4600e1f_1 -> freetype[version='>=2.10.4,<3.0a0']
+torchvision==0.7.0=py37_cu92 -> pillow[version='>=4.1.1'] -> freetype[version='2.7|2.7.*|2.7|2.8.*|2.8.1|2.8.1.*|>=2.10.4,<3.0a0|>=2.9.1,<3.0a0|>=2.8.1,<2.9.0a0|>=2.10.3,<3.0a0|>=2.8,<2.9.0a0']
+
+Package certifi conflicts for:
+certifi==2020.12.5=py37h89c1867_1
+setuptools==49.6.0=py37h89c1867_3 -> certifi[version='>=2016.9.26']
+pip==21.1.1=pyhd8ed1ab_0 -> setuptools -> certifi[version='>=2016.09|>=2016.9.26']The following specifications were found to be incompatible with your system:
+
+  - feature:/linux-64::__glibc==2.35=0
+  - feature:|@/linux-64::__glibc==2.35=0
+  - cudatoolkit==9.2.148=h80a95b2_8 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - freetype==2.10.4=h0708190_1 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - jpeg==9d=h36c2ea0_0 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
+  - lcms2==2.12=hddcbb42_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - libffi==3.3=h58526e2_2 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
+  - libpng==1.6.37=h21135ba_2 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
+  - libtiff==4.2.0=hdc55705_1 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - libwebp-base==1.2.0=h7f98852_2 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - lz4-c==1.9.3=h9c3ff4c_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - mkl-service==2.3.0=py37h27cfd23_1 -> libgcc-ng[version='>=7.3.0'] -> __glibc[version='>=2.17']
+  - mkl_fft==1.3.0=py37h42c9631_2 -> libgcc-ng[version='>=7.3.0'] -> __glibc[version='>=2.17']
+  - mkl_random==1.2.1=py37ha9443f7_2 -> libgcc-ng[version='>=7.3.0'] -> __glibc[version='>=2.17']
+  - ncurses==6.2=h58526e2_4 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
+  - ninja==1.10.2=h4bd325d_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - numpy-base==1.20.1=py37h7d8b39e_0 -> libgcc-ng[version='>=7.3.0'] -> __glibc[version='>=2.17']
+  - numpy==1.20.1=py37h93e21f0_0 -> libgcc-ng[version='>=7.3.0'] -> __glibc[version='>=2.17']
+  - openjpeg==2.4.0=hf7af979_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - openssl==1.1.1k=h7f98852_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - pillow==8.1.2=py37h4600e1f_1 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - python==3.7.10=hffdb5ce_100_cpython -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - readline==8.1=h46c0cb4_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - sqlite==3.35.5=h74cdb3f_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+  - tk==8.6.10=h21135ba_1 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
+  - xz==5.2.5=h516909a_1 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
+  - zlib==1.2.11=h516909a_1010 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
+  - zstd==1.4.9=ha95c52a_0 -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
+
+Your installed version is: 2.35
+
+Note that strict channel priority may have removed packages required for satisfiability.
+

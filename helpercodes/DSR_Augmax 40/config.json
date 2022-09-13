@@ -1,1 +1,1 @@
-{"csel": true, "resume": false, "retain_scores": false, "findsubset": true, "simsel": false, "trainbatch": 100, "testbatch": 100, "epochs": 100, "num_trajpoint": 240, "num_freqcp": 50, "num_freqep": 20, "num_freqbatch": 10, "featuredim": 512, "num_datapoints": 3700, "root_dir": "./main/"}
+{"csel": true, "resume": false, "retain_scores": false, "findsubset": true, "simsel": false, "trainbatch": 100, "testbatch": 100, "epochs": 200, "num_trajpoint": 480, "num_freqcp": 50, "num_freqep": 20, "num_freqbatch": 10, "featuredim": 512, "num_datapoints": 3700, "root_dir": "./main/"}

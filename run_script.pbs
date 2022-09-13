@@ -1,0 +1,15 @@
+#!/bin/sh
+# Torque script to submit CUDA C/C++ programs.
+
+# Torque directives
+#PBS -N testpy
+#PBS -q gpu
+#PBS -l walltime=01:00:00,mem=400mb,nodes=4:ppn=4:gpus=4
+#PBS -V
+
+# User Directivies
+module load anaconda3
+source activate subset
+cd /home/mt1/21CS60D06/MTP/wkg_code/AugMax/helpercodes/DSR_FGSM 60
+python test_fgsm.py
+#End of script

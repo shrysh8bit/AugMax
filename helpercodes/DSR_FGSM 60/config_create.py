@@ -19,7 +19,7 @@ params['testbatch'] = 100 #Test data batch size
 params['epochs'] = 200 #Training epochs
 #FGSM augmentations are done on 10% data, so total set size is 66000; 20% of 66000 = 132000
 #40% of 66000 = 264 ; 60% of 66000 = 
-params['num_trajpoint'] = 132 #Number of to-be selected trajectories
+params['num_trajpoint'] = 132*3 #Number of to-be selected trajectories
 params['num_freqcp'] = 50 #Frequency of updates at which training checkpoints will be saved
 params['num_freqep'] = 20 #Frequency of epochs at which CheckSel algorithm will be executed
 params['num_freqbatch'] = 10 #Frequency of batches at which CheckSel algorithm will be executed

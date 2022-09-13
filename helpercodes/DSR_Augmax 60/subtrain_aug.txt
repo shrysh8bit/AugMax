@@ -1,0 +1,205 @@
+==> Preparing data..
+torch.Size([120000, 1, 1, 28, 28])
+72000
+720
+==> Building model..
+Training
+
+Epoch: 0
+0.9994029614540731
+Testing
+Saving..
+94.52
+Best Accuracy
+94.52
+Training
+
+Epoch: 1
+0.8548331108146318
+Testing
+Saving..
+95.57
+Best Accuracy
+95.57
+Training
+
+Epoch: 2
+0.8489196135536852
+Testing
+95.18
+Best Accuracy
+95.57
+Training
+
+Epoch: 3
+0.8789185561623128
+Testing
+95.45
+Best Accuracy
+95.57
+Training
+
+Epoch: 4
+0.76134341946895
+Testing
+Saving..
+96.55
+Best Accuracy
+96.55
+Training
+
+Epoch: 5
+0.9354742265543453
+Testing
+95.35
+Best Accuracy
+96.55
+Training
+
+Epoch: 6
+0.813322718683967
+Testing
+94.78
+Best Accuracy
+96.55
+Training
+
+Epoch: 7
+0.8145157533991818
+Testing
+Saving..
+97.0
+Best Accuracy
+97.0
+Training
+
+Epoch: 8
+0.7333937791773275
+Testing
+95.92
+Best Accuracy
+97.0
+Training
+
+Epoch: 9
+0.6755165756163246
+Testing
+96.6
+Best Accuracy
+97.0
+Training
+
+Epoch: 10
+0.9008346753342593
+Testing
+84.09
+Best Accuracy
+97.0
+Training
+
+Epoch: 11
+1.2607075732009634
+Testing
+95.3
+Best Accuracy
+97.0
+Training
+
+Epoch: 12
+1.1148334831123723
+Testing
+Saving..
+97.21
+Best Accuracy
+97.21
+Training
+
+Epoch: 13
+0.9936996057567411
+Testing
+96.35
+Best Accuracy
+97.21
+Training
+
+Epoch: 14
+0.8335555449065977
+Testing
+95.89
+Best Accuracy
+97.21
+Training
+
+Epoch: 15
+0.812443939178809
+Testing
+95.31
+Best Accuracy
+97.21
+Training
+
+Epoch: 16
+0.7601375889877616
+Testing
+94.19
+Best Accuracy
+97.21
+Training
+
+Epoch: 17
+0.8904805470242454
+Testing
+95.76
+Best Accuracy
+97.21
+Training
+
+Epoch: 18
+0.8950960480288106
+Testing
+95.45
+Best Accuracy
+97.21
+Training
+
+Epoch: 19
+0.7695246136984341
+Testing
+96.37
+Best Accuracy
+97.21
+Training
+
+Epoch: 20
+0.9376476539275577
+Testing
+95.01
+Best Accuracy
+97.21
+Training
+
+Epoch: 21
+0.8323168261326404
+Testing
+95.06
+Best Accuracy
+97.21
+Training
+
+Epoch: 22
+0.8122888340489092
+Testing
+95.56
+Best Accuracy
+97.21
+Training
+
+Epoch: 23
+1.0432603188449716
+Testing
+97.03
+Best Accuracy
+97.21
+Training
+
+Epoch: 24

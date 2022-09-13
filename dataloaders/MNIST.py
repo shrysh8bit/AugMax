@@ -31,6 +31,8 @@ def MNIST_dataloaders(data_dir, num_classes=10, AugMax=None, batch_size = 96, **
         all_train_data = torchvision.datasets.MNIST(root='./data/', train=True, download=True, transform=all_train_transform)
         test_data = torchvision.datasets.MNIST(root='./data/', train=False, download=True, transform=test_transform)
         
+        print(f"6. Len of data: all train {len(all_train_data)}    test {len(test_data)}")
+        
         train_aug_indices = np.load('indices/mnist_train_aug_indices.npy')
         train_non_aug_indices = np.load('indices/mnist_train_non_aug_indices.npy')
 
