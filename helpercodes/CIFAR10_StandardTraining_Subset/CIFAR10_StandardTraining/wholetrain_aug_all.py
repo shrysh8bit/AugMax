@@ -113,7 +113,7 @@ for batchid, (ip, targ) in enumerate(trainl):
     ftrain.append(ip.numpy())
     ytrain.append(targ.item())
     for _ in range(1):
-        ftrain.append(np.expand_dims(aug(ip, test_transform, -1, 3).cpu().numpy(),axis=0))
+        ftrain.append(np.expand_dims(aug(ip, test_transform, 3, 3).cpu().numpy(),axis=0))
         ytrain.append(targ.item())
     '''else:
         ftrain.append(ip.numpy())
