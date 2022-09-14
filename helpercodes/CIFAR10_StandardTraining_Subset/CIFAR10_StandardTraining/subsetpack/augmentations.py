@@ -117,14 +117,12 @@ def sharpness(pil_img, level):
     level = float_parameter(sample_level(level), 1.8) + 0.1
     return ImageEnhance.Sharpness(pil_img).enhance(level)
 
+augmentations = [autocontrast, rotate,translate_x]
 
-augmentations = [
-    autocontrast, equalize, posterize, rotate, solarize, shear_x, shear_y,
-    translate_x, translate_y
-]
-augmentations = [
-    autocontrast, rotate,translate_x, translate_y, equalize, posterize, solarize, shear_x, shear_y
-]
+# augmentations = [
+#     autocontrast, equalize, posterize, rotate, solarize, shear_x, shear_y,
+#     translate_x, translate_y
+# ]
 
 augmentations_all = [
     autocontrast, equalize, posterize, rotate, solarize, shear_x, shear_y,

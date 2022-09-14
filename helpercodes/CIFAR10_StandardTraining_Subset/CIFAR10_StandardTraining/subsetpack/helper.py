@@ -149,7 +149,7 @@ class HelperFunc(object):
 			inputs_test, targets_test = inputs_test.to(self.device), targets_test.to(self.device)
 			#lv_c,adv_images = atk_curr(inputs_test, targets_test)
 			for index in range(len(inputs_test)):
-				adv_images.append(self.aug(inputs_test[index], test_transform, -1, 3))
+				adv_images.append(self.aug(inputs_test[index], test_transform, 3, 3))
 			adv_images = torch.stack(adv_images).to(self.device)
 			#print(inputs_test.shape)
 			#print(adv_images.shape)

@@ -157,7 +157,7 @@ class TrajSel(object):
 				ftrain.append(ip.numpy())
 				ytrain.append(targ.item())
 				for _ in range(1):
-				    ftrain.append(np.expand_dims(self.aug(ip, test_transform, -1, 3).cpu().numpy(),axis=0))
+				    ftrain.append(np.expand_dims(self.aug(ip, test_transform, 3, 3).cpu().numpy(),axis=0))
 				    #ftrain.append(atk(ip,targ)[1].cpu().numpy())
 				    ytrain.append(targ.item())
 				#print(ftrain[0])
