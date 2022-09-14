@@ -4,7 +4,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from scipy.linalg import lstsq
-from sklearn.preprocessing import normalize
+# from sklearn.preprocessing import normalize
 from subsetpack.carlini_wagner import carlini_wagner_l2
 from subsetpack.fgsm import FGSM
 from torch.autograd import grad

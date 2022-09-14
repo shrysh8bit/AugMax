@@ -4,7 +4,7 @@ import torch
 import random
 import numpy as np
 from PIL import Image
-from skimage.util import random_noise
+# from skimage.util import random_noise
 from torchvision.datasets import SVHN
 from torchvision.transforms import ToTensor
 import torchvision
