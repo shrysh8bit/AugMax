@@ -49,6 +49,30 @@ class Net(nn.Module):
         output = F.log_softmax(x, dim=1)
         return output
 
+class MNIST_model(nn.Module):
+    def __init__(self):
+        super(MNIST_model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, 3, 1) #in_channel x out_channel x kernel_size x stride
+        self.conv2 = nn.Conv2d(32, 64, 3, 1)
+        self.dropout1 = nn.Dropout2d(0.25)
+        self.dropout2 = nn.Dropout2d(0.5)
+        self.fc1 = nn.Linear(9216, 128)
+        self.fc2 = nn.Linear(128, 10)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = F.relu(x)
+        x = self.conv2(x)
+        x = F.relu(x)
+        x = F.max_pool2d(x, 2)
+        x = self.dropout1(x)
+        x = torch.flatten(x, 1)
+        x = self.fc1(x)
+        x = F.relu(x)
+        x = self.dropout2(x)
+        x = self.fc2(x)
+        output = F.log_softmax(x, dim=1)
+        return output
 
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -66,9 +90,24 @@ net = Net()
 net = net.to(device)
 net.load_state_dict(torch.load('./checkpoint_sub/ckptw.pth')['net'])
 
-net1 = Net()
+state_dict = torch.load('./addon/best_SA.pth')
+# create new OrderedDict that does not contain `module.`
+from collections import OrderedDict
+new_state_dict = OrderedDict()
+
+for k, v in state_dict.items():
+    if 'module' in k:
+        name = k[7:] # remove `module.`
+        new_state_dict[name] = v
+    else:
+        name = k # remove `module.`
+        new_state_dict[name] = v
+# load params
+# model.load_state_dict(new_state_dict)
+
+net1 = MNIST_model()
 net1 = net1.to(device)
-net1.load_state_dict(torch.load('./checkpoint_sub/ckpt_sub40_otheraug_all.pth')['net'])
+net1.load_state_dict(new_state_dict)
 
 
 
@@ -179,6 +218,7 @@ def test(epoch,net):
     epv = []
     global best_acc
     net.eval()    
+    net1.eval()    
     #with torch.no_grad():
     for ep in [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]:
         test_loss = 0
