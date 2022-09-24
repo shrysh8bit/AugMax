@@ -1,0 +1,54 @@
+/var/spool/slurm/slurmd/job00347/slurm_script: line 13: activate: No such file or directory
+dataset tiny     img size 224
+---> ResNet18
+loss str Lambda10.0
+attack str fat-1-untargeted-10-0.1
+saving to ./runs/tiny/fat-1-untargeted-10-0.1_Lambda10.0_e200-b400_sgd-lr0.1-m0.9-wd0.0005_cos
+1. Running on rank 0.
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=1, batch_size=400, data_root_path='./data', dataset='tiny', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='0', lr=0.1, mixture_depth=1, mixture_width=1, model='ResNet18_tiny', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
+2. in gpu id == 0
+ddp False
+3. train batch size 400   num workers 16
+4. Tiny data loader
+Training images loading from ./data/tiny-224/train
+Validation images loading from ./data/tiny-224/val
+8. in main fn -> Tiny data len Train 100000   & val 5000
+9. Starting dataloader
+9. batch size train 400     test 1000
+10. data loaders complete
+11. Creating attack class fat
+   Temp attacker <class 'utils.attacks.FriendlyAugMaxAttack'>
+12. End of attk class
+13. Augmix module start
+augmix model <class 'augmax_modules.augmax.AugMixModule'> 
+    Augmix augmax module create stop
+Epoch 0-0 | Train | Loss: 5.4293 (5.4060, 0.0233), SA: 0.0025, RA: 0.0025
+Epoch 0-20 | Train | Loss: 5.3728 (5.2398, 0.0413), SA: 0.0101, RA: 0.0092
+Epoch 0-40 | Train | Loss: 5.2760 (4.9701, 0.0693), SA: 0.0168, RA: 0.0152
+Epoch 0-60 | Train | Loss: 5.1990 (4.9587, 0.0611), SA: 0.0222, RA: 0.0195
+Epoch 0-80 | Train | Loss: 5.1361 (4.8543, 0.0917), SA: 0.0266, RA: 0.0230
+Epoch 0-100 | Train | Loss: 5.0854 (4.7391, 0.0782), SA: 0.0301, RA: 0.0263
+Epoch 0-120 | Train | Loss: 5.0473 (4.7107, 0.0846), SA: 0.0336, RA: 0.0292
+Epoch 0-140 | Train | Loss: 5.0131 (4.6617, 0.0828), SA: 0.0362, RA: 0.0315
+Epoch 0-160 | Train | Loss: 4.9789 (4.6689, 0.0859), SA: 0.0396, RA: 0.0343
+Epoch 0-180 | Train | Loss: 4.9432 (4.5988, 0.0898), SA: 0.0438, RA: 0.0380
+Epoch 0-200 | Train | Loss: 4.9119 (4.3828, 0.1111), SA: 0.0469, RA: 0.0407
+Epoch 0-220 | Train | Loss: 4.8849 (4.5096, 0.0986), SA: 0.0495, RA: 0.0431
+Epoch 0-240 | Train | Loss: 4.8569 (4.2872, 0.1219), SA: 0.0526, RA: 0.0459
+False
+Epoch 0 | Validation | Time: 956.7821 | lr: 0.1 | SA: 0.0958
+Epoch 1-0 | Train | Loss: 4.5807 (4.4597, 0.1210), SA: 0.0875, RA: 0.0650
+Epoch 1-20 | Train | Loss: 4.4672 (4.3139, 0.1525), SA: 0.0937, RA: 0.0813
+Epoch 1-40 | Train | Loss: 4.4549 (4.3888, 0.1644), SA: 0.0974, RA: 0.0848
+Epoch 1-60 | Train | Loss: 4.4477 (4.4046, 0.1227), SA: 0.0988, RA: 0.0863
+Epoch 1-80 | Train | Loss: 4.4300 (4.0769, 0.1430), SA: 0.1006, RA: 0.0889
+Epoch 1-100 | Train | Loss: 4.4135 (4.2680, 0.1534), SA: 0.1027, RA: 0.0909
+Epoch 1-120 | Train | Loss: 4.4004 (4.1881, 0.1365), SA: 0.1042, RA: 0.0919
+Epoch 1-140 | Train | Loss: 4.3818 (4.0865, 0.1289), SA: 0.1063, RA: 0.0938
+Epoch 1-160 | Train | Loss: 4.3654 (3.9528, 0.1375), SA: 0.1083, RA: 0.0955
+Epoch 1-180 | Train | Loss: 4.3440 (4.0051, 0.0973), SA: 0.1110, RA: 0.0983
+Epoch 1-200 | Train | Loss: 4.3249 (4.0257, 0.1327), SA: 0.1136, RA: 0.1006
+Epoch 1-220 | Train | Loss: 4.3098 (4.0087, 0.1249), SA: 0.1161, RA: 0.1027
+Epoch 1-240 | Train | Loss: 4.2937 (4.0389, 0.1276), SA: 0.1185, RA: 0.1048
+False
+Epoch 1 | Validation | Time: 935.0043 | lr: 0.09999383162408304 | SA: 0.1652

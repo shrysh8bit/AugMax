@@ -10,6 +10,7 @@ from torch.utils.data import DataLoader
 from models.cifar10.resnet_DuBIN import ResNet18_DuBIN
 from models.cifar10.wideresnet_DuBIN import WRN40_DuBIN
 from models.cifar10.resnext_DuBIN import ResNeXt29_DuBIN
+from models.resnet import ResNet18
 
 from models.imagenet.resnet_DuBIN import ResNet18_DuBIN as INResNet18_DuBIN
 
@@ -23,9 +24,9 @@ parser = argparse.ArgumentParser(description='Trains a CIFAR Classifier')
 parser.add_argument('--gpu', default='0')
 parser.add_argument('--cpus', type=int, default=4)
 # dataset:
-parser.add_argument('--dataset', '--ds', default='cifar10', choices=['cifar10', 'cifar100', 'tin', 'IN'], help='which dataset to use')
+parser.add_argument('--dataset', '--ds', default='cifar10', choices=['cifar10', 'cifar100', 'tin', 'IN', 'tiny'], help='which dataset to use')
 parser.add_argument('--data_root_path', '--drp', default='./data', help='Where you save all your datasets.')
-parser.add_argument('--model', '--md', default='WRN40_DuBIN', choices=['ResNet18_DuBIN', 'WRN40_DuBIN', 'ResNeXt29_DuBIN'], help='which model to use')
+parser.add_argument('--model', '--md', default='WRN40_DuBIN', choices=['ResNet18_DuBIN', 'WRN40_DuBIN', 'ResNeXt29_DuBIN', 'ResNet18'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # 
 parser.add_argument('--test_batch_size', '--tb', type=int, default=1000)
@@ -46,9 +47,10 @@ CORRUPTIONS = [
 ]
 
 # model:
-if args.dataset == 'IN':
+if args.dataset == 'cifar10':
+    model_fn = ResNet18
+elif args.dataset == 'IN':
     model_fn = INResNet18_DuBIN
-
 else:
     if args.model == 'ResNet18_DuBIN':
         model_fn = ResNet18_DuBIN
@@ -67,7 +69,7 @@ elif args.dataset == 'tin':
 elif args.dataset == 'IN':
     num_classes, init_stride = 1000, None
 
-if args.dataset == 'IN':
+if args.dataset == 'IN' or args.dataset == 'cifar10' :
     model = model_fn().cuda()
 else:
     model = model_fn(num_classes=num_classes, init_stride=init_stride).cuda()
@@ -77,13 +79,14 @@ model = torch.nn.DataParallel(model)
 # load model:
 # print(f"Aug max results save loc {args.save_root_path}")
 # print(f"Best sa path save loc {args.ckpt_path}")
-ckpt = torch.load(os.path.join(args.save_root_path, 'AugMax_results', args.model, args.ckpt_path, 'best_SA.pth'))
+ckpt = torch.load(os.path.join(args.save_root_path, 'best_SA.pth'))
+# ckpt = torch.load(os.path.join(args.save_root_path, 'AugMax_results', args.model, args.ckpt_path, 'best_SA.pth'))
 # print(f"args.save_root_path {args.save_root_path 'AugMax_results', args.ckpt_path, 'best_SA.pth')}")
-print(f"ckpt load loc {os.path.join(args.save_root_path, 'AugMax_results', args.model, args.ckpt_path, 'best_SA.pth')}")
+print(f"ckpt load loc {os.path.join(args.save_root_path, 'best_SA.pth')}")
 model.load_state_dict(ckpt)        
 
 # log file:
-fp = open(os.path.join(args.save_root_path, 'AugMax_results',args.model, args.ckpt_path, 'test_results.txt'), 'a+')
+fp = open(os.path.join(args.save_root_path, 'test_results.txt'), 'a+')
 
 ## Test on CIFAR:
 def val_cifar():

@@ -1,0 +1,83 @@
+Namespace(ckpt_path='', cpus=4, data_root_path='./data', dataset='cifar10', gpu='0', k=10, mode='all', model='ResNet18', save_root_path='./runs/cifar10/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos', test_batch_size=1000, widen_factor=2)
+ckpt load loc ./runs/cifar10/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos/best_SA.pth
+Files already downloaded and verified
+Files already downloaded and verified
+clean test time: 7.29s
+clean: 0.9454
+len of test_set.data  50000
+loader for gaussian_noise ready
+len of test_set.data  50000
+loader for shot_noise ready
+len of test_set.data  50000
+loader for impulse_noise ready
+len of test_set.data  50000
+loader for defocus_blur ready
+len of test_set.data  50000
+loader for glass_blur ready
+len of test_set.data  50000
+loader for motion_blur ready
+len of test_set.data  50000
+loader for zoom_blur ready
+len of test_set.data  50000
+loader for snow ready
+len of test_set.data  50000
+loader for frost ready
+len of test_set.data  50000
+loader for fog ready
+len of test_set.data  50000
+loader for brightness ready
+len of test_set.data  50000
+loader for contrast ready
+len of test_set.data  50000
+loader for elastic_transform ready
+len of test_set.data  50000
+loader for pixelate ready
+len of test_set.data  50000
+loader for jpeg_compression ready
+evaluating corruptions...
+50
+gaussian_noise test time: 33.06s
+gaussian_noise: 0.7957
+50
+shot_noise test time: 33.04s
+shot_noise: 0.8492
+50
+impulse_noise test time: 33.12s
+impulse_noise: 0.8195
+50
+defocus_blur test time: 33.09s
+defocus_blur: 0.9112
+50
+glass_blur test time: 32.98s
+glass_blur: 0.6487
+50
+motion_blur test time: 32.94s
+motion_blur: 0.8434
+50
+zoom_blur test time: 32.97s
+zoom_blur: 0.8909
+50
+snow test time: 33.05s
+snow: 0.8555
+50
+frost test time: 32.84s
+frost: 0.8765
+50
+fog test time: 32.86s
+fog: 0.8855
+50
+brightness test time: 32.85s
+brightness: 0.9372
+50
+contrast test time: 32.76s
+contrast: 0.8696
+50
+elastic_transform test time: 32.84s
+elastic_transform: 0.8710
+50
+pixelate test time: 32.77s
+pixelate: 0.8187
+50
+jpeg_compression test time: 32.77s
+jpeg_compression: 0.8599
+corruption acc: (mean) 0.8489

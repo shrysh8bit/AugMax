@@ -29,21 +29,24 @@ def tiny_imagenet_dataloaders(data_dir, transform_train=True, AugMax=None, **Aug
     print('Tiny imagenet Validation images loading from %s' % validation_root)
     
     if AugMax is not None:
-
-        # train_transform = transforms.Compose([
-        #         transforms.RandomRotation(20),
-        #         transforms.RandomHorizontalFlip(0.5),
-        #         transforms.ToTensor(),
-        #         transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
-        #     ])
-        # val_transform = transforms.Compose([
-        #         transforms.ToTensor(),
-        #         transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
-        #     ])
-        # test_transform = transforms.Compose([
-        #         transforms.ToTensor(),
-        #         transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
-        #     ])
+        preprocess = transforms.Compose(
+                [transforms.ToTensor(),
+                transforms.Normalize(mean, std)])
+        
+        train_transform = transforms.Compose([
+                transforms.RandomRotation(20),
+                transforms.RandomHorizontalFlip(0.5),
+                transforms.ToTensor(),
+                transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+            ])
+        val_transform = transforms.Compose([
+                transforms.ToTensor(),
+                transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+            ])
+        test_transform = transforms.Compose([
+                transforms.ToTensor(),
+                transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+            ])
 
 
 
@@ -52,7 +55,7 @@ def tiny_imagenet_dataloaders(data_dir, transform_train=True, AugMax=None, **Aug
                 transforms.RandomRotation(20),
                 transforms.RandomHorizontalFlip(0.5),
                 # transforms.ToPILImage(),
-                # transforms.ToTensor(),
+                transforms.ToTensor(),
                 transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
             ]),
             'val': transforms.Compose([
@@ -72,7 +75,7 @@ def tiny_imagenet_dataloaders(data_dir, transform_train=True, AugMax=None, **Aug
         test_data = datasets.ImageFolder(os.path.join(data_dir, 'val'),transform=data_transforms['val']) 
 
 
-        train_data = AugMax(train_data, data_transforms['test'], 
+        train_data = AugMax(train_data, data_transforms['train'], 
             mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'], 
         )
 

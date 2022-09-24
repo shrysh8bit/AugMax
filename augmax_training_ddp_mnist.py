@@ -33,7 +33,7 @@ from dataloaders.cifar10 import cifar_dataloaders
 from dataloaders.tiny_imagenet import tiny_imagenet_dataloaders, tiny_imagenet_deepaug_dataloaders
 from dataloaders.imagenet import imagenet_dataloaders, imagenet_deepaug_dataloaders
 from dataloaders.MNIST import MNIST_dataloaders
-from dataloaders.tiny_imagenet import tiny_imagenet_dataloaders
+from dataloaders.imagenet import imagenet_dataloaders
 
 from utils.utils import *
 from utils.context import ctx_noparamgrad_and_eval
@@ -81,7 +81,10 @@ parser.add_argument('--dist_url', default='tcp://localhost:23456', type=str, hel
 args = parser.parse_args()
 
 # adjust learning rate:
-if args.dataset == 'tin':
+if args.dataset == 'tiny':
+    # args.lr *= args.batch_size / 256. # linearly scaled to batch size
+    augmentations.IMAGE_SIZE = 224 # change imange size
+elif args.dataset == 'tin':
     args.lr *= args.batch_size / 256. # linearly scaled to batch size
     augmentations.IMAGE_SIZE = 64 # change imange size
 elif args.dataset == 'IN':
@@ -184,7 +187,7 @@ def train(gpu_id, ngpus_per_node):
         print(f"4. Tiny data loader")
         num_classes = 200
         init_stride = 1
-        train_data, val_data = tiny_imagenet_dataloaders(data_dir= (args.data_root_path + '/tiny-224'), num_classes=num_classes,
+        train_data, val_data = imagenet_dataloaders(data_dir= (args.data_root_path + '/tiny-224'), num_classes=num_classes,
             AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity,
             batch_size = args.batch_size
         )
