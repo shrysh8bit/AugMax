@@ -23,7 +23,7 @@ from models.cifar10.resnet_DuBIN import ResNet18_DuBIN
 from models.cifar10.wideresnet_DuBIN import WRN40_DuBIN
 from models.cifar10.resnext_DuBIN import ResNeXt29_DuBIN
 from models.MNIST import MNIST_model
-from models.resnet import ResNet18
+from models.resnet import ResNet18p
 
 from models.imagenet.resnet_DuBIN import ResNet18_DuBIN as INResNet18_DuBIN
 from models.imagenet.resnet_DuBIN import ResNet50_DuBIN as INResNet50_DuBIN
