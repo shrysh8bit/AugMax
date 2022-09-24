@@ -23,7 +23,8 @@ from models.cifar10.resnet_DuBIN import ResNet18_DuBIN
 from models.cifar10.wideresnet_DuBIN import WRN40_DuBIN
 from models.cifar10.resnext_DuBIN import ResNeXt29_DuBIN
 from models.MNIST import MNIST_model
-from models.resnet import ResNet18p
+from models.resnet import ResNet18
+from models.tiny import ResNet18 as ResNet18_tiny
 
 from models.imagenet.resnet_DuBIN import ResNet18_DuBIN as INResNet18_DuBIN
 from models.imagenet.resnet_DuBIN import ResNet50_DuBIN as INResNet50_DuBIN
@@ -32,6 +33,7 @@ from dataloaders.cifar10 import cifar_dataloaders
 from dataloaders.tiny_imagenet import tiny_imagenet_dataloaders, tiny_imagenet_deepaug_dataloaders
 from dataloaders.imagenet import imagenet_dataloaders, imagenet_deepaug_dataloaders
 from dataloaders.MNIST import MNIST_dataloaders
+from dataloaders.tiny_imagenet import tiny_imagenet_dataloaders
 
 from utils.utils import *
 from utils.context import ctx_noparamgrad_and_eval
@@ -41,9 +43,9 @@ parser = argparse.ArgumentParser(description='Trains a CIFAR Classifier')
 parser.add_argument('--gpu', default='0')
 parser.add_argument('--num_workers', '--cpus', default=16, type=int)
 # dataset:
-parser.add_argument('--dataset', '--ds', default='MNIST', choices=['cifar10', 'cifar100', 'tin', 'IN', 'MNIST'], help='which dataset to use')
+parser.add_argument('--dataset', '--ds', default='MNIST', choices=['cifar10', 'cifar100', 'tin', 'IN', 'MNIST', 'tiny'], help='which dataset to use')
 parser.add_argument('--data_root_path', '--drp', help='Where you save all your datasets.')
-parser.add_argument('--model', '--md', default='ResNet', choices=['ResNet','MNIST','ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29'], help='which model to use')
+parser.add_argument('--model', '--md', default='ResNet', choices=['ResNet','MNIST','ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29', 'ResNet18_tiny'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # Optimization options
 parser.add_argument('--epochs', '-e', type=int, default=200, help='Number of epochs to train.')
@@ -97,7 +99,9 @@ if args.num_nodes == 1: # When using multiple nodes, we assume all gpus on each 
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu 
 
 # select model_fn:
-if args.dataset == 'cifar10':
+if args.dataset == 'tiny':
+    model_fn = ResNet18_tiny
+elif args.dataset == 'cifar10':
     model_fn = ResNet18
 elif args.dataset == 'MNIST':
     model_fn = MNIST_model
@@ -176,7 +180,17 @@ def train(gpu_id, ngpus_per_node):
     print(f"3. train batch size {train_batch_size}   num workers {num_workers}")
 
     # data loader:
-    if args.dataset == 'MNIST':
+    if args.dataset == 'tiny':
+        print(f"4. Tiny data loader")
+        num_classes = 200
+        init_stride = 1
+        train_data, val_data = tiny_imagenet_dataloaders(data_dir= (args.data_root_path + '/tiny-224'), num_classes=num_classes,
+            AugMax=AugMaxDataset, mixture_width=args.mixture_width, mixture_depth=args.mixture_depth, aug_severity=args.aug_severity,
+            batch_size = args.batch_size
+        )
+
+        print(f"8. in main fn -> Tiny data len Train {len(train_data)}   & val {len(val_data)}")
+    elif args.dataset == 'MNIST':
         print(f"4. MNIST data loader")
         num_classes = 10
         init_stride = 1
@@ -236,7 +250,9 @@ def train(gpu_id, ngpus_per_node):
     print(f"10. data loaders complete")
 
     # model:
-    if args.dataset == 'cifar10':
+    if args.dataset == 'tiny':
+        model = model_fn().to(device)
+    elif args.dataset == 'cifar10':
         model = model_fn().to(device)
     elif args.dataset == 'MNIST':
         model = model_fn().to(device)

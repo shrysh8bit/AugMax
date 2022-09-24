@@ -25,18 +25,54 @@ def tiny_imagenet_dataloaders(data_dir, transform_train=True, AugMax=None, **Aug
     
     train_root = os.path.join(data_dir, 'train')  # this is path to training images folder
     validation_root = os.path.join(data_dir, 'val/images')  # this is path to validation images folder
-    print('Training images loading from %s' % train_root)
-    print('Validation images loading from %s' % validation_root)
+    print('Tiny imagenet Training images loading from %s' % train_root)
+    print('Tiny imagenet Validation images loading from %s' % validation_root)
     
     if AugMax is not None:
-        train_transform = transforms.Compose(
-            [transforms.RandomHorizontalFlip(),
-            transforms.RandomCrop(64, padding=4)]) if transform_train else None
-        test_transform = transforms.Compose([transforms.ToTensor()])
 
-        train_data = datasets.ImageFolder(train_root, transform=train_transform)
-        test_data = datasets.ImageFolder(validation_root, transform=test_transform)
-        train_data = AugMax(train_data, test_transform, 
+        # train_transform = transforms.Compose([
+        #         transforms.RandomRotation(20),
+        #         transforms.RandomHorizontalFlip(0.5),
+        #         transforms.ToTensor(),
+        #         transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+        #     ])
+        # val_transform = transforms.Compose([
+        #         transforms.ToTensor(),
+        #         transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+        #     ])
+        # test_transform = transforms.Compose([
+        #         transforms.ToTensor(),
+        #         transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+        #     ])
+
+
+
+        data_transforms = {
+            'train': transforms.Compose([
+                transforms.RandomRotation(20),
+                transforms.RandomHorizontalFlip(0.5),
+                # transforms.ToPILImage(),
+                # transforms.ToTensor(),
+                transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+            ]),
+            'val': transforms.Compose([
+                # transforms.ToPILImage(),
+                transforms.ToTensor(),
+                transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+            ]),
+            'test': transforms.Compose([
+                # transforms.ToPILImage(),
+                transforms.ToTensor(),
+                transforms.Normalize([0.4802, 0.4481, 0.3975], [0.2302, 0.2265, 0.2262]),
+            ])
+        }
+        
+
+        train_data = datasets.ImageFolder(os.path.join(data_dir, 'train'),transform=data_transforms['train'])
+        test_data = datasets.ImageFolder(os.path.join(data_dir, 'val'),transform=data_transforms['val']) 
+
+
+        train_data = AugMax(train_data, data_transforms['test'], 
             mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'], 
         )
 
@@ -51,6 +87,38 @@ def tiny_imagenet_dataloaders(data_dir, transform_train=True, AugMax=None, **Aug
         test_data = datasets.ImageFolder(validation_root, transform=test_transform)
     
     return train_data, test_data
+
+# def tiny_imagenet_dataloaders(data_dir, transform_train=True, AugMax=None, **AugMax_args):
+    
+#     train_root = os.path.join(data_dir, 'train')  # this is path to training images folder
+#     validation_root = os.path.join(data_dir, 'val/images')  # this is path to validation images folder
+#     print('Training images loading from %s' % train_root)
+#     print('Validation images loading from %s' % validation_root)
+    
+#     if AugMax is not None:
+#         train_transform = transforms.Compose(
+#             [transforms.RandomHorizontalFlip(),
+#             transforms.RandomCrop(64, padding=4)]) if transform_train else None
+#         test_transform = transforms.Compose([transforms.ToTensor()])
+
+#         train_data = datasets.ImageFolder(train_root, transform=train_transform)
+#         test_data = datasets.ImageFolder(validation_root, transform=test_transform)
+#         train_data = AugMax(train_data, test_transform, 
+#             mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'], 
+#         )
+
+#     else:
+#         train_transform = transforms.Compose(
+#             [transforms.RandomHorizontalFlip(),
+#             transforms.RandomCrop(64, padding=4),
+#             transforms.ToTensor()]) if transform_train else transforms.Compose([transforms.ToTensor()])
+#         test_transform = transforms.Compose([transforms.ToTensor()])
+
+#         train_data = datasets.ImageFolder(train_root, transform=train_transform)
+#         test_data = datasets.ImageFolder(validation_root, transform=test_transform)
+    
+#     return train_data, test_data
+
 
 def tiny_imagenet_deepaug_dataloaders(data_dir, transform_train=True, AugMax=None, **AugMax_args):
     

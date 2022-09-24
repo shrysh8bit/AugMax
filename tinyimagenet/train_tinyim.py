@@ -358,7 +358,6 @@ num_workers = {'train' : 100,'val'   : 0,'test'  : 0}
 
 torch.manual_seed(123)
 
-
 data_transforms = {
     'train': transforms.Compose([
         transforms.RandomRotation(20),

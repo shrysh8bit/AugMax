@@ -1,0 +1,58 @@
+dataset tiny     img size 32
+---> ResNet18
+loss str Lambda10.0
+attack str fat-1-untargeted-10-0.1
+saving to ./runs/tiny/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos
+1. Running on rank 0.
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=1, batch_size=1000, data_root_path='./data', dataset='tiny', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='0', lr=0.1, mixture_depth=1, mixture_width=1, model='ResNet18_tiny', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
+2. in gpu id == 0
+ddp False
+3. train batch size 1000   num workers 16
+4. Tiny data loader
+Tiny imagenet Training images loading from ./data/tiny-224/train
+Tiny imagenet Validation images loading from ./data/tiny-224/val/images
+8. in main fn -> Tiny data len Train 100000   & val 5000
+9. Starting dataloader
+9. batch size train 1000     test 1000
+10. data loaders complete
+11. Creating attack class fat
+   Temp attacker <class 'utils.attacks.FriendlyAugMaxAttack'>
+12. End of attk class
+13. Augmix module start
+augmix model <class 'augmax_modules.augmax.AugMixModule'> 
+    Augmix augmax module create stop
+Traceback (most recent call last):
+  File "augmax_training_ddp_mnist.py", line 473, in <module>
+    train(0, 0)
+  File "augmax_training_ddp_mnist.py", line 338, in train
+    for i, (images_tuples, labels) in enumerate(train_loader):
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 517, in __next__
+    data = self._next_data()
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1199, in _next_data
+    return self._process_data(data)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1225, in _process_data
+    data.reraise()
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/_utils.py", line 429, in reraise
+    raise self.exc_type(msg)
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 202, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mt1/21CS60D06/MTP/wkg_code/AugMax/augmax_modules/augmax.py", line 60, in __getitem__
+    x, y = self.dataset[i]
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torchvision/datasets/folder.py", line 180, in __getitem__
+    sample = self.transform(sample)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 60, in __call__
+    img = t(img)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 221, in forward
+    return F.normalize(tensor, self.mean, self.std, self.inplace)
+  File "/home/mt1/21CS60D06/anaconda3/envs/augmax18/lib/python3.8/site-packages/torchvision/transforms/functional.py", line 318, in normalize
+    raise TypeError('Input tensor should be a torch tensor. Got {}.'.format(type(tensor)))
+TypeError: Input tensor should be a torch tensor. Got <class 'PIL.Image.Image'>.
+
