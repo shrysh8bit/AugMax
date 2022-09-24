@@ -1,9 +1,10 @@
 dataset cifar10     img size 32
+---> ResNet18
 loss str Lambda10.0
 attack str fat-1-untargeted-10-0.1
 saving to ./runs/cifar10/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos
 1. Running on rank 0.
-Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=1, batch_size=1000, data_root_path='./data', dataset='cifar10', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='1', lr=0.1, mixture_depth=1, mixture_width=1, model='MNIST', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=1, batch_size=1000, data_root_path='./data', dataset='cifar10', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='1', lr=0.1, mixture_depth=1, mixture_width=1, model='ResNet', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
 2. in gpu id == 0
 ddp False
 3. train batch size 1000   num workers 16
@@ -14,9 +15,29 @@ cifar train data len 50000  val data len 10000
 9. Starting dataloader
 9. batch size train 1000     test 1000
 10. data loaders complete
-Traceback (most recent call last):
-  File "augmax_training_ddp_mnist.py", line 456, in <module>
-    train(0, 0)
-  File "augmax_training_ddp_mnist.py", line 251, in train
-    model = model_fn(num_classes=num_classes, init_stride=init_stride).to(device)
-TypeError: __init__() got an unexpected keyword argument 'init_stride'
+11. Creating attack class fat
+   Temp attacker <class 'utils.attacks.FriendlyAugMaxAttack'>
+12. End of attk class
+13. Augmix module start
+augmix model <class 'augmax_modules.augmax.AugMixModule'> 
+    Augmix augmax module create stop
+Epoch 0-0 | Train | Loss: 2.3549 (2.3427, 0.0122), SA: 0.1170, RA: 0.1220
+Epoch 0-20 | Train | Loss: 3.2654 (2.2808, 0.0271), SA: 0.1350, RA: 0.1325
+Epoch 0-40 | Train | Loss: 2.7317 (1.9388, 0.0780), SA: 0.1886, RA: 0.1763
+False
+Epoch 0 | Validation | Time: 120.1502 | lr: 0.1 | SA: 0.3007
+Epoch 1-0 | Train | Loss: 2.0164 (1.9196, 0.0968), SA: 0.2840, RA: 0.2570
+Epoch 1-20 | Train | Loss: 1.9072 (1.7451, 0.1261), SA: 0.3294, RA: 0.2981
+Epoch 1-40 | Train | Loss: 1.8557 (1.6523, 0.0893), SA: 0.3522, RA: 0.3200
+False
+Epoch 1 | Validation | Time: 110.7027 | lr: 0.09999383162408304 | SA: 0.4082
+Epoch 2-0 | Train | Loss: 1.6616 (1.5696, 0.0919), SA: 0.4200, RA: 0.3910
+Epoch 2-20 | Train | Loss: 1.6893 (1.5178, 0.1033), SA: 0.4163, RA: 0.3865
+Epoch 2-40 | Train | Loss: 1.6601 (1.4830, 0.1071), SA: 0.4340, RA: 0.4029
+False
+Epoch 2 | Validation | Time: 111.0540 | lr: 0.09997532801828658 | SA: 0.4500
+Epoch 3-0 | Train | Loss: 1.5208 (1.3991, 0.1217), SA: 0.4770, RA: 0.4410
+Epoch 3-20 | Train | Loss: 1.5097 (1.3786, 0.1029), SA: 0.4927, RA: 0.4587
+Epoch 3-40 | Train | Loss: 1.4818 (1.2650, 0.0926), SA: 0.5054, RA: 0.4750
+False
+Epoch 3 | Validation | Time: 110.8969 | lr: 0.09994449374809851 | SA: 0.2886

@@ -23,7 +23,7 @@ from models.cifar10.resnet_DuBIN import ResNet18_DuBIN
 from models.cifar10.wideresnet_DuBIN import WRN40_DuBIN
 from models.cifar10.resnext_DuBIN import ResNeXt29_DuBIN
 from models.MNIST import MNIST_model
-from models.resnet import ResNet_model
+from models.resnet import ResNet18
 
 from models.imagenet.resnet_DuBIN import ResNet18_DuBIN as INResNet18_DuBIN
 from models.imagenet.resnet_DuBIN import ResNet50_DuBIN as INResNet50_DuBIN
@@ -98,7 +98,7 @@ if args.num_nodes == 1: # When using multiple nodes, we assume all gpus on each 
 
 # select model_fn:
 if args.dataset == 'cifar10':
-    model_fn = ResNet_model
+    model_fn = ResNet18
 elif args.dataset == 'MNIST':
     model_fn = MNIST_model
 elif args.dataset == 'IN':
