@@ -370,3 +370,44 @@ Epoch 69-0 | Train | Loss: 0.0918 (0.0414, 0.0504), SA: 0.9860, RA: 0.9770
 Epoch 69-20 | Train | Loss: 0.1044 (0.0544, 0.0444), SA: 0.9818, RA: 0.9722
 Epoch 69-40 | Train | Loss: 0.1047 (0.0597, 0.0501), SA: 0.9820, RA: 0.9726
 False
+Epoch 69 | Validation | Time: 110.9691 | lr: 0.0733964907130287 | SA: 0.9112
+Epoch 70-0 | Train | Loss: 0.1003 (0.0469, 0.0534), SA: 0.9860, RA: 0.9750
+Epoch 70-20 | Train | Loss: 0.1042 (0.0703, 0.0445), SA: 0.9823, RA: 0.9731
+Epoch 70-40 | Train | Loss: 0.1123 (0.0456, 0.0656), SA: 0.9801, RA: 0.9707
+False
+Epoch 70 | Validation | Time: 110.9657 | lr: 0.07269952498697736 | SA: 0.9105
+Epoch 71-0 | Train | Loss: 0.1023 (0.0427, 0.0597), SA: 0.9860, RA: 0.9760
+Epoch 71-20 | Train | Loss: 0.1057 (0.0657, 0.0567), SA: 0.9826, RA: 0.9719
+Epoch 71-40 | Train | Loss: 0.1072 (0.0684, 0.0497), SA: 0.9818, RA: 0.9712
+False
+Epoch 71 | Validation | Time: 111.1605 | lr: 0.07199695849279578 | SA: 0.9043
+Epoch 72-0 | Train | Loss: 0.0835 (0.0499, 0.0336), SA: 0.9830, RA: 0.9800
+Epoch 72-20 | Train | Loss: 0.1038 (0.0499, 0.0486), SA: 0.9830, RA: 0.9747
+Epoch 72-40 | Train | Loss: 0.1054 (0.0386, 0.0490), SA: 0.9824, RA: 0.9734
+False
+Epoch 72 | Validation | Time: 110.7617 | lr: 0.07128896457825366 | SA: 0.9093
+Epoch 73-0 | Train | Loss: 0.1211 (0.0714, 0.0497), SA: 0.9730, RA: 0.9640
+Epoch 73-20 | Train | Loss: 0.1014 (0.0466, 0.0464), SA: 0.9830, RA: 0.9732
+Epoch 73-40 | Train | Loss: 0.1054 (0.0568, 0.0506), SA: 0.9824, RA: 0.9723
+False
+Epoch 73 | Validation | Time: 110.7932 | lr: 0.07057571793025548 | SA: 0.9045
+Epoch 74-0 | Train | Loss: 0.0891 (0.0398, 0.0493), SA: 0.9930, RA: 0.9810
+Epoch 74-20 | Train | Loss: 0.1049 (0.0537, 0.0354), SA: 0.9831, RA: 0.9750
+Epoch 74-40 | Train | Loss: 0.1051 (0.0585, 0.0661), SA: 0.9832, RA: 0.9741
+False
+Epoch 74 | Validation | Time: 110.9624 | lr: 0.06985739453173906 | SA: 0.9043
+Epoch 75-0 | Train | Loss: 0.0970 (0.0439, 0.0530), SA: 0.9890, RA: 0.9800
+Epoch 75-20 | Train | Loss: 0.0985 (0.0762, 0.0585), SA: 0.9846, RA: 0.9755
+Epoch 75-40 | Train | Loss: 0.0993 (0.0597, 0.0304), SA: 0.9835, RA: 0.9749
+False
+Epoch 75 | Validation | Time: 111.0201 | lr: 0.06913417161825453 | SA: 0.9181
+Epoch 76-0 | Train | Loss: 0.0655 (0.0281, 0.0374), SA: 0.9910, RA: 0.9870
+Epoch 76-20 | Train | Loss: 0.0963 (0.0601, 0.0727), SA: 0.9841, RA: 0.9760
+Epoch 76-40 | Train | Loss: 0.0999 (0.0586, 0.0502), SA: 0.9836, RA: 0.9743
+False
+Epoch 76 | Validation | Time: 110.9086 | lr: 0.06840622763423394 | SA: 0.9156
+Epoch 77-0 | Train | Loss: 0.1171 (0.0594, 0.0576), SA: 0.9750, RA: 0.9650
+Epoch 77-20 | Train | Loss: 0.1031 (0.0620, 0.0578), SA: 0.9836, RA: 0.9733
+Epoch 77-40 | Train | Loss: 0.0987 (0.0410, 0.0465), SA: 0.9837, RA: 0.9748
+False
+Epoch 77 | Validation | Time: 110.7621 | lr: 0.0676737421889629 | SA: 0.9096
