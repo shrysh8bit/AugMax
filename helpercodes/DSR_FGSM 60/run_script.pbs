@@ -9,7 +9,7 @@
 
 # User Directivies
 module load anaconda3
-source activate subset
+source activate augmax18
 cd /home/mt1/21CS60D06/MTP/wkg_code/AugMax/helpercodes/DSR_FGSM\ 60/
-python subtrain_aug.py
+python experiment.py
 #End of script

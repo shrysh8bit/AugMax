@@ -23,6 +23,7 @@ from models.cifar10.resnet_DuBIN import ResNet18_DuBIN
 from models.cifar10.wideresnet_DuBIN import WRN40_DuBIN
 from models.cifar10.resnext_DuBIN import ResNeXt29_DuBIN
 from models.MNIST import MNIST_model
+from models.resnet import ResNet_model
 
 from models.imagenet.resnet_DuBIN import ResNet18_DuBIN as INResNet18_DuBIN
 from models.imagenet.resnet_DuBIN import ResNet50_DuBIN as INResNet50_DuBIN
@@ -42,7 +43,7 @@ parser.add_argument('--num_workers', '--cpus', default=16, type=int)
 # dataset:
 parser.add_argument('--dataset', '--ds', default='MNIST', choices=['cifar10', 'cifar100', 'tin', 'IN', 'MNIST'], help='which dataset to use')
 parser.add_argument('--data_root_path', '--drp', help='Where you save all your datasets.')
-parser.add_argument('--model', '--md', default='MNIST', choices=['MNIST','ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29'], help='which model to use')
+parser.add_argument('--model', '--md', default='ResNet', choices=['ResNet','MNIST','ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # Optimization options
 parser.add_argument('--epochs', '-e', type=int, default=200, help='Number of epochs to train.')
@@ -50,7 +51,7 @@ parser.add_argument('--decay_epochs', '--de', default=[100,150], nargs='+', type
 parser.add_argument('--opt', default='sgd', choices=['sgd', 'adam'], help='which optimizer to use')
 parser.add_argument('--decay', default='cos', choices=['cos', 'multisteps'], help='which lr decay method to use')
 parser.add_argument('--lr', type=float, default=0.1, help='Initial learning rate.')
-parser.add_argument('--batch_size', '-b', type=int, default=96, help='Batch size for training.')
+parser.add_argument('--batch_size', '-b', type=int, default=1000, help='Batch size for training.')
 parser.add_argument('--test_batch_size', '--tb', type=int, default=1000, help='Batch size for validation.')
 parser.add_argument('--momentum', '-m', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--wd', type=float, default=0.0005, help='Weight decay (L2 penalty).')
@@ -96,7 +97,9 @@ if args.num_nodes == 1: # When using multiple nodes, we assume all gpus on each 
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu 
 
 # select model_fn:
-if args.dataset == 'MNIST':
+if args.dataset == 'cifar10':
+    model_fn = ResNet_model
+elif args.dataset == 'MNIST':
     model_fn = MNIST_model
 elif args.dataset == 'IN':
     if args.model == 'ResNet18':
@@ -113,6 +116,7 @@ else:
 
 # mkdirs:
 model_str = model_fn.__name__
+print(f"---> {model_str}")
 if args.opt == 'sgd':
     opt_str = 'e%d-b%d_sgd-lr%s-m%s-wd%s' % (args.epochs, args.batch_size, args.lr, args.momentum, args.wd)
 elif args.opt == 'adam':
@@ -232,7 +236,9 @@ def train(gpu_id, ngpus_per_node):
     print(f"10. data loaders complete")
 
     # model:
-    if args.dataset == 'MNIST':
+    if args.dataset == 'cifar10':
+        model = model_fn().to(device)
+    elif args.dataset == 'MNIST':
         model = model_fn().to(device)
     elif args.dataset == 'IN':
         if args.model == 'WRN40':
@@ -331,7 +337,7 @@ def train(gpu_id, ngpus_per_node):
             images_tuple_2 = images_tuples[1]
             images_tuple_2 = [images.to(device) for images in images_tuple_2]
             labels = labels.to(device)
-            exit(1)
+            # exit(1)
             # switch to BN-A:
             if 'DuBIN' in model_fn.__name__:
                 model.apply(lambda m: setattr(m, 'route', 'A')) # use auxilary BN for AugMax images

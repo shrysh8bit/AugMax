@@ -1,0 +1,23 @@
+dataset cifar10     img size 32
+---> ResNet_model
+loss str Lambda10.0
+attack str fat-1-untargeted-10-0.1
+saving to ./runs/cifar10/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos
+1. Running on rank 0.
+Namespace(Lambda=10.0, alpha=0.1, attacker='fat', aug_severity=1, batch_size=1000, data_root_path='./data', dataset='cifar10', ddp=False, ddp_backend='nccl', decay='cos', decay_epochs=[100, 150], deepaug=False, dist_url='tcp://localhost:23456', epochs=200, gpu='0', lr=0.1, mixture_depth=1, mixture_width=1, model='ResNet', momentum=0.9, node_id=0, num_nodes=1, num_workers=16, opt='sgd', resume=False, save_root_path='./runs/', steps=10, targeted=False, tau=1, test_batch_size=1000, wd=0.0005, widen_factor=2)
+2. in gpu id == 0
+ddp False
+3. train batch size 1000   num workers 16
+4. cifar data loader
+Files already downloaded and verified
+Files already downloaded and verified
+cifar train data len 50000  val data len 10000
+9. Starting dataloader
+9. batch size train 1000     test 1000
+10. data loaders complete
+Traceback (most recent call last):
+  File "augmax_training_ddp_mnist.py", line 457, in <module>
+    train(0, 0)
+  File "augmax_training_ddp_mnist.py", line 240, in train
+    model = model_fn().to(device)
+TypeError: __init__() missing 2 required positional arguments: 'block' and 'num_blocks'

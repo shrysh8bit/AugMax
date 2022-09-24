@@ -87,7 +87,7 @@ testset = torchvision.datasets.MNIST(
 
 net = Net()
 net = net.to(device)
-net.load_state_dict(torch.load('./checkpoint_sub/ckptw.pth')['net'])
+net.load_state_dict(torch.load('./checkpoint_sub/ckpt_eps3_f60_aug.pth')['net'])
 
 
 state_dict = torch.load('./addon/best_SA.pth')
@@ -218,7 +218,7 @@ def test(epoch,net):
     epv = []
     global best_acc
     net.eval()    
-    net1.eval()
+    # net1.eval()
     #with torch.no_grad():
     for ep in [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]:
         test_loss = 0
