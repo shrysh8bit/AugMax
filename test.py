@@ -11,6 +11,7 @@ from models.cifar10.resnet_DuBIN import ResNet18_DuBIN
 from models.cifar10.wideresnet_DuBIN import WRN40_DuBIN
 from models.cifar10.resnext_DuBIN import ResNeXt29_DuBIN
 from models.resnet import ResNet18
+from models.tiny import ResNet18 as ResNet18_tiny
 
 from models.imagenet.resnet_DuBIN import ResNet18_DuBIN as INResNet18_DuBIN
 
@@ -24,12 +25,12 @@ parser = argparse.ArgumentParser(description='Trains a CIFAR Classifier')
 parser.add_argument('--gpu', default='0')
 parser.add_argument('--cpus', type=int, default=4)
 # dataset:
-parser.add_argument('--dataset', '--ds', default='cifar10', choices=['cifar10', 'cifar100', 'tin', 'IN', 'tiny'], help='which dataset to use')
+parser.add_argument('--dataset', '--ds', default='cifar10', choices=['cifar10', 'cifar100', 'tin', 'IN', 'tiny', 'tiny-C'], help='which dataset to use')
 parser.add_argument('--data_root_path', '--drp', default='./data', help='Where you save all your datasets.')
-parser.add_argument('--model', '--md', default='WRN40_DuBIN', choices=['ResNet18_DuBIN', 'WRN40_DuBIN', 'ResNeXt29_DuBIN', 'ResNet18'], help='which model to use')
+parser.add_argument('--model', '--md', default='WRN40_DuBIN', choices=['ResNet18_DuBIN', 'WRN40_DuBIN', 'ResNeXt29_DuBIN', 'ResNet18', 'ResNet18_tiny'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # 
-parser.add_argument('--test_batch_size', '--tb', type=int, default=1000)
+parser.add_argument('--test_batch_size', '--tb', type=int, default=100)
 parser.add_argument('--ckpt_path', default='')
 parser.add_argument('--mode', default='clean', choices=['clean', 'c', 'v2', 'sta', 'all'], help='Which dataset to evaluate on')
 parser.add_argument('--k', default=10, type=int, help='hyperparameter k in worst-of-k spatial attack')

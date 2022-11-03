@@ -1,0 +1,109 @@
+Namespace(ckpt_path='', cpus=4, data_root_path='./data', dataset='cifar10', gpu='0', k=10, mode='c', model='ResNet18', save_root_path='/home/mt1/21CS60D06/MTP/wkg_code/AugMax/runs/cifar10/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos', test_batch_size=100, widen_factor=2)
+ckpt load loc /home/mt1/21CS60D06/MTP/wkg_code/AugMax/runs/cifar10/fat-1-untargeted-10-0.1_Lambda10.0_e200-b1000_sgd-lr0.1-m0.9-wd0.0005_cos/best_SA.pth
+len of test_set.data  50000
+loader for gaussian_noise ready
+len of test_set.data  50000
+loader for shot_noise ready
+len of test_set.data  50000
+loader for impulse_noise ready
+len of test_set.data  50000
+loader for defocus_blur ready
+len of test_set.data  50000
+loader for glass_blur ready
+len of test_set.data  50000
+loader for motion_blur ready
+len of test_set.data  50000
+loader for zoom_blur ready
+len of test_set.data  50000
+loader for snow ready
+len of test_set.data  50000
+loader for frost ready
+len of test_set.data  50000
+loader for fog ready
+len of test_set.data  50000
+loader for brightness ready
+len of test_set.data  50000
+loader for contrast ready
+len of test_set.data  50000
+loader for elastic_transform ready
+len of test_set.data  50000
+loader for pixelate ready
+len of test_set.data  50000
+loader for jpeg_compression ready
+evaluating corruptions...
+500
+gaussian_noise test time: 28.86s
+gaussian_noise: 0.8528
+Severity levels (1-5)
+[0.9077999836206436, 0.8794999808073044, 0.8419999784231186, 0.8279999780654907, 0.8068999767303466]
+500
+shot_noise test time: 28.41s
+shot_noise: 0.8761
+Severity levels (1-5)
+[0.9181999784708023, 0.9064999800920487, 0.8729999774694442, 0.8548999804258347, 0.8279999750852585]
+500
+impulse_noise test time: 28.53s
+impulse_noise: 0.8541
+Severity levels (1-5)
+[0.9163999783992768, 0.8949999821186065, 0.8733999788761139, 0.8191999769210816, 0.7663999807834625]
+500
+defocus_blur test time: 28.64s
+defocus_blur: 0.9203
+Severity levels (1-5)
+[0.9323999792337417, 0.9318999797105789, 0.9296999818086624, 0.9148999834060669, 0.892499982714653]
+500
+glass_blur test time: 28.75s
+glass_blur: 0.7544
+Severity levels (1-5)
+[0.7976999807357789, 0.7986999833583832, 0.7991999793052673, 0.6896999830007553, 0.6868999797105789]
+500
+motion_blur test time: 28.72s
+motion_blur: 0.8898
+Severity levels (1-5)
+[0.9180999821424485, 0.9051999813318252, 0.8809999811649323, 0.8842999815940857, 0.8602999770641326]
+500
+zoom_blur test time: 28.71s
+zoom_blur: 0.9081
+Severity levels (1-5)
+[0.9205999797582627, 0.9207999843358994, 0.9132999813556671, 0.9015999799966812, 0.8839999830722809]
+500
+snow test time: 28.71s
+snow: 0.8623
+Severity levels (1-5)
+[0.9104999828338624, 0.8700999802350998, 0.8571999806165695, 0.8354999774694443, 0.8379999780654908]
+500
+frost test time: 28.71s
+frost: 0.8898
+Severity levels (1-5)
+[0.9230999839305878, 0.9049999797344208, 0.8837999796867371, 0.8809999829530716, 0.8558999812602996]
+500
+fog test time: 28.72s
+fog: 0.9011
+Severity levels (1-5)
+[0.933199982047081, 0.9266999799013138, 0.9140999829769134, 0.8977999806404113, 0.8334999787807464]
+500
+brightness test time: 28.73s
+brightness: 0.9294
+Severity levels (1-5)
+[0.9329999822378159, 0.9327999818325042, 0.9313999825716018, 0.929799981713295, 0.9200999826192856]
+500
+contrast test time: 28.72s
+contrast: 0.9217
+Severity levels (1-5)
+[0.9328999811410904, 0.9268999820947648, 0.9239999830722809, 0.9198999834060669, 0.904699981212616]
+500
+elastic_transform test time: 28.71s
+elastic_transform: 0.8707
+Severity levels (1-5)
+[0.9071999847888946, 0.9074999809265136, 0.9040999811887741, 0.8532999783754349, 0.7815999799966812]
+500
+pixelate test time: 28.70s
+pixelate: 0.8891
+Severity levels (1-5)
+[0.9218999820947648, 0.9147999823093415, 0.9032999789714813, 0.8797999799251557, 0.8254999750852585]
+500
+jpeg_compression test time: 28.73s
+jpeg_compression: 0.8501
+Severity levels (1-5)
+[0.8933999782800675, 0.866399980187416, 0.8494999825954437, 0.8348999756574631, 0.8064999794960022]
+corruption acc: (mean) 0.8780

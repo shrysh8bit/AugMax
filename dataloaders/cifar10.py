@@ -18,6 +18,8 @@ def cifar_dataloaders(data_dir, num_classes=10, AugMax=None, **AugMax_args):
 
         train_data = CIFAR(data_dir, train=True, transform=train_transform, download=True)
         test_data = CIFAR(data_dir, train=False, transform=test_transform, download=True)
+        print(f"len of train data {len(train_data)}")
+        print(f"len of test data {len(test_data)}")
         train_data = AugMax(train_data, test_transform, 
             mixture_width=AugMax_args['mixture_width'], mixture_depth=AugMax_args['mixture_depth'], aug_severity=AugMax_args['aug_severity'], 
         )

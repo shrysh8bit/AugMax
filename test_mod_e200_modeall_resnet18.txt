@@ -1,0 +1,114 @@
+Namespace(ckpt_path='', cpus=4, data_root_path='./data', dataset='cifar10', gpu='1', k=10, mode='all', model='ResNet18', save_root_path='/home/mt1/21CS60D06/MTP/wkg_code/AugMax/runs/031122/Resnet18/cifar10/fat-1-untargeted-5-0.1_Lambda10_e200-b100_sgd-lr0.1-m0.9-wd0.0005_cos', test_batch_size=100, widen_factor=2)
+ckpt load loc /home/mt1/21CS60D06/MTP/wkg_code/AugMax/runs/031122/Resnet18/cifar10/fat-1-untargeted-5-0.1_Lambda10_e200-b100_sgd-lr0.1-m0.9-wd0.0005_cos/best_SA.pth
+Files already downloaded and verified
+Files already downloaded and verified
+clean test time: 1.30s
+clean: 0.9574
+len of test_set.data  50000
+loader for gaussian_noise ready
+len of test_set.data  50000
+loader for shot_noise ready
+len of test_set.data  50000
+loader for impulse_noise ready
+len of test_set.data  50000
+loader for defocus_blur ready
+len of test_set.data  50000
+loader for glass_blur ready
+len of test_set.data  50000
+loader for motion_blur ready
+len of test_set.data  50000
+loader for zoom_blur ready
+len of test_set.data  50000
+loader for snow ready
+len of test_set.data  50000
+loader for frost ready
+len of test_set.data  50000
+loader for fog ready
+len of test_set.data  50000
+loader for brightness ready
+len of test_set.data  50000
+loader for contrast ready
+len of test_set.data  50000
+loader for elastic_transform ready
+len of test_set.data  50000
+loader for pixelate ready
+len of test_set.data  50000
+loader for jpeg_compression ready
+evaluating corruptions...
+500
+gaussian_noise test time: 4.73s
+gaussian_noise: 0.7808
+Severity levels (1-5)
+[0.9280999833345414, 0.8687999784946442, 0.7648999798297882, 0.706499981880188, 0.6356999862194062]
+500
+shot_noise test time: 4.73s
+shot_noise: 0.8438
+Severity levels (1-5)
+[0.942699983716011, 0.9225999808311462, 0.8455999773740769, 0.7996999770402908, 0.7081999832391739]
+500
+impulse_noise test time: 4.73s
+impulse_noise: 0.8752
+Severity levels (1-5)
+[0.9463999831676483, 0.9300999808311462, 0.9101999813318252, 0.8400999784469605, 0.7489999824762344]
+500
+defocus_blur test time: 4.72s
+defocus_blur: 0.9463
+Severity levels (1-5)
+[0.9566999804973603, 0.9552999818325043, 0.9529999822378159, 0.9434999823570251, 0.9231999802589417]
+500
+glass_blur test time: 4.71s
+glass_blur: 0.7846
+Severity levels (1-5)
+[0.8201999777555465, 0.8241999793052673, 0.8420999813079834, 0.703799985051155, 0.7324999833106994]
+500
+motion_blur test time: 4.72s
+motion_blur: 0.9293
+Severity levels (1-5)
+[0.9492999815940857, 0.9399999850988388, 0.9256999832391739, 0.9259999817609788, 0.9052999806404114]
+500
+zoom_blur test time: 4.79s
+zoom_blur: 0.9362
+Severity levels (1-5)
+[0.9474999815225601, 0.9458999836444855, 0.9406999838352204, 0.9340999841690063, 0.9125999802350998]
+500
+snow test time: 4.68s
+snow: 0.9029
+Severity levels (1-5)
+[0.9395999825000763, 0.9105999809503555, 0.9060999804735184, 0.885699982047081, 0.8725999820232392]
+500
+frost test time: 4.72s
+frost: 0.9033
+Severity levels (1-5)
+[0.9460999804735184, 0.9286999809741974, 0.8976999777555466, 0.8902999824285507, 0.8535999804735184]
+500
+fog test time: 4.71s
+fog: 0.9223
+Severity levels (1-5)
+[0.9566999787092209, 0.9517999809980392, 0.9432999843358993, 0.9269999808073044, 0.8324999797344208]
+500
+brightness test time: 4.74s
+brightness: 0.9522
+Severity levels (1-5)
+[0.9576999789476395, 0.956199979186058, 0.9542999804019928, 0.9510999810695648, 0.9414999854564666]
+500
+contrast test time: 4.74s
+contrast: 0.9214
+Severity levels (1-5)
+[0.9558999794721603, 0.948999981880188, 0.9424999821186065, 0.9269999819993973, 0.832699978351593]
+500
+elastic_transform test time: 4.72s
+elastic_transform: 0.9110
+Severity levels (1-5)
+[0.9378999817371368, 0.9394999819993973, 0.9370999830961227, 0.8987999790906906, 0.8414999788999558]
+500
+pixelate test time: 4.71s
+pixelate: 0.8964
+Severity levels (1-5)
+[0.9498999840021134, 0.9404999852180481, 0.9293999809026718, 0.8825999790430069, 0.7795999819040298]
+500
+jpeg_compression test time: 4.69s
+jpeg_compression: 0.8842
+Severity levels (1-5)
+[0.9183999812602996, 0.8951999807357788, 0.8853999817371369, 0.8748999810218812, 0.8470999783277512]
+test_c_accs:    [0.7807999819517135, 0.8437599804401398, 0.8751599812507629, 0.9463399814367295, 0.7845599813461304, 0.9292599824666977, 0.9361599826812744, 0.9029199815988541, 0.9032799804210663, 0.9222599809169769, 0.9521599810123443, 0.921419980764389, 0.9109599809646607, 0.896399982213974, 0.8841999806165696]
+corruption acc: (mean) 0.8926

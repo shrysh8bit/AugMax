@@ -44,8 +44,8 @@ parser.add_argument('--gpu', default='0')
 parser.add_argument('--num_workers', '--cpus', default=16, type=int)
 # dataset:
 parser.add_argument('--dataset', '--ds', default='MNIST', choices=['cifar10', 'cifar100', 'tin', 'IN', 'MNIST', 'tiny'], help='which dataset to use')
-parser.add_argument('--data_root_path', '--drp', help='Where you save all your datasets.')
-parser.add_argument('--model', '--md', default='ResNet', choices=['ResNet','MNIST','ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29', 'ResNet18_tiny'], help='which model to use')
+parser.add_argument('--data_root_path', '--drp', default='./data/', help='Where you save all your datasets.')
+parser.add_argument('--model', '--md', default='ResNet', choices=['ResNet','MNIST','ResNet18_DuBIN','ResNet18', 'ResNet50', 'WRN40', 'ResNeXt29', 'ResNet18_tiny'], help='which model to use')
 parser.add_argument('--widen_factor', '--widen', default=2, type=int, help='widen factor for WRN')
 # Optimization options
 parser.add_argument('--epochs', '-e', type=int, default=200, help='Number of epochs to train.')
@@ -53,14 +53,14 @@ parser.add_argument('--decay_epochs', '--de', default=[100,150], nargs='+', type
 parser.add_argument('--opt', default='sgd', choices=['sgd', 'adam'], help='which optimizer to use')
 parser.add_argument('--decay', default='cos', choices=['cos', 'multisteps'], help='which lr decay method to use')
 parser.add_argument('--lr', type=float, default=0.1, help='Initial learning rate.')
-parser.add_argument('--batch_size', '-b', type=int, default=1000, help='Batch size for training.')
-parser.add_argument('--test_batch_size', '--tb', type=int, default=1000, help='Batch size for validation.')
+parser.add_argument('--batch_size', '-b', type=int, default=100, help='Batch size for training.')
+parser.add_argument('--test_batch_size', '--tb', type=int, default=100, help='Batch size for validation.')
 parser.add_argument('--momentum', '-m', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--wd', type=float, default=0.0005, help='Weight decay (L2 penalty).')
 # AugMix options
 parser.add_argument('--mixture_width', default=1, help='Number of augmentation chains to mix per augmented example')
-parser.add_argument('--mixture_depth', default=1, help='Depth of augmentation chains. -1 denotes stochastic depth in [1, 3]')
-parser.add_argument('--aug_severity', default=1, help='Severity of base augmentation operators')
+parser.add_argument('--mixture_depth', default=-1, help='Depth of augmentation chains. -1 denotes stochastic depth in [1, 3]')
+parser.add_argument('--aug_severity', default=3, help='Severity of base augmentation operators')
 # augmax parameters:
 parser.add_argument('--attacker', default='fat', choices=['pgd', 'fat'], help='How to solve the inner maximization problem.')
 parser.add_argument('--targeted', action='store_true', help='If true, targeted attack')
@@ -105,7 +105,8 @@ if args.num_nodes == 1: # When using multiple nodes, we assume all gpus on each 
 if args.dataset == 'tiny':
     model_fn = ResNet18_tiny
 elif args.dataset == 'cifar10':
-    model_fn = ResNet18
+    model_fn = ResNet18_DuBIN
+    # model_fn = ResNet18_DuBIN
 elif args.dataset == 'MNIST':
     model_fn = MNIST_model
 elif args.dataset == 'IN':
@@ -315,7 +316,44 @@ def train(gpu_id, ngpus_per_node):
     augmax_model = AugMaxModule(device=device)
     print(f"    Augmix augmax module create stop")
 
+    print ("Printing all params before trg")
 
+    print (f''' --gpu                       {args.gpu}
+                --num_workers               {args.num_workers}
+                --dataset                   {args.dataset}
+                --data_root_path            {args.data_root_path}
+                --model                     {args.model}
+                --widen_factor              {args.widen_factor}
+                --epochs                    {args.epochs}
+                --decay_epochs              {args.decay_epochs}
+                --opt                       {args.opt}
+                --decay                     {args.decay}
+                --lr                        {args.lr}
+                --batch_size                {args.batch_size}
+                --test_batch_size           {args.test_batch_size}
+                --momentum                  {args.momentum}
+                --wd                        {args.wd}
+                
+                --mixture_width             {args.mixture_width}
+                --mixture_depth             {args.mixture_depth}
+                --aug_severity              {args.aug_severity}
+                
+                --attacker                  {args.attacker}
+                --targeted                  {args.targeted}
+                --alpha                     {args.alpha}
+                --tau                       {args.tau}
+                --steps                     {args.steps}
+                --Lambda                    {args.Lambda}
+                
+                --deepaug                   {args.deepaug}
+                --resume                    {args.resume}
+                --save_root_path            {args.save_root_path}
+                
+                --ddp                       {args.ddp}
+                --ddp_backend               {args.ddp_backend}
+                --num_nodes                 {args.num_nodes}
+                --node_id                   {args.node_id}
+                --dist_url                  {args.dist_url}''')
     # train loader testing
     # for i, (images_tuples, labels) in enumerate(train_loader):
     #     print(f"i {i} images_tuples {len(images_tuples)}   labels{len(labels)} ")
@@ -335,20 +373,27 @@ def train(gpu_id, ngpus_per_node):
         requires_grad_(model, True)
         accs, accs_augmax, losses = AverageMeter(), AverageMeter(), AverageMeter()
 
-        # print(f"train loader    type {type(train_loader)}   len {len(train_loader)}")
+        print(f"train loader    type {type(train_loader)}   len {len(train_loader)}")
 
         # print(f"    start enumeration over train_loader")
         for i, (images_tuples, labels) in enumerate(train_loader):
             
             # print(f"    In train loader", flush=True)
-            # print(f"    images_tuples len {len(images_tuples)}  len[0] {len(images_tuples[0])} len[1] {len(images_tuples[1])}", flush=True)
-            # print(f"    images_tuples[0][0] == images_tuples[0][1]  {images_tuples[0][0] == images_tuples[0][1]} ", flush = True)
+            # print(f"    images_tuples len: {len(images_tuples)},  len[0]: {len(images_tuples[0])}, len[1]: {len(images_tuples[1])}", flush=True)
+            # # print(f"    images_tuples[0][0] == images_tuples[0][1]  {images_tuples[0][0] == images_tuples[0][1]} ", flush = True)
+            # print()
+            # print(f"    images_tuples shape[0][0] {images_tuples[0][0].shape},  shape[0][1] {images_tuples[0][1].shape}    type[0][0] {type(images_tuples[0][0])}")
             
-            # print(f"    images_tuples len[0][0] {len(images_tuples[0][0])}  len[0][1] {len(images_tuples[0][1])}")
-            # print(f"    images_tuples[0][0] {images_tuples[0][0].shape}  [0][1] {images_tuples[0][1].shape}")
-            # print(f"    images_tuples len[1][0] {len(images_tuples[1][0])}  len[1][1] {len(images_tuples[1][1])}")
-            # print(f'    data has not been augmented, but contains a tuple of size 2, each element is another tuple of size 2,')
-            # print(f"    every such tuple is a tensor of shape [batch_size, 1, 28, 28], 4 copies of the same image")
+            # print()
+            # print(f"    images_tuples shape[0][0][0] {(images_tuples[0][0][0].shape)},  shape[0][0][1] {(images_tuples[0][0][1].shape)}  type[0][0][0] {type(images_tuples[0][0][0])}")
+            # print(f"    images_tuples len[0][1][0] {len(images_tuples[0][0][0])},  len[0][1][1] {len(images_tuples[0][0][1])}  type[0][1][0] {type(images_tuples[0][0][0])}")
+            # # print(f"    images_tuples len[0][0][0] {len(images_tuples[0][0][0])},  len[0][0][1] {len(images_tuples[0][0][1])}  type[0][0][0] {type(images_tuples[0][0][0])}")
+            # # print()
+            # # print(f"    images_tuples[0][0] {images_tuples[0][0].shape}  [0][1] {images_tuples[0][1].shape}")
+            # # print(f"    images_tuples[0][0][0] {images_tuples[0][0][0].shape}  [0][0][1] {images_tuples[0][0][1].shape}")
+            # # print(f"    images_tuples len[1][0] {len(images_tuples[1][0])}  len[1][1] {len(images_tuples[1][1])}")
+            # # print(f'    data has not been augmented, but contains a tuple of size 2, each element is another tuple of size 2,')
+            # # print(f"    every such tuple is a tensor of shape [batch_size, 1, 28, 28], 4 copies of the same image")
 
             # get batch:
             images_tuple = images_tuples[0]
